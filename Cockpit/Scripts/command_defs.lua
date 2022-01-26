@@ -62,6 +62,7 @@ Keys =
     iCommandHUDBrightnessUp         =   746;
     iCommandHUDBrightnessDown       =   747;
     iCommandBrightnessILS           =   156;
+    iCommandToggleMirrors           =   1625;
 
 }   
 
@@ -108,5 +109,6 @@ device_commands =
     CLIC_MODE_HMD               = counter(),
     CLIC_HUD_COLOR              = counter(),
     CLIC_NAVMODES               = counter(),
+    CLIC_MIRROIR                = counter(),
 
 }
