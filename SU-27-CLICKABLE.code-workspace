@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Steam\\steamapps\\common\\DCSWorld\\Config\\Input\\Aircrafts"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Steam\\steamapps\\common\\DCSWorld\\Mods\\aircraft\\Flaming Cliffs\\Input\\su-27"
+		},
+		{
+			"path": "..\\..\\aircraft"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Steam\\steamapps\\common\\DCSWorld\\Mods\\aircraft\\Flaming Cliffs\\Cockpit\\KneeboardLeft"
+		},
+		{
+			"path": "..\\..\\PROJETS\\SU-27-UFCP"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\OneDrive\\Bureau\\Modding\\Sources\\RWR\\Cockpit\\Scripts"
+		}
+	],
+	"settings": {}
+}
