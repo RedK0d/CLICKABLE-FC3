@@ -178,6 +178,10 @@ function SetCommand(command,value)
         dispatch_action(nil,Keys.iCommandBrightnessILS)
         
     end
+    if command == device_commands.CLIC_MIRROIR and value == 1 then
+        dispatch_action(nil,Keys.iCommandToggleMirrors)
+        
+    end
 
 
     
