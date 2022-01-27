@@ -1,6 +1,7 @@
 # SU-27-CLICKABLE
  A partially clickable mod for the Su-27 
  
+
  # INSTALLATION 
 Very simple installation.
 Simply unzip the contents of the archive into your "Saved Games\DCS\Mods\tech\" directory.
@@ -20,5 +21,6 @@ Mainpanel now only calls the edm file if get_aircraft_type() returns Su-27 or J-
 # 27/01/2022  v0.0.3-alpha
 
 Added clickables Mirrors.
+
 
 
