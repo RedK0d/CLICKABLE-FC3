@@ -1,5 +1,5 @@
-# SU-27-CLICKABLE
- A partially clickable mod for the Su-27 
+# CLICKABLE-FC3
+ A partially clickable mod for the FC3 Planes
  
 
  # INSTALLATION 
