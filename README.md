@@ -1,5 +1,10 @@
 # CLICKABLE-FC3
  A partially clickable mod for the FC3 Planes
+ Supported
+ Su-27
+ J-11A
+ Su-33
+ More to come...
  
 
  # INSTALLATION 
