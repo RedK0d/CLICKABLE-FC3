@@ -1,5 +1,12 @@
 # CLICKABLE-FC3
  A partially clickable mod for the FC3 Planes
+
+ Supported
+ Su-27
+ J-11A
+ Su-33
+ More to come...
+
  
 
  # INSTALLATION 
@@ -22,5 +29,6 @@ Mainpanel now only calls the edm file if get_aircraft_type() returns Su-27 or J-
 
 Added clickables Mirrors.
 
+# 29/01/2022  v0.0.4-alpha
 
-
+Added SU-33 Support

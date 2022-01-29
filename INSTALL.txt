@@ -1,4 +1,3 @@
-
 # CLICKABLE-FC3
 A partially clickable mod for the FC3 Planes
 
