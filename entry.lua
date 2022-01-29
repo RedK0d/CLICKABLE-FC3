@@ -40,7 +40,7 @@ add_plugin_systems('SU-27-CLICKABLE_Module','*',path,
 	--["Su-25"] = {enable_options_key_for_unit = 'Su25_enabled'},
 	--["Su-25T"] = {enable_options_key_for_unit = 'Su25t_enabled'},
 	["Su-27"] = {enable_options_key_for_unit = 'Su27_enabled'},
-	--["Su-33"] = {enable_options_key_for_unit = 'Su33_enabled'},
+	["Su-33"] = {enable_options_key_for_unit = 'Su33_enabled'},
 	
 	
 	
