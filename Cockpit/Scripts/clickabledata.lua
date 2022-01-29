@@ -65,6 +65,6 @@ elements["PNT_AUTO_THRUSTD"]        = default_button("Autothrust - Decrease Velo
 elements["PNT_ASC_REFUELING"]       = default_button("ASC Refueling Mode",                                  devices.CLICKABLE,  device_commands.CLIC_ASC_REFUEL    )  
 elements["PNT_FUEL_PROBE"]          = default_button("Refueling Boom",                                      devices.CLICKABLE,  device_commands.CLIC_RBOOM         )  
 elements["PNT_AFTERBURNER_S"]       = default_button("Special Afterburner Mode",                            devices.CLICKABLE,  device_commands.CLIC_AFTERURN_S    ) 
-
+elements["PNT_REFUELING_LIGHTS"]    = default_button("Aerial Refueling Lights",                             devices.CLICKABLE,  device_commands.CLIC_RLIGHTS       ) 
 
 end

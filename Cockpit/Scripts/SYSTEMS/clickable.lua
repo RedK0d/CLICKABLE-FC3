@@ -218,6 +218,12 @@ function SetCommand(command,value)
         
     end
 
+    if command == device_commands.CLIC_RLIGHTS and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlane_ADF_Test)
+        
+    end
+
+
 
 
 
