@@ -63,6 +63,8 @@ Keys =
     iCommandHUDBrightnessDown       =   747;
     iCommandBrightnessILS           =   156;
     iCommandToggleMirrors           =   1625;
+    iCommandPlaneAUTOnOff           =   63;
+    iCommandPlaneAUTIncrease        =   64;
 
 }   
 
@@ -110,5 +112,7 @@ device_commands =
     CLIC_HUD_COLOR              = counter(),
     CLIC_NAVMODES               = counter(),
     CLIC_MIRROIR                = counter(),
-
+    CLIC_AUTOTHRUST             = counter(),
+    CLIC_AUTOTHRUST_I           = counter(),
+    CLIC_AUTOTHRUST_D           = counter(),
 }

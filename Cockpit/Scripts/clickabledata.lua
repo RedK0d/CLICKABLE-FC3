@@ -3,6 +3,7 @@ dofile(LockOn_Options.script_path.."command_defs.lua")
 dofile(LockOn_Options.script_path.."devices.lua")
 local gettext = require("i_18n")
 _ = gettext.translate
+local  aircraft = get_aircraft_type()
 show_element_boxes = true --connector debug
 --dofile(LockOn_Options.script_path.."sounds.lua")
 --dofile(LockOn_Options.common_script_path..'localizer.lua')
@@ -55,3 +56,11 @@ elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",        
 elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
 elements["PNT_MIRROR_LEFT"]         = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
 elements["PNT_MIRROR_RIGHT"]        = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
+
+--[Su-33] Specifics
+if  aircraft=="Su-33"                       then
+elements["PNT_AUTO_THRUST"]         = default_button("Autothrust",                                          devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST    )                                                                                                                                  
+elements["PNT_AUTO_THRUSTI"]        = default_button("Autothrust - Increase Velocity",                      devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST_I  )                                                                                                                                  
+elements["PNT_AUTO_THRUSTD"]        = default_button("Autothrust - Decrease Velocity",                      devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST_D  )                                                                                                                                  
+
+end

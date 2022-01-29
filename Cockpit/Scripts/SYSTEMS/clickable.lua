@@ -183,6 +183,26 @@ function SetCommand(command,value)
         
     end
 
+    if command == device_commands.CLIC_AUTOTHRUST and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneAUTOnOff)
+        
+    end
+
+    if command == device_commands.CLIC_AUTOTHRUST_I and value == 1 then
+        dispatch_action(0,Keys.iCommandPlaneAUTIncrease,1.0)
+    elseif value == 0 then
+        dispatch_action(0,Keys.iCommandPlaneAUTIncrease,0.0)
+            
+        
+    end
+
+    if command == device_commands.CLIC_AUTOTHRUST_D and value == 1 then
+        dispatch_action(0,Keys.iCommandPlaneAUTIncrease,-1.0)
+    elseif value == 0 then
+        dispatch_action(0,Keys.iCommandPlaneAUTIncrease,0.0)
+        
+    end
+
 
     
 
