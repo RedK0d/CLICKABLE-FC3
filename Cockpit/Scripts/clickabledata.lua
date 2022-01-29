@@ -66,5 +66,6 @@ elements["PNT_ASC_REFUELING"]       = default_button("ASC Refueling Mode",      
 elements["PNT_FUEL_PROBE"]          = default_button("Refueling Boom",                                      devices.CLICKABLE,  device_commands.CLIC_RBOOM         )  
 elements["PNT_AFTERBURNER_S"]       = default_button("Special Afterburner Mode",                            devices.CLICKABLE,  device_commands.CLIC_AFTERURN_S    ) 
 elements["PNT_REFUELING_LIGHTS"]    = default_button("Aerial Refueling Lights",                             devices.CLICKABLE,  device_commands.CLIC_RLIGHTS       ) 
-
+elements["PNT_TAIL_HOOK"]           = default_button("Tail Hook",                                           devices.CLICKABLE,  device_commands.CLIC_TAILHOOK      ) 
+elements["PNT_TAIL_HOOK_EMER"]      = default_button("Emergency Tail Hook",                                 devices.CLICKABLE,  device_commands.CLIC_TAILHOOK      )
 end

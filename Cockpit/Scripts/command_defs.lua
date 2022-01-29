@@ -69,6 +69,7 @@ Keys =
     iCommandPlaneAirRefuel              =   155;
     iCommandPlane_P_51_WarEmergencyPower=   1601;
     iCommandPlane_ADF_Test              =   588;
+    iCommandPlaneHook                   =   69;
 
 
 }   
@@ -124,4 +125,5 @@ device_commands =
     CLIC_RBOOM                  = counter(),
     CLIC_AFTERURN_S             = counter(),
     CLIC_RLIGHTS                = counter(),
+    CLIC_TAILHOOK               = counter(),
 }

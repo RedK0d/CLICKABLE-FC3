@@ -223,6 +223,11 @@ function SetCommand(command,value)
         
     end
 
+    if command == device_commands.CLIC_TAILHOOK and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneHook)
+        
+    end
+
 
 
 
