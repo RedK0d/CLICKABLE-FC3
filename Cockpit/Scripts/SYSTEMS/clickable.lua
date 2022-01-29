@@ -41,7 +41,7 @@ function SetCommand(command,value)
     dispatch_action(nil,Keys.iCommandPlaneHeadLightOnOff)   
     end   
     
-    if command == device_commands.CLIC_DIRECT_CONTROL and value ==1 then
+    if command == device_commands.CLIC_ASC_DC and value ==1 then
         dispatch_action(nil,Keys.iCommandPlaneCobra)   
     end    
     if command == device_commands.CLIC_FUEL_DUMP_ON  then
@@ -202,6 +202,18 @@ function SetCommand(command,value)
         dispatch_action(0,Keys.iCommandPlaneAUTIncrease,0.0)
         
     end
+
+    if command == device_commands.CLIC_ASC_REFUEL and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlane_ADF_Mode_change)
+        
+    end
+
+    if command == device_commands.CLIC_RBOOM and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneAirRefuel)
+        
+    end
+
+
 
 
     

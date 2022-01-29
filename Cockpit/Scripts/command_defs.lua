@@ -65,6 +65,10 @@ Keys =
     iCommandToggleMirrors           =   1625;
     iCommandPlaneAUTOnOff           =   63;
     iCommandPlaneAUTIncrease        =   64;
+    iCommandPlane_ADF_Mode_change   =   583;
+    iCommandPlaneAirRefuel          =   155;
+    
+
 
 }   
 
@@ -76,7 +80,7 @@ device_commands =
     CLIC_FLAPS_UP               = counter(),
     CLIC_FLAPS_DOWN             = counter(),
     CLIC_LANDING_LIGHTS         = counter(),
-    CLIC_DIRECT_CONTROL         = counter(),
+    CLIC_ASC_DC                 = counter(),
     CLIC_FUEL_DUMP_ON           = counter(),
     CLIC_FUEL_DUMP_OFF          = counter(),
     CLIC_AUTO_STOP              = counter(),
@@ -115,4 +119,6 @@ device_commands =
     CLIC_AUTOTHRUST             = counter(),
     CLIC_AUTOTHRUST_I           = counter(),
     CLIC_AUTOTHRUST_D           = counter(),
+    CLIC_ASC_REFUEL             = counter(),
+    CLIC_RBOOM                  = counter(),
 }

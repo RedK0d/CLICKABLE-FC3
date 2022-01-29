@@ -17,12 +17,12 @@ elements = {}
 
 
 
-elements["PNT_FLAPS_UP"]            = default_button("Flaps Up",                        devices.CLICKABLE,  device_commands.CLIC_FLAPS_UP                          )
-elements["PNT_FLAPS_DOWN"]          = default_button("Flaps Landing Position",          devices.CLICKABLE,  device_commands.CLIC_FLAPS_DOWN                        )
-elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",         devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS                    )
-elements["PNT_DIRECT_CONTROL"]      = default_button("ASC Direct Control (Cobra)",      devices.CLICKABLE,  device_commands.CLIC_DIRECT_CONTROL                    )
-elements["PNT_FUEL_DUMP"]           = default_2_position_tumb("Fuel Dump",              devices.CLICKABLE,  device_commands.CLIC_FUEL_DUMP_ON                      )
-elements["PNT_AUTO_RESET"]          = default_button("Autopilot Reset",                 devices.CLICKABLE,  device_commands.CLIC_AUTO_STOP                         )
+elements["PNT_FLAPS_UP"]            = default_button("Flaps Up",                                            devices.CLICKABLE,  device_commands.CLIC_FLAPS_UP      )
+elements["PNT_FLAPS_DOWN"]          = default_button("Flaps Landing Position",                              devices.CLICKABLE,  device_commands.CLIC_FLAPS_DOWN    )
+elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",                             devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS)
+elements["PNT_DIRECT_CONTROL"]      = default_button("ASC Direct Control (Cobra)",                          devices.CLICKABLE,  device_commands.CLIC_ASC_DC        )
+elements["PNT_FUEL_DUMP"]           = default_2_position_tumb("Fuel Dump",                                  devices.CLICKABLE,  device_commands.CLIC_FUEL_DUMP_ON  )
+elements["PNT_AUTO_RESET"]          = default_button("Autopilot Reset",                                     devices.CLICKABLE,  device_commands.CLIC_AUTO_STOP     )
 elements["PNT_AUTO_BARO"]           = default_button("Autopilot - Altitude And Roll Hold",                  devices.CLICKABLE,  device_commands.CLIC_AUTO_BARO     )
 elements["PNT_AUTO_LEVEL"]          = default_button("Autopilot - Transition To Level Flight Control",      devices.CLICKABLE,  device_commands.CLIC_AUTO_LEVEL    )
 elements["PNT_AUTO_NAV"]            = default_button("Autopilot - Route following",                         devices.CLICKABLE,  device_commands.CLIC_AUTO_ROUTE    )
@@ -62,5 +62,8 @@ if  aircraft=="Su-33"                       then
 elements["PNT_AUTO_THRUST"]         = default_button("Autothrust",                                          devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST    )                                                                                                                                  
 elements["PNT_AUTO_THRUSTI"]        = default_button("Autothrust - Increase Velocity",                      devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST_I  )                                                                                                                                  
 elements["PNT_AUTO_THRUSTD"]        = default_button("Autothrust - Decrease Velocity",                      devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST_D  )                                                                                                                                  
+elements["PNT_ASC_REFUELING"]       = default_button("ASC Refueling Mode",                                  devices.CLICKABLE,  device_commands.CLIC_ASC_REFUEL    )  
+elements["PNT_FUEL_PROBE"]          = default_button("Refueling Boom'",                                     devices.CLICKABLE,  device_commands.CLIC_RBOOM         )  
+
 
 end
