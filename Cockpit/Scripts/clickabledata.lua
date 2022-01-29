@@ -68,4 +68,6 @@ elements["PNT_AFTERBURNER_S"]       = default_button("Special Afterburner Mode",
 elements["PNT_REFUELING_LIGHTS"]    = default_button("Aerial Refueling Lights",                             devices.CLICKABLE,  device_commands.CLIC_RLIGHTS       ) 
 elements["PNT_TAIL_HOOK"]           = default_button("Tail Hook",                                           devices.CLICKABLE,  device_commands.CLIC_TAILHOOK      ) 
 elements["PNT_TAIL_HOOK_EMER"]      = default_button("Emergency Tail Hook",                                 devices.CLICKABLE,  device_commands.CLIC_TAILHOOK      )
+elements["PNT_WINGS_F"]             = default_button("Folding Wings",                                       devices.CLICKABLE,  device_commands.CLIC_WINGSF        )
+
 end

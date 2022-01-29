@@ -228,6 +228,11 @@ function SetCommand(command,value)
         
     end
 
+    if command == device_commands.CLIC_WINGSF and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlanePackWing)
+        
+    end
+
 
 
 
