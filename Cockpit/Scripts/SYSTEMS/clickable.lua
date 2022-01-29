@@ -213,6 +213,11 @@ function SetCommand(command,value)
         
     end
 
+    if command == device_commands.CLIC_AFTERURN_S and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlane_P_51_WarEmergencyPower)
+        
+    end
+
 
 
 

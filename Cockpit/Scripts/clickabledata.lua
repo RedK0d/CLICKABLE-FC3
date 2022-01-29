@@ -63,7 +63,8 @@ elements["PNT_AUTO_THRUST"]         = default_button("Autothrust",              
 elements["PNT_AUTO_THRUSTI"]        = default_button("Autothrust - Increase Velocity",                      devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST_I  )                                                                                                                                  
 elements["PNT_AUTO_THRUSTD"]        = default_button("Autothrust - Decrease Velocity",                      devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST_D  )                                                                                                                                  
 elements["PNT_ASC_REFUELING"]       = default_button("ASC Refueling Mode",                                  devices.CLICKABLE,  device_commands.CLIC_ASC_REFUEL    )  
-elements["PNT_FUEL_PROBE"]          = default_button("Refueling Boom'",                                     devices.CLICKABLE,  device_commands.CLIC_RBOOM         )  
+elements["PNT_FUEL_PROBE"]          = default_button("Refueling Boom",                                      devices.CLICKABLE,  device_commands.CLIC_RBOOM         )  
+elements["PNT_AFTERBURNER_S"]       = default_button("Special Afterburner Mode",                            devices.CLICKABLE,  device_commands.CLIC_AFTERURN_S    ) 
 
 
 end
