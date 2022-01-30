@@ -57,6 +57,8 @@ elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",          
 elements["PNT_MIRROR_LEFT"]         = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
 elements["PNT_MIRROR_RIGHT"]        = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )   
 elements["PNT_ENG_INLET"]           = default_button("Engine Inlet Grids Auto/Off",                         devices.CLICKABLE,  device_commands.CLIC_ENG_INLET     )                                                                                                                                 
+elements["PNT_EMERGENCY_BRAKE"]     = default_button("Emergency Baake",                                     devices.CLICKABLE,  device_commands.CLIC_EMER_BRAKE    )                                                                                                                                 
+                                                                                                                             
 
 --[Su-33] Specifics
 if  aircraft=="Su-33"                       then

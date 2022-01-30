@@ -72,6 +72,7 @@ Keys =
     iCommandPlaneHook                   =   69;
     iCommandPlanePackWing               =   70;
     iCommandPlane_HOTAS_ChinaHatForward =   566;
+    iCommandPlaneWheelParkingBrake      =   855;
 
 
 }   
@@ -121,6 +122,7 @@ device_commands =
     CLIC_NAVMODES               = counter(),
     CLIC_MIRROIR                = counter(),
     CLIC_ENG_INLET              = counter(),
+    CLIC_EMER_BRAKE             = counter(),
     CLIC_AUTOTHRUST             = counter(),
     CLIC_AUTOTHRUST_I           = counter(),
     CLIC_AUTOTHRUST_D           = counter(),
