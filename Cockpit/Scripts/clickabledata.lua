@@ -55,7 +55,8 @@ elements["PNT_HUD_COL"]             = default_button("HUD Color",               
 elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
 elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
 elements["PNT_MIRROR_LEFT"]         = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
-elements["PNT_MIRROR_RIGHT"]        = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
+elements["PNT_MIRROR_RIGHT"]        = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )   
+elements["PNT_ENG_INLET"]           = default_button("Engine Inlet Grids Auto/Off",                         devices.CLICKABLE,  device_commands.CLIC_ENG_INLET     )                                                                                                                                 
 
 --[Su-33] Specifics
 if  aircraft=="Su-33"                       then

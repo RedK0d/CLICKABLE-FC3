@@ -71,6 +71,7 @@ Keys =
     iCommandPlane_ADF_Test              =   588;
     iCommandPlaneHook                   =   69;
     iCommandPlanePackWing               =   70;
+    iCommandPlane_HOTAS_ChinaHatForward =   566;
 
 
 }   
@@ -119,6 +120,7 @@ device_commands =
     CLIC_HUD_COLOR              = counter(),
     CLIC_NAVMODES               = counter(),
     CLIC_MIRROIR                = counter(),
+    CLIC_ENG_INLET              = counter(),
     CLIC_AUTOTHRUST             = counter(),
     CLIC_AUTOTHRUST_I           = counter(),
     CLIC_AUTOTHRUST_D           = counter(),
