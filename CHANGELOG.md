@@ -43,5 +43,8 @@ Added for Su/33
 Fixed UI visual bug on Clickable Module Special Options panel
 Added CHANGELOG.md
 Added Patreon Support
+
+# 31/01/2022  v0.1.2-alpha
 Updated Entry.lua to avoid conflicts with other mods
+Please report conflicts by opening an issue on GitHub and uploading the mod's entry.lua file.
 
