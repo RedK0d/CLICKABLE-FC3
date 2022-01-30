@@ -1,23 +1,23 @@
 
-declare_plugin("SU-27-CLICKABLE_Module",
+declare_plugin("CLICKABLE-FC3_Module",
 {
 	dirName		  = current_mod_path,
-	displayName   = "SU-27-CLICKABLE_Module",
-	shortName	  = "SU-27-CLICKABLE_Module",
-	fileMenuName  = "SU-27-CLICKABLE_Module",
+	displayName   = "CLICKABLE-FC3_Module",
+	shortName	  = "CLICKABLE-FC3_Module",
+	fileMenuName  = "CLICKABLE-FC3_Module",
 	state		  = "installed",
 	developerName = "RedK0d",
-	info		  = "SU-27-CLICKABLE_Module",
+	info		  = "CLICKABLE-FC3_Module",
 	
 	load_immediately = true,
 	binaries	 = {},
 	Options =
 	{
 		{
-			name		= _("SU-27-CLICKABLE_Module"),
-            nameId		= "SU-27-CLICKABLE_Module",
+			name		= _("CLICKABLE-FC3_Module"),
+            nameId		= "CLICKABLE-FC3_Module",
             dir			= "Options",
-            CLSID		= "{SU 27 CLICKABLE}"
+            CLSID		= "{FC3 CLICKABLE}"
 		},
 	},
 })
@@ -29,7 +29,7 @@ local path = current_mod_path..'/Cockpit/Scripts/'
 
 
 		
-add_plugin_systems('SU-27-CLICKABLE_Module','*',path,
+add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	{
 	
 	

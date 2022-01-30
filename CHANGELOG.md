@@ -1,24 +1,3 @@
-# CLICKABLE-FC3
- A partially clickable mod for the FC3 Planes
-
- Supported
- Su-27
- J-11A
- Su-33
- More to come...
-
- 
-
- # INSTALLATION 
-Very simple installation.
-Simply unzip the contents of the archive into your "Saved Games\DCS\Mods\tech\" directory.
-Then launch the game.
-You can you can manage the activation of the module in the options.
-
- # DISCORD
-Join us on Discord. 
- https://discord.com/invite/CrExr87dP9
-
 # 26/01/2022  v0.0.1-alpha
 
 Added Edm file containing the connectors.
@@ -58,3 +37,9 @@ Added for Su/33
 -Tail Hook
 -Emergency Tail Hook
 -Folding Wings
+
+# 30/01/2022  v0.1.1-alpha
+
+Fixed UI visual bug on Clickable Module Special Options panel
+Added CHANGELOG.md
+Added Patreon Support
