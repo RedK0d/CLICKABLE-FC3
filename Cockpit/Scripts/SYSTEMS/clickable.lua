@@ -41,7 +41,7 @@ function SetCommand(command,value)
     dispatch_action(nil,Keys.iCommandPlaneHeadLightOnOff)   
     end   
     
-    if command == device_commands.CLIC_DIRECT_CONTROL and value ==1 then
+    if command == device_commands.CLIC_ASC_DC and value ==1 then
         dispatch_action(nil,Keys.iCommandPlaneCobra)   
     end    
     if command == device_commands.CLIC_FUEL_DUMP_ON  then
@@ -182,6 +182,80 @@ function SetCommand(command,value)
         dispatch_action(nil,Keys.iCommandToggleMirrors)
         
     end
+
+    if command == device_commands.CLIC_ENG_INLET and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlane_HOTAS_ChinaHatForward)
+        
+    end
+
+    if command == device_commands.CLIC_EMER_BRAKE and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneWheelParkingBrake)
+        
+    end
+
+    if command == device_commands.CLIC_NOSE_WHEEL and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlane_HOTAS_NoseWheelSteeringButton)
+        
+    end
+
+    if command == device_commands.CLIC_EJECT and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneEject)
+        
+    end
+
+
+    if command == device_commands.CLIC_AUTOTHRUST and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneAUTOnOff)
+        
+    end
+
+    if command == device_commands.CLIC_AUTOTHRUST_I and value == 1 then
+        dispatch_action(0,Keys.iCommandPlaneAUTIncrease,1.0)
+    elseif value == 0 then
+        dispatch_action(0,Keys.iCommandPlaneAUTIncrease,0.0)
+            
+        
+    end
+
+    if command == device_commands.CLIC_AUTOTHRUST_D and value == 1 then
+        dispatch_action(0,Keys.iCommandPlaneAUTIncrease,-1.0)
+    elseif value == 0 then
+        dispatch_action(0,Keys.iCommandPlaneAUTIncrease,0.0)
+        
+    end
+
+    if command == device_commands.CLIC_ASC_REFUEL and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlane_ADF_Mode_change)
+        
+    end
+
+    if command == device_commands.CLIC_RBOOM and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneAirRefuel)
+        
+    end
+
+    if command == device_commands.CLIC_AFTERURN_S and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlane_P_51_WarEmergencyPower)
+        
+    end
+
+    if command == device_commands.CLIC_RLIGHTS and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlane_ADF_Test)
+        
+    end
+
+    if command == device_commands.CLIC_TAILHOOK and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneHook)
+        
+    end
+
+    if command == device_commands.CLIC_WINGSF and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlanePackWing)
+        
+    end
+
+
+
 
 
     

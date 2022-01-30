@@ -3,6 +3,7 @@ dofile(LockOn_Options.script_path.."command_defs.lua")
 dofile(LockOn_Options.script_path.."devices.lua")
 local gettext = require("i_18n")
 _ = gettext.translate
+local  aircraft = get_aircraft_type()
 show_element_boxes = true --connector debug
 --dofile(LockOn_Options.script_path.."sounds.lua")
 --dofile(LockOn_Options.common_script_path..'localizer.lua')
@@ -16,12 +17,12 @@ elements = {}
 
 
 
-elements["PNT_FLAPS_UP"]            = default_button("Flaps Up",                        devices.CLICKABLE,  device_commands.CLIC_FLAPS_UP                          )
-elements["PNT_FLAPS_DOWN"]          = default_button("Flaps Landing Position",          devices.CLICKABLE,  device_commands.CLIC_FLAPS_DOWN                        )
-elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",         devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS                    )
-elements["PNT_DIRECT_CONTROL"]      = default_button("ASC Direct Control (Cobra)",      devices.CLICKABLE,  device_commands.CLIC_DIRECT_CONTROL                    )
-elements["PNT_FUEL_DUMP"]           = default_2_position_tumb("Fuel Dump",              devices.CLICKABLE,  device_commands.CLIC_FUEL_DUMP_ON                      )
-elements["PNT_AUTO_RESET"]          = default_button("Autopilot Reset",                 devices.CLICKABLE,  device_commands.CLIC_AUTO_STOP                         )
+elements["PNT_FLAPS_UP"]            = default_button("Flaps Up",                                            devices.CLICKABLE,  device_commands.CLIC_FLAPS_UP      )
+elements["PNT_FLAPS_DOWN"]          = default_button("Flaps Landing Position",                              devices.CLICKABLE,  device_commands.CLIC_FLAPS_DOWN    )
+elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",                             devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS)
+elements["PNT_DIRECT_CONTROL"]      = default_button("ASC Direct Control (Cobra)",                          devices.CLICKABLE,  device_commands.CLIC_ASC_DC        )
+elements["PNT_FUEL_DUMP"]           = default_2_position_tumb("Fuel Dump",                                  devices.CLICKABLE,  device_commands.CLIC_FUEL_DUMP_ON  )
+elements["PNT_AUTO_RESET"]          = default_button("Autopilot Reset",                                     devices.CLICKABLE,  device_commands.CLIC_AUTO_STOP     )
 elements["PNT_AUTO_BARO"]           = default_button("Autopilot - Altitude And Roll Hold",                  devices.CLICKABLE,  device_commands.CLIC_AUTO_BARO     )
 elements["PNT_AUTO_LEVEL"]          = default_button("Autopilot - Transition To Level Flight Control",      devices.CLICKABLE,  device_commands.CLIC_AUTO_LEVEL    )
 elements["PNT_AUTO_NAV"]            = default_button("Autopilot - Route following",                         devices.CLICKABLE,  device_commands.CLIC_AUTO_ROUTE    )
@@ -54,4 +55,24 @@ elements["PNT_HUD_COL"]             = default_button("HUD Color",               
 elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
 elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
 elements["PNT_MIRROR_LEFT"]         = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
-elements["PNT_MIRROR_RIGHT"]        = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
+elements["PNT_MIRROR_RIGHT"]        = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )   
+elements["PNT_ENG_INLET"]           = default_button("Engine Inlet Grids Auto/Off",                         devices.CLICKABLE,  device_commands.CLIC_ENG_INLET     )                                                                                                                                 
+elements["PNT_EMERGENCY_BRAKE"]     = default_button("Emergency Brake",                                     devices.CLICKABLE,  device_commands.CLIC_EMER_BRAKE    )     
+elements["PNT_NOSE_WHEEL"]          = default_button("Nose Wheel Steering",                                 devices.CLICKABLE,  device_commands.CLIC_NOSE_WHEEL    )     
+elements["PNT_EJECT"]               = default_button("Eject (3 times)",                                     devices.CLICKABLE,  device_commands.CLIC_EJECT         )  
+                                                                                                                             
+
+--[Su-33] Specifics
+if  aircraft=="Su-33"                       then
+elements["PNT_AUTO_THRUST"]         = default_button("Autothrust",                                          devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST    )                                                                                                                                  
+elements["PNT_AUTO_THRUSTI"]        = default_button("Autothrust - Increase Velocity",                      devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST_I  )                                                                                                                                  
+elements["PNT_AUTO_THRUSTD"]        = default_button("Autothrust - Decrease Velocity",                      devices.CLICKABLE,  device_commands.CLIC_AUTOTHRUST_D  )                                                                                                                                  
+elements["PNT_ASC_REFUELING"]       = default_button("ASC Refueling Mode",                                  devices.CLICKABLE,  device_commands.CLIC_ASC_REFUEL    )  
+elements["PNT_FUEL_PROBE"]          = default_button("Refueling Boom",                                      devices.CLICKABLE,  device_commands.CLIC_RBOOM         )  
+elements["PNT_AFTERBURNER_S"]       = default_button("Special Afterburner Mode",                            devices.CLICKABLE,  device_commands.CLIC_AFTERURN_S    ) 
+elements["PNT_REFUELING_LIGHTS"]    = default_button("Aerial Refueling Lights",                             devices.CLICKABLE,  device_commands.CLIC_RLIGHTS       ) 
+elements["PNT_TAIL_HOOK"]           = default_button("Tail Hook",                                           devices.CLICKABLE,  device_commands.CLIC_TAILHOOK      ) 
+elements["PNT_TAIL_HOOK_EMER"]      = default_button("Emergency Tail Hook",                                 devices.CLICKABLE,  device_commands.CLIC_TAILHOOK      )
+elements["PNT_WINGS_F"]             = default_button("Folding Wings",                                       devices.CLICKABLE,  device_commands.CLIC_WINGSF        )
+
+end
