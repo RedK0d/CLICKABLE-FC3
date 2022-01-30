@@ -41,20 +41,20 @@ Added SU-33 Support
 
 Added for Su-27/33
 
-Engine Inlet Grids Auto/Off    
-Emergency Brake
-Nose Wheel Steering
-Eject (3 times)
+-Engine Inlet Grids Auto/Off    
+-Emergency Brake
+-Nose Wheel Steering
+-Eject (3 times)
 
 Added for Su/33
 
-Autothrust
-Autothrust - Increase Velocity
-Autothrust - Decrease Velocity
-ASC Refueling Mode
-Refueling Boom
-Special Afterburner Mode
-Aerial Refueling Lights
-Tail Hook
-Emergency Tail Hook
-Folding Wings
+-Autothrust
+-Autothrust - Increase Velocity
+-Autothrust - Decrease Velocity
+-ASC Refueling Mode
+-Refueling Boom
+-Special Afterburner Mode
+-Aerial Refueling Lights
+-Tail Hook
+-Emergency Tail Hook
+-Folding Wings
