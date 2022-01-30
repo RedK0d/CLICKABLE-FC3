@@ -74,6 +74,7 @@ Keys =
     iCommandPlane_HOTAS_ChinaHatForward =   566;
     iCommandPlaneWheelParkingBrake      =   855;
     iCommandPlane_HOTAS_NoseWheelSteeringButton = 562;
+    iCommandPlaneEject                  =   83;
 
 
 }   
@@ -134,4 +135,5 @@ device_commands =
     CLIC_RLIGHTS                = counter(),
     CLIC_TAILHOOK               = counter(),
     CLIC_WINGSF                 = counter(),
+    CLIC_EJECT                  = counter(),
 }

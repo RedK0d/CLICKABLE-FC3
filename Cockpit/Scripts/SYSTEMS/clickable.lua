@@ -198,6 +198,11 @@ function SetCommand(command,value)
         
     end
 
+    if command == device_commands.CLIC_EJECT and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneEject)
+        
+    end
+
 
     if command == device_commands.CLIC_AUTOTHRUST and value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneAUTOnOff)
