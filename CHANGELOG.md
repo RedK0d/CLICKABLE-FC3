@@ -51,8 +51,9 @@ Please report conflicts by opening an issue on GitHub and uploading the mod's en
 
 # 01/02/2022 v0.1.3-alpha
 
-Fixed interference issue with F-86F Sabre Mod
+Fixed interference issue with F-86F Sabre Module
 Fixed interference issue with UH-60L Mod
+Fixed interference issue with A-10C_2 Module
 
 Su-27/33/J-11A
 
@@ -66,3 +67,4 @@ Added Elapsed Time Clock Start/Stop/Reset"
 Su-33
 
 Added Autopilot - Ground Collision Avoidance
+
