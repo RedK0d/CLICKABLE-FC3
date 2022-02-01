@@ -178,6 +178,12 @@ function SetCommand(command,value)
         dispatch_action(nil,Keys.iCommandBrightnessILS)
         
     end
+
+    if command == device_commands.CLIC_HUD_BRT and value >0 then
+        dispatch_action(nil,Keys.iCommandHUDBrightnessUp)
+    else
+        dispatch_action(nil,Keys.iCommandHUDBrightnessDown)  
+    end
     if command == device_commands.CLIC_MIRROIR and value == 1 then
         dispatch_action(nil,Keys.iCommandToggleMirrors)
         
@@ -203,6 +209,45 @@ function SetCommand(command,value)
         
     end
 
+    if command == device_commands.CLIC_RWR_MODE and value == 1 then
+        dispatch_action(nil,Keys.iCommandChangeRWRMode)
+        
+    end
+
+    if command == device_commands.CLIC_RWR_SOUND and value >0 then
+        dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeUp)
+    else
+        dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeDown)  
+    end
+
+    if command == device_commands.CLIC_WARNING_RST and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneResetMasterWarning)
+        
+    end
+
+    if command == device_commands.CLIC_DSP_ZOOMIN and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneZoomIn)
+        
+    end
+    if command == device_commands.CLIC_DSP_ZOOMOUT and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneZoomOut)
+        
+    end
+    if command == device_commands.CLIC_CLOCK_F and value == 1 then
+        dispatch_action(nil,Keys.iCommandFlightClockReset)
+        
+    end
+    if command == device_commands.CLIC_CLOCK_E and value == 1 then
+        dispatch_action(nil,Keys.iCommandClockElapsedTimeReset)
+        
+    end
+
+--[Su-33] Specifics
+
+    if command == device_commands.CLIC_AUTO_GCA and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneSAUHRadio)
+        
+    end
 
     if command == device_commands.CLIC_AUTOTHRUST and value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneAUTOnOff)
