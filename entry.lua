@@ -101,6 +101,7 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["Su-30MKK"]			= {enable_options_key_for_unit='dontuseit'},
 	["J-16"]				= {enable_options_key_for_unit='dontuseit'},
 	["UH-60L"]				= {enable_options_key_for_unit='dontuseit'},
+	["F-86F Sabre"]			= {enable_options_key_for_unit='dontuseit'},
 
 	
 	}
