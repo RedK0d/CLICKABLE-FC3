@@ -45,6 +45,24 @@ Added CHANGELOG.md
 Added Patreon Support
 
 # 31/01/2022  v0.1.2-alpha
+
 Updated Entry.lua to avoid conflicts with other mods
 Please report conflicts by opening an issue on GitHub and uploading the mod's entry.lua file.
 
+# 01/02/2022 v0.1.3-alpha
+
+Fixed interference issue with F-86F Sabre Mod
+Fixed interference issue with UH-60L Mod
+
+Su-27/33/J-11A
+
+Added RWR/SPO Mode Select 
+Added RWR/SPO Sound Signals Volume Up/Down 
+Added Audible Warning Reset 
+Added Display Zoom In & Display Zoom Out 
+Added Flight Clock Start/Stop/Reset 
+Added Elapsed Time Clock Start/Stop/Reset" 
+
+Su-33
+
+Added Autopilot - Ground Collision Avoidance

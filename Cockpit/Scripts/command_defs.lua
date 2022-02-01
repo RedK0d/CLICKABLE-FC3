@@ -75,7 +75,13 @@ Keys =
     iCommandPlaneWheelParkingBrake      =   855;
     iCommandPlane_HOTAS_NoseWheelSteeringButton = 562;
     iCommandPlaneEject                  =   83;
-
+    iCommandChangeRWRMode               =   286;
+    iCommandPlaneThreatWarnSoundVolumeDown  =   409;
+    iCommandPlaneThreatWarnSoundVolumeUp    =   410;
+    iCommandPlaneResetMasterWarning     =   144;
+    iCommandPlaneSAUHRadio              =   60;
+    iCommandFlightClockReset            =   288;
+    iCommandClockElapsedTimeReset       =   1629;
 
 }   
 
@@ -94,6 +100,7 @@ device_commands =
     CLIC_AUTO_BARO              = counter(),
     CLIC_AUTO_LEVEL             = counter(),
     CLIC_AUTO_ROUTE             = counter(),
+    CLIC_AUTO_GCA               = counter(),
     CLIC_HUD_REPEATER           = counter(),
     CLIC_POWER                  = counter(),
     CLIC_ENG_L_START            = counter(),
@@ -121,6 +128,7 @@ device_commands =
     CLIC_MODE_BORE              = counter(),
     CLIC_MODE_HMD               = counter(),
     CLIC_HUD_COLOR              = counter(),
+    CLIC_HUD_BRT                = counter(),
     CLIC_NAVMODES               = counter(),
     CLIC_MIRROIR                = counter(),
     CLIC_ENG_INLET              = counter(),
@@ -136,4 +144,12 @@ device_commands =
     CLIC_TAILHOOK               = counter(),
     CLIC_WINGSF                 = counter(),
     CLIC_EJECT                  = counter(),
+    CLIC_RWR_MODE               = counter(),
+    CLIC_RWR_SOUND              = counter(),
+    CLIC_WARNING_RST            = counter(),
+    CLIC_DSP_ZOOMIN             = counter(),
+    CLIC_DSP_ZOOMOUT            = counter(),
+    CLIC_CLOCK_F                = counter(),
+    CLIC_CLOCK_E                = counter(),
+
 }
