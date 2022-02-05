@@ -5,15 +5,15 @@ end
 
 Keys =
 {
-    iCommandSensorReset	                =   1635;
-    iCommandPlaneRadarChangeMode        =	285;
-    iCommandPlaneRadarCenter	        =   92;
-    iCommandPlaneChangeRadarPRF	        =   394;
-    iCommandPlaneEOSOnOff	            =   87;
-    iCommandPlaneRadarLeft	            =   88;
-    iCommandPlaneRadarRight	            =   89;
-    iCommandPlaneRadarUp	            =   90;
-    iCommandPlaneRadarDown	            =   91;
+    iCommandSensorReset	                        =   1635;
+    iCommandPlaneRadarChangeMode                =	285;
+    iCommandPlaneRadarCenter	                =   92;
+    iCommandPlaneChangeRadarPRF	                =   394;
+    iCommandPlaneEOSOnOff	                    =   87;
+    iCommandPlaneRadarLeft	                    =   88;
+    iCommandPlaneRadarRight	                    =   89;
+    iCommandPlaneRadarUp	                    =   90;
+    iCommandPlaneRadarDown	                    =   91;
     iCommandPlaneRadarStop	            =   235;
     iCommandSelecterLeft                =   139;
     iCommandSelecterRight               =   140;
@@ -82,6 +82,12 @@ Keys =
     iCommandPlaneSAUHRadio              =   60;
     iCommandFlightClockReset            =   288;
     iCommandClockElapsedTimeReset       =   1629;
+    iCommandCockpitClickModeOnOff       =   363;
+    iCommandPlaneStabHrad               =   390;
+    iCommandPlaneStabTangBank           =   386;
+    iCommandAltimeterPressureIncrease   =   316;
+    iCommandAltimeterPressureDecrease   =   317;
+    iCommandAltimeterPressureStop       =   318;
 
 }   
 
@@ -100,6 +106,7 @@ device_commands =
     CLIC_AUTO_BARO              = counter(),
     CLIC_AUTO_LEVEL             = counter(),
     CLIC_AUTO_ROUTE             = counter(),
+    CLIC_AUTO_RADAR             = counter(),
     CLIC_AUTO_GCA               = counter(),
     CLIC_HUD_REPEATER           = counter(),
     CLIC_POWER                  = counter(),
@@ -151,5 +158,6 @@ device_commands =
     CLIC_DSP_ZOOMOUT            = counter(),
     CLIC_CLOCK_F                = counter(),
     CLIC_CLOCK_E                = counter(),
+    CLIC_ALTIMETER              = counter(),
 
 }

@@ -68,3 +68,19 @@ Su-33
 
 Added Autopilot - Ground Collision Avoidance
 
+# 05/02/2022 v0.1.4-alpha
+
+Fixed issues
+    .Interference issue with Su-25T Module
+    .Interference issue with TF-51D Module
+Su-27/33/J-11A
+    .AP Auto button should be Attitude Hold #21 
+    ."Toggle Mirrors" action still appears when cockpit is open #24 
+        -Reduced the number of Mirror connectors to one, and lowered the position a bit. 
+    . Scroll down knobs fails #23 
+        -The scrollUp and scrollDown actions now work correctly. 
+
+Enhancements
+Su-27/33/J-11A
+    .The user no longer has to type LAlt+C to enable interactions at startup.
+    .Added Altimeter Pressure Increase/Decrease

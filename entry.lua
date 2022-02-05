@@ -44,6 +44,7 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["A-10C"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["A-10C II"]			= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["Su-25"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
+	["Su-25T"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["Su-25A"] 				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["MiG-29A"]				= {enable_options_key_for_unit='dontuseit'},
 	["MiG-29G"]				= {enable_options_key_for_unit='dontuseit'},
@@ -103,7 +104,7 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["UH-60L"]				= {enable_options_key_for_unit='dontuseit'},
 	["F-86F Sabre"]			= {enable_options_key_for_unit='dontuseit'},
 	["A-10C_2"]				= {enable_options_key_for_unit='dontuseit'},
-	
+	["TF-51D"]				= {enable_options_key_for_unit='dontuseit'},
 	
 	}
 )
