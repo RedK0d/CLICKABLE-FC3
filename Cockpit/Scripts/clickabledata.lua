@@ -5,11 +5,7 @@ local gettext = require("i_18n")
 _ = gettext.translate
 local  aircraft = get_aircraft_type()
 show_element_boxes = true --connector debug
---dofile(LockOn_Options.script_path.."sounds.lua")
---dofile(LockOn_Options.common_script_path..'localizer.lua')
 
--- local gettext = require("i_18n")
--- _ = gettext.translate
 
 
 
@@ -24,6 +20,7 @@ elements["PNT_DIRECT_CONTROL"]      = default_button("ASC Direct Control (Cobra)
 elements["PNT_FUEL_DUMP"]           = default_2_position_tumb("Fuel Dump",                                  devices.CLICKABLE,  device_commands.CLIC_FUEL_DUMP_ON  )
 elements["PNT_AUTO_RESET"]          = default_button("Autopilot Reset",                                     devices.CLICKABLE,  device_commands.CLIC_AUTO_STOP     )
 elements["PNT_AUTO_BARO"]           = default_button("Autopilot - Altitude And Roll Hold",                  devices.CLICKABLE,  device_commands.CLIC_AUTO_BARO     )
+elements["PNT_AUTO_RADAR"]          = default_button("Autopilot - Radar Altitude Hold",                     devices.CLICKABLE,  device_commands.CLIC_AUTO_RADAR    )
 elements["PNT_AUTO_LEVEL"]          = default_button("Autopilot - Transition To Level Flight Control",      devices.CLICKABLE,  device_commands.CLIC_AUTO_LEVEL    )
 elements["PNT_AUTO_NAV"]            = default_button("Autopilot - Route following",                         devices.CLICKABLE,  device_commands.CLIC_AUTO_ROUTE    )
 elements["PNT_HUD_REP"]             = default_button("HDD, HUD Repeater Mode On/Off",                       devices.CLICKABLE,  device_commands.CLIC_HUD_REPEATER  )
@@ -35,9 +32,11 @@ elements["PNT_ENG_R"]               = default_button("Engine Right Start",      
 elements["PNT_ENG_LO"]              = default_button("Engine Left Stop",                                    devices.CLICKABLE,  device_commands.CLIC_ENG_L_STOP    )
 elements["PNT_ENG_RO"]              = default_button("Engine Right Stop",                                   devices.CLICKABLE,  device_commands.CLIC_ENG_R_STOP    )
 elements["PNT_HUD_FILTER"]          = default_button("HUD Color Filter On/Off",                             devices.CLICKABLE,  device_commands.CLIC_HUD_FILTER    )
-elements["PNT_HUD_BRT"]             = default_axis("HUD Brightness Up/Down",                                devices.CLICKABLE,  device_commands.CLIC_HUD_BRT,nil, 0, 0.1)
+elements["PNT_HUD_BRT"]             = default_axis_limited("HUD Brightness Up/Down",                        devices.CLICKABLE,  device_commands.CLIC_HUD_BRT,nil, 0, 1,true,true)
 elements["PNT_GEAR"]                = default_button("Landing Gear Up/Down",                                devices.CLICKABLE,  device_commands.CLIC_GEAR          )  
 elements["PNT_CANOPY"]              = default_button("Canopy Open/Close",                                   devices.CLICKABLE,  device_commands.CLIC_CANOPY        )  
+                                                                                                                                   
+
 elements["PNT_NAVLIGHT"]            = default_button("Navigation lights",                                   devices.CLICKABLE,  device_commands.CLIC_NAVLIGHTS     )  
 elements["PNT_LIGHT"]               = default_button("Illumination Cockpit",                                devices.CLICKABLE,  device_commands.CLIC_COCKPITLIGHT  )  
 elements["PNT_JETTINSON"]           = default_button("Weapons Jettison",                                    devices.CLICKABLE,  device_commands.CLIC_JETTINSON     )  
@@ -53,22 +52,22 @@ elements["PNT_MODE_VS"]             = default_button("Close Air Combat Vertical 
 elements["PNT_MODE_OPT"]            = default_button("Close Air Combat Bore Mode",                          devices.CLICKABLE,  device_commands.CLIC_MODE_BORE     )                         
 elements["PNT_MODE_HMT"]            = default_button("Close Air Combat HMD Helmet Mode",                    devices.CLICKABLE,  device_commands.CLIC_MODE_HMD      )   
 elements["PNT_HUD_COL"]             = default_button("HUD Color",                                           devices.CLICKABLE,  device_commands.CLIC_HUD_COLOR     )                                                                                                                                   
-elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
-elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
-elements["PNT_MIRROR_LEFT"]         = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )                                                                                                                                  
-elements["PNT_MIRROR_RIGHT"]        = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )   
+elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )
+elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )
 elements["PNT_ENG_INLET"]           = default_button("Engine Inlet Grids Auto/Off",                         devices.CLICKABLE,  device_commands.CLIC_ENG_INLET     )                                                                                                                                 
 elements["PNT_EMERGENCY_BRAKE"]     = default_button("Emergency Brake",                                     devices.CLICKABLE,  device_commands.CLIC_EMER_BRAKE    )     
 elements["PNT_NOSE_WHEEL"]          = default_button("Nose Wheel Steering",                                 devices.CLICKABLE,  device_commands.CLIC_NOSE_WHEEL    )     
 elements["PNT_EJECT"]               = default_button("Eject (3 times)",                                     devices.CLICKABLE,  device_commands.CLIC_EJECT         )  
 elements["PNT_RWR_MODE"]            = default_button("RWR/SPO Mode Select",                                 devices.CLICKABLE,  device_commands.CLIC_RWR_MODE      )  
-elements["PNT_RWR_SOUND"]           = default_axis("RWR/SPO Sound Signals Volume Up/Down",			        devices.CLICKABLE,  device_commands.CLIC_RWR_SOUND,nil, 1, 0.1)
-elements["PNT_RWR_SOUND_BIS"]       = default_axis("RWR/SPO Sound Signals Volume Up/Down",			        devices.CLICKABLE,  device_commands.CLIC_RWR_SOUND,nil, 1, 0.1)
+elements["PNT_RWR_SOUND"]           = default_axis_limited("RWR/SPO Sound Signals Volume Up/Down",			        devices.CLICKABLE,  device_commands.CLIC_RWR_SOUND,nil, 0, 1,true,true)
+elements["PNT_RWR_SOUND_BIS"]       = default_axis_limited("RWR/SPO Sound Signals Volume Up/Down",			        devices.CLICKABLE,  device_commands.CLIC_RWR_SOUND,nil, 0, 1,true,true)
 elements["PNT_WARNING_RST"]         = default_button("Audible Warning Reset",			                    devices.CLICKABLE,  device_commands.CLIC_WARNING_RST   )  
 elements["PNT_DSP_ZOOMIN"]          = default_button("Display Zoom In",			                            devices.CLICKABLE,  device_commands.CLIC_DSP_ZOOMIN    )  
 elements["PNT_DSP_ZOOMOUT"]         = default_button("Display Zoom Out",		                            devices.CLICKABLE,  device_commands.CLIC_DSP_ZOOMOUT   )  
 elements["PNT_CLOCK_F"]             = default_button("Flight Clock Start/Stop/Reset",		                devices.CLICKABLE,  device_commands.CLIC_CLOCK_F       )  
 elements["PNT_CLOCK_E"]             = default_button("Elapsed Time Clock Start/Stop/Reset",		            devices.CLICKABLE,  device_commands.CLIC_CLOCK_E       )  
+elements["PNT_ALTIMETER"]           = default_axis_limited("Altimeter Pressure Increase/Decrease",		    devices.CLICKABLE,  device_commands.CLIC_ALTIMETER,nil, 0, 1,true,true)
+
 
                                                                                                                              
 
@@ -87,3 +86,4 @@ elements["PNT_TAIL_HOOK_EMER"]      = default_button("Emergency Tail Hook",     
 elements["PNT_WINGS_F"]             = default_button("Folding Wings",                                       devices.CLICKABLE,  device_commands.CLIC_WINGSF        )
 
 end
+

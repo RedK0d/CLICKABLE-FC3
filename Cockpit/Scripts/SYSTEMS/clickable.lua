@@ -8,12 +8,14 @@ dofile(LockOn_Options.script_path.."dump.lua")
 update_time_step = 0.02 --update will be called 50 times per second
 make_default_activity(update_time_step) 
 sensor_data = get_base_data()
-local dev 	    = GetSelf()
+local dev 	    =   GetSelf()
+
 function post_initialize()
+    dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
+
 	local birth = LockOn_Options.init_conditions.birth_place
 
     if birth=="GROUND_HOT" or birth=="AIR_HOT" then
-        
     elseif birth=="GROUND_COLD" then
     end
   
@@ -55,10 +57,14 @@ function SetCommand(command,value)
     end         
     if command == device_commands.CLIC_AUTO_BARO and value ==1 then
     dispatch_action(nil,Keys.iCommandPlaneStabHbarBank)
-    end         
+    end  
+    
+    if command == device_commands.CLIC_AUTO_RADAR and value ==1 then
+        dispatch_action(nil,Keys.iCommandPlaneStabHrad)
+        end  
              
     if command == device_commands.CLIC_AUTO_LEVEL and value ==1 then
-        dispatch_action(nil,Keys.iCommandPlaneStabHorizon) 
+        dispatch_action(nil,Keys.iCommandPlaneStabTangBank) 
     end      
     if command == device_commands.CLIC_AUTO_ROUTE  and value ==1 then
         dispatch_action(nil,Keys.iCommandPlaneRouteAutopilot) 
@@ -181,8 +187,19 @@ function SetCommand(command,value)
 
     if command == device_commands.CLIC_HUD_BRT and value >0 then
         dispatch_action(nil,Keys.iCommandHUDBrightnessUp)
-    else
+        dispatch_action(nil,Keys.iCommandHUDBrightnessUp)
+        dispatch_action(nil,Keys.iCommandHUDBrightnessUp)
+        dispatch_action(nil,Keys.iCommandHUDBrightnessUp)
+
+
+
+    elseif  value <0 then
         dispatch_action(nil,Keys.iCommandHUDBrightnessDown)  
+        dispatch_action(nil,Keys.iCommandHUDBrightnessDown)
+        dispatch_action(nil,Keys.iCommandHUDBrightnessDown)  
+        dispatch_action(nil,Keys.iCommandHUDBrightnessDown)  
+
+
     end
     if command == device_commands.CLIC_MIRROIR and value == 1 then
         dispatch_action(nil,Keys.iCommandToggleMirrors)
@@ -216,7 +233,9 @@ function SetCommand(command,value)
 
     if command == device_commands.CLIC_RWR_SOUND and value >0 then
         dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeUp)
-    else
+        dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeUp)
+    elseif  value <0 then
+        dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeDown) 
         dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeDown)  
     end
 
@@ -241,6 +260,16 @@ function SetCommand(command,value)
         dispatch_action(nil,Keys.iCommandClockElapsedTimeReset)
         
     end
+    if command == device_commands.CLIC_ALTIMETER and value >0 then
+        dispatch_action(nil,Keys.iCommandAltimeterPressureIncrease)
+        dispatch_action(nil,Keys.iCommandAltimeterPressureIncrease)
+        dispatch_action(nil,Keys.iCommandAltimeterPressureIncrease)
+    elseif  value <0 then
+        dispatch_action(nil,Keys.iCommandAltimeterPressureDecrease) 
+        dispatch_action(nil,Keys.iCommandAltimeterPressureDecrease) 
+        dispatch_action(nil,Keys.iCommandAltimeterPressureDecrease) 
+    end
+
 
 --[Su-33] Specifics
 
@@ -314,8 +343,8 @@ end
 	
 
 function update()
-	end
-	
+
+end
 need_to_be_closed = false -- close lua state after initialization
 
 
