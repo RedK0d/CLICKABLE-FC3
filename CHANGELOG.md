@@ -84,3 +84,42 @@ Enhancements
 Su-27/33/J-11A
     .The user no longer has to type LAlt+C to enable interactions at startup.
     .Added Altimeter Pressure Increase/Decrease
+
+# 09/02/2022 v0.1.5-alpha
+Fixed issues
+    .Interference issue with Yak-52 Module
+    .Interference issue with MOSQUITOFBMKVI Module
+    .Interference issue with Mi-8MT Module
+Enhancements
+Added SU-25T Support
+    .Added Altimeter Pressure Increase/Decrease
+    .Added Autopilot - Attitude Hold
+    .Added Autopilot - Altitude And Roll Hold
+    .Added Autopilot - Transition To Level Flight Control
+    .Added Autopilot - Route following
+    .Added Autopilot - Radar Altitude Hold
+    .Added Canopy Open/Close
+    .Added Flight Clock Start/Stop/Reset
+    .Added Elapsed Time Clock Start/Stop/Reset
+    .Added Eject (3 times)
+    .Added Emergency Brake
+    .Added Engine Left Start
+    .Added Engine Right Start
+    .Added Engine Left Stop
+    .Added Engine Right Stop
+    .Added Landing Gear Up/Down
+    .Added HUD Brightness Up/Down
+    .Added HUD Color
+    .Added HUD Color Filter On/Off
+    .Added Weapons Jettison
+    .Added Emergency Jettison
+    .Added Fuel Tanks Jettison
+    .Added Navigation lights
+    .Added Navigation Modes
+    .Added Nose Wheel Steering
+    .Added Electric Power Switch
+    .Added RWR/SPO Mode Select
+    .Added RWR/SPO Sound Signals Volume Up/Down
+    .Added Audible Warning Reset
+    .Added Flaps Up/Down
+    .Added Flaps Landing Position
