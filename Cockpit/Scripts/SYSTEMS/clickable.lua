@@ -9,8 +9,11 @@ update_time_step = 0.02 --update will be called 50 times per second
 make_default_activity(update_time_step) 
 sensor_data = get_base_data()
 local dev 	    =   GetSelf()
+local aircraft = get_aircraft_type()
 
 function post_initialize()
+    --print_message_to_user(aircraft)
+
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
 
 	local birth = LockOn_Options.init_conditions.birth_place
@@ -32,11 +35,14 @@ end
 
 function SetCommand(command,value)
 
+    if command == device_commands.CLIC_FLAPS_MULTI and  value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneFlaps)
+    end 
     if command == device_commands.CLIC_FLAPS_UP then
         dispatch_action(nil,Keys.iCommandPlaneFlapsOff)    
     end 
              
-    if command == device_commands.CLIC_FLAPS_DOWN then
+    if command == device_commands.CLIC_FLAPS_DOWN or command == device_commands.CLIC_FLAPS_LAND then
     dispatch_action(nil,Keys.iCommandPlaneFlapsOn)    
     end         
     if command == device_commands.CLIC_LANDING_LIGHTS and value ==1 then
@@ -64,11 +70,14 @@ function SetCommand(command,value)
         end  
              
     if command == device_commands.CLIC_AUTO_LEVEL and value ==1 then
-        dispatch_action(nil,Keys.iCommandPlaneStabTangBank) 
+        dispatch_action(nil,Keys.iCommandPlaneStabHorizon) 
     end      
     if command == device_commands.CLIC_AUTO_ROUTE  and value ==1 then
         dispatch_action(nil,Keys.iCommandPlaneRouteAutopilot) 
-    end        
+    end  
+    if command == device_commands.CLIC_AUTO_ALT  and value ==1 then
+        dispatch_action(nil,Keys.iCommandPlaneStabTangBank) 
+    end      
     if command == device_commands.CLIC_HUD_REPEATER and value ==1 then
         dispatch_action(nil,Keys.iCommandPlaneRightMFD_OSB1) 
     end     
@@ -109,7 +118,10 @@ function SetCommand(command,value)
     end  
     if command == device_commands.CLIC_COCKPITLIGHT   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneCockpitIllumination) 
-    end  
+    end 
+    if command == device_commands.CLIC_JETTINSON_TANK   and value ==1 then  
+        dispatch_action(nil,Keys.iCommandPlaneJettisonFuelTanks) 
+    end 
     if command == device_commands.CLIC_JETTINSON   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneJettisonWeapons) 
     end
@@ -193,7 +205,7 @@ function SetCommand(command,value)
 
 
 
-    elseif  value <0 then
+    elseif command == device_commands.CLIC_HUD_BRT and  value <0 then
         dispatch_action(nil,Keys.iCommandHUDBrightnessDown)  
         dispatch_action(nil,Keys.iCommandHUDBrightnessDown)
         dispatch_action(nil,Keys.iCommandHUDBrightnessDown)  
@@ -234,7 +246,7 @@ function SetCommand(command,value)
     if command == device_commands.CLIC_RWR_SOUND and value >0 then
         dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeUp)
         dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeUp)
-    elseif  value <0 then
+    elseif command == device_commands.CLIC_RWR_SOUND and  value <0 then
         dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeDown) 
         dispatch_action(nil,Keys.iCommandPlaneThreatWarnSoundVolumeDown)  
     end
@@ -264,7 +276,7 @@ function SetCommand(command,value)
         dispatch_action(nil,Keys.iCommandAltimeterPressureIncrease)
         dispatch_action(nil,Keys.iCommandAltimeterPressureIncrease)
         dispatch_action(nil,Keys.iCommandAltimeterPressureIncrease)
-    elseif  value <0 then
+    elseif command == device_commands.CLIC_ALTIMETER and  value <0 then
         dispatch_action(nil,Keys.iCommandAltimeterPressureDecrease) 
         dispatch_action(nil,Keys.iCommandAltimeterPressureDecrease) 
         dispatch_action(nil,Keys.iCommandAltimeterPressureDecrease) 

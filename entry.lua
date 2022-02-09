@@ -37,6 +37,7 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["J-11A"] 				= {enable_options_key_for_unit = 'J11a_enabled'},
 	["Su-27"] 				= {enable_options_key_for_unit = 'Su27_enabled'},
 	["Su-33"] 				= {enable_options_key_for_unit = 'Su33_enabled'},
+	["Su-25T"] 				= {enable_options_key_for_unit = 'Su25t_enabled'},
 	
 	--Not yet implemented
 	["F-15C"]				= {enable_options_key_for_unit='dontuseit'},
@@ -44,20 +45,23 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["A-10C"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["A-10C II"]			= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["Su-25"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
-	["Su-25T"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["Su-25A"] 				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["MiG-29A"]				= {enable_options_key_for_unit='dontuseit'},
 	["MiG-29G"]				= {enable_options_key_for_unit='dontuseit'},
 	["MiG-29S"]				= {enable_options_key_for_unit='dontuseit'},
 
 	--Excluded, list to be enlarged to avoid conflicts 	
+	["Mi-8MT"]				= {enable_options_key_for_unit='dontuseit'},
+	["F-14"]				= {enable_options_key_for_unit='dontuseit'},
+	["F-14A-135-GR"]		= {enable_options_key_for_unit='dontuseit'},
+	["Yak-52"]				= {enable_options_key_for_unit='dontuseit'},
 	["Bf 109 K-4"]			= {enable_options_key_for_unit='dontuseit'},
 	["Christen Eagle II"]	= {enable_options_key_for_unit='dontuseit'},
 	["Fw 190 A-8"]			= {enable_options_key_for_unit='dontuseit'},
 	["Fw 190 D-9"]			= {enable_options_key_for_unit='dontuseit'},
 	["MiG-19P"]				= {enable_options_key_for_unit='dontuseit'},
 	["MiG-21Bis"]			= {enable_options_key_for_unit='dontuseit'},
-	["Mosquito FB Mk. VI"]	= {enable_options_key_for_unit='dontuseit'},
+	["MosquitoFBMkVI"]		= {enable_options_key_for_unit='dontuseit'},
 	["P-47D-30"]			= {enable_options_key_for_unit='dontuseit'},
 	["SA342"]				= {enable_options_key_for_unit='dontuseit'},
 	["Spitfire LF Mk. IX"]	= {enable_options_key_for_unit='dontuseit'},
@@ -70,7 +74,6 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["C-101"]				= {enable_options_key_for_unit='dontuseit'},
 	["F-5E"]				= {enable_options_key_for_unit='dontuseit'},
 	["F-86F"]				= {enable_options_key_for_unit='dontuseit'},
-	["F-14A"]				= {enable_options_key_for_unit='dontuseit'},
 	["F-14B"]				= {enable_options_key_for_unit='dontuseit'},
 	["F/A-18C"]				= {enable_options_key_for_unit='dontuseit'},
 	["FW-190D9"]			= {enable_options_key_for_unit='dontuseit'},

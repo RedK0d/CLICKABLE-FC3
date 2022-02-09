@@ -28,7 +28,7 @@ return {
 		--Mig29g_enabled = DbOption.new():setValue(true):checkbox(),
 		--Mig29s_enabled = DbOption.new():setValue(true):checkbox(),
 		--Su25_enabled = DbOption.new():setValue(true):checkbox(),
-		--Su25t_enabled = DbOption.new():setValue(true):checkbox(),
+		Su25t_enabled = DbOption.new():setValue(true):checkbox(),
 		Su27_enabled = DbOption.new():setValue(true):checkbox(),
 		Su33_enabled = DbOption.new():setValue(true):checkbox(),
 		}
