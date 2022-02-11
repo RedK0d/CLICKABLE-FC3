@@ -123,3 +123,23 @@ Added SU-25T Support
     .Added Audible Warning Reset
     .Added Flaps Up/Down
     .Added Flaps Landing Position
+
+# 11/02/2022 v0.1.6-alpha
+
+Fixed issues
+    .Interference issue with F-5E-3 Module
+    .Interference issue with AV8BNA Module
+    .Interference issue with Spitfire LF Mk. IX Module
+
+SU-25T
+    . Solved Su-25T Possible bug between Attitude Hold Autopilot and Auto pilot Reset #32 
+Enhancements
+SU-25T 
+    .Moved the cannopy connector
+    .Added ECM
+    .Added IR Jamming
+    .Added Ripple Interval Increase/Decrease.
+    .Added Ripple Quantity Select/SPPU select
+    .Added Cut Of Burst select
+
+
