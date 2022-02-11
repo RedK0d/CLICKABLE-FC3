@@ -90,6 +90,13 @@ Keys =
     iCommandAltimeterPressureIncrease   =   316;
     iCommandAltimeterPressureDecrease   =   317;
     iCommandAltimeterPressureStop       =   318;
+    iCommandActiveIRJamming	            =   391;
+    iCommandChangeRippleInterval	    =   282;
+    iCommandChangeRippleIntervalDown	=   308;
+    iCommandChangeRippleQuantity	    =   281;
+    iCommandChangeGunRateOfFire         =   280;
+
+
 
 }   
 
@@ -121,6 +128,7 @@ device_commands =
     CLIC_ENG_R_STOP             = counter(),
     CLIC_CTM                    = counter(),
     CLIC_JAM                    = counter(),
+    CLIC_JAM_IR                 = counter(),
     CLIC_HUD_FILTER             = counter(),
     CLIC_GEAR                   = counter(),
     CLIC_CANOPY                 = counter(),
@@ -165,5 +173,7 @@ device_commands =
     CLIC_CLOCK_F                = counter(),
     CLIC_CLOCK_E                = counter(),
     CLIC_ALTIMETER              = counter(),
-
+    CLIC_RIPPLE_INT             = counter(),
+    CLIC_RIPPLE_QT              = counter(),   
+    CLIC_CUTBURST               = counter(),
 }

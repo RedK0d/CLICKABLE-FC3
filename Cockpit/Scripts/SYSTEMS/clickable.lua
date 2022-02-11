@@ -12,7 +12,8 @@ local dev 	    =   GetSelf()
 local aircraft = get_aircraft_type()
 
 function post_initialize()
-    --print_message_to_user(aircraft)
+    print_message_to_user("If you see a Su-25T cockpit appear where it shouldn't, contact me on discord giving me the exact information displayed below.",10)
+    print_message_to_user(aircraft,10)
 
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
 
@@ -34,7 +35,7 @@ end
 
 
 function SetCommand(command,value)
-
+    
     if command == device_commands.CLIC_FLAPS_MULTI and  value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneFlaps)
     end 
@@ -102,7 +103,12 @@ function SetCommand(command,value)
     end    
     if command == device_commands.CLIC_JAM and value ==1 then 
         dispatch_action(nil,Keys.iCommandActiveJamming) 
-    end    
+    end
+    if command == device_commands.CLIC_JAM_IR and value ==1 then 
+        dispatch_action(nil,Keys.iCommandActiveIRJamming) 
+    end  
+
+
     if command == device_commands.CLIC_HUD_FILTER  and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneHUDFilterOnOff) 
     end 
@@ -337,6 +343,26 @@ function SetCommand(command,value)
 
     if command == device_commands.CLIC_WINGSF and value == 1 then
         dispatch_action(nil,Keys.iCommandPlanePackWing)
+        
+    end
+
+    if command == device_commands.CLIC_RIPPLE_INT and value >0 then
+        dispatch_action(nil,Keys.iCommandChangeRippleInterval)
+
+
+
+    elseif command == device_commands.CLIC_RIPPLE_INT and  value <0 then
+        dispatch_action(nil,Keys.iCommandChangeRippleIntervalDown)  
+
+    end
+
+    if command == device_commands.CLIC_RIPPLE_QT and value == 1 then
+        dispatch_action(nil,Keys.iCommandChangeRippleQuantity)
+        
+    end
+
+    if command == device_commands.CLIC_CUTBURST and value == 1 then
+        dispatch_action(nil,Keys.iCommandChangeGunRateOfFire)
         
     end
 
