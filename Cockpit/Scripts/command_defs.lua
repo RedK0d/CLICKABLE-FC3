@@ -95,6 +95,7 @@ Keys =
     iCommandChangeRippleIntervalDown	=   308;
     iCommandChangeRippleQuantity	    =   281;
     iCommandChangeGunRateOfFire         =   280;
+    iCommandPlaneParachute              =   76;
 
 
 
@@ -176,4 +177,5 @@ device_commands =
     CLIC_RIPPLE_INT             = counter(),
     CLIC_RIPPLE_QT              = counter(),   
     CLIC_CUTBURST               = counter(),
+    CLIC_PARACHUTE              = counter(),
 }

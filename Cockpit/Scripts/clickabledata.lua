@@ -62,6 +62,8 @@ elements["PNT_DSP_ZOOMOUT"]         = default_button("Display Zoom Out",		      
 elements["PNT_CLOCK_F"]             = default_button("Flight Clock Start/Stop/Reset",		                devices.CLICKABLE,  device_commands.CLIC_CLOCK_F       )  
 elements["PNT_CLOCK_E"]             = default_button("Elapsed Time Clock Start/Stop/Reset",		            devices.CLICKABLE,  device_commands.CLIC_CLOCK_E       )  
 elements["PNT_ALTIMETER"]           = default_axis_limited("Altimeter Pressure Increase/Decrease",		    devices.CLICKABLE,  device_commands.CLIC_ALTIMETER,nil, 0, 1,true,true)
+elements["PNT_LIGHT"]               = default_button("Illumination Cockpit",                                devices.CLICKABLE,  device_commands.CLIC_COCKPITLIGHT  )  
+elements["PNT_PARACHUTE"]           = default_button("Dragging Chute",                                      devices.CLICKABLE,  device_commands.CLIC_PARACHUTE     )
 
 if  aircraft=="Su-25T" then
 elements["PNT_AUTO_ALT"]            = default_button("Autopilot - Attitude Hold",                           devices.CLICKABLE,  device_commands.CLIC_AUTO_ALT      )

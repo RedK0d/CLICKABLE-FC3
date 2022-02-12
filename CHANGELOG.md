@@ -124,15 +124,31 @@ Added SU-25T Support
     .Added Flaps Up/Down
     .Added Flaps Landing Position
 
-# 11/02/2022 v0.1.6-alpha
+# 12/02/2022 v0.1.6-alpha
 
 Fixed issues
     .Interference issue with F-5E-3 Module
     .Interference issue with AV8BNA Module
     .Interference issue with Spitfire LF Mk. IX Module
+    .Interference issue with Bf-109K-4 Module 
+    .Interference issue with P-47D-40 Module
+    .Interference issue with P-47D-30bl1 Module       
+    .Interference issue with SA342L Module
+    .Interference issue with SA342M Module
+    .Interference issue with SA342Minigun Module
+    .Interference issue with SA342Mistral Module
+    .Interference issue with C-101CC Module
+    .Interference issue with C-101EB Module
+    .Interference issue with FW-190A8 Module
+    .Interference issue with L-39C Module
+    .Interference issue with L-39ZA Module
+    .Interference issue with P-51D-30-NA Module
+    .Interference issue with P-51D Module
 
 SU-25T
     . Solved Su-25T Possible bug between Attitude Hold Autopilot and Auto pilot Reset #32 
+SU-27/J-11A/SU-33/
+    . Solved "Internal Lights Switch Missing #38"
 Enhancements
 SU-25T 
     .Moved the cannopy connector
@@ -141,5 +157,5 @@ SU-25T
     .Added Ripple Interval Increase/Decrease.
     .Added Ripple Quantity Select/SPPU select
     .Added Cut Of Burst select
-
+    .Added Dragging Chute
 
