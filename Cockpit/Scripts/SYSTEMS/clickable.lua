@@ -35,6 +35,10 @@ end
 
 
 function SetCommand(command,value)
+
+    if command == device_commands.CLIC_PARACHUTE and  value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneParachute)
+    end 
     
     if command == device_commands.CLIC_FLAPS_MULTI and  value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneFlaps)

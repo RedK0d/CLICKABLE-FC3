@@ -124,7 +124,7 @@ Added SU-25T Support
     .Added Flaps Up/Down
     .Added Flaps Landing Position
 
-# XX/02/2022 v0.1.6-alpha
+# 12/02/2022 v0.1.6-alpha
 
 Fixed issues
     .Interference issue with F-5E-3 Module
@@ -157,5 +157,5 @@ SU-25T
     .Added Ripple Interval Increase/Decrease.
     .Added Ripple Quantity Select/SPPU select
     .Added Cut Of Burst select
-
+    .Added Dragging Chute
 
