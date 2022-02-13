@@ -159,3 +159,9 @@ SU-25T
     .Added Cut Of Burst select
     .Added Dragging Chute
 
+# XX/02/2022 v0.1.7-alpha
+
+Fixed issues
+    .Interference issue with Bell-47 Module
+
+

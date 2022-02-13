@@ -51,6 +51,7 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["MiG-29S"]				= {enable_options_key_for_unit='dontuseit'},
 
 	--Excluded, list to be enlarged to avoid conflicts 	
+	["Bell-47"]				= {enable_options_key_for_unit='dontuseit'},
 	["AV8BNA"]				= {enable_options_key_for_unit='dontuseit'},
 	["SpitfireLFMkIXCW"]	= {enable_options_key_for_unit='dontuseit'},
 	["SpitfireLFMkIX"]		= {enable_options_key_for_unit='dontuseit'},
