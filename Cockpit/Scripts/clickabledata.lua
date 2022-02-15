@@ -31,22 +31,15 @@ elements["PNT_HUD_FILTER"]          = default_button("HUD Color Filter On/Off", 
 elements["PNT_HUD_BRT"]             = default_axis_limited("HUD Brightness Up/Down",                        devices.CLICKABLE,  device_commands.CLIC_HUD_BRT,nil, 0, 1,true,true)
 elements["PNT_GEAR"]                = default_button("Landing Gear Up/Down",                                devices.CLICKABLE,  device_commands.CLIC_GEAR          )  
 elements["PNT_CANOPY"]              = default_button("Canopy Open/Close",                                   devices.CLICKABLE,  device_commands.CLIC_CANOPY        )  
-                                                                                                                                   
-
 elements["PNT_NAVLIGHT"]            = default_button("Navigation lights",                                   devices.CLICKABLE,  device_commands.CLIC_NAVLIGHTS     )  
 elements["PNT_JETTINSON"]           = default_button("Weapons Jettison",                                    devices.CLICKABLE,  device_commands.CLIC_JETTINSON     )  
 elements["PNT_JETTINSON_EMER"]      = default_button("Emergency Jettison",                                  devices.CLICKABLE,  device_commands.CLIC_JETTINSON_EMER)  
-elements["PNT_SCAN_RDR"]            = default_button("Radar On/Off",                                        devices.CLICKABLE,  device_commands.CLIC_RADAR_ON_OFF  )
-elements["PNT_SCAN_EOS"]            = default_button("Electro-Optical System On/Off",                       devices.CLICKABLE,  device_commands.CLIC_EOS_ON_OFF    )
 elements["PNT_SCAN_L"]              = default_button("Scan Zone Left",                                      devices.CLICKABLE,  device_commands.CLIC_SCAN_L        )
 elements["PNT_SCAN_R"]              = default_button("Scan Zone Right",                                     devices.CLICKABLE,  device_commands.CLIC_SCAN_R        )
 elements["PNT_SCAN_U"]              = default_button("Scan Zone Up",                                        devices.CLICKABLE,  device_commands.CLIC_SCAN_U        )
 elements["PNT_SCAN_D"]              = default_button("Scan Zone Down",                                      devices.CLICKABLE,  device_commands.CLIC_SCAN_D        )
-elements["PNT_MODE_BVR"]            = default_button("Beyond Visual Range Mode",                            devices.CLICKABLE,  device_commands.CLIC_MODE_BVR      )                        
-elements["PNT_MODE_VS"]             = default_button("Close Air Combat Vertical Scan Mode",                 devices.CLICKABLE,  device_commands.CLIC_MODE_VS       )                            
-elements["PNT_MODE_OPT"]            = default_button("Close Air Combat Bore Mode",                          devices.CLICKABLE,  device_commands.CLIC_MODE_BORE     )                         
-elements["PNT_MODE_HMT"]            = default_button("Close Air Combat HMD Helmet Mode",                    devices.CLICKABLE,  device_commands.CLIC_MODE_HMD      )   
-elements["PNT_HUD_COL"]             = default_button("HUD Color",                                           devices.CLICKABLE,  device_commands.CLIC_HUD_COLOR     )                                                                                                                                   
+elements["PNT_HUD_COL"]             = default_button("HUD Color",                                           devices.CLICKABLE,  device_commands.CLIC_HUD_COLOR     )
+elements["PNT_MODE"]                = default_axis_limited("Master Modes Select",                           devices.CLICKABLE,  device_commands.CLIC_MODE,nil, 0, 1,true,true)
 elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )
 elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )
 elements["PNT_ENG_INLET"]           = default_button("Engine Inlet Grids Auto/Off",                         devices.CLICKABLE,  device_commands.CLIC_ENG_INLET     )                                                                                                                                 
@@ -64,12 +57,13 @@ elements["PNT_CLOCK_E"]             = default_button("Elapsed Time Clock Start/S
 elements["PNT_ALTIMETER"]           = default_axis_limited("Altimeter Pressure Increase/Decrease",		    devices.CLICKABLE,  device_commands.CLIC_ALTIMETER,nil, 0, 1,true,true)
 elements["PNT_LIGHT"]               = default_button("Illumination Cockpit",                                devices.CLICKABLE,  device_commands.CLIC_COCKPITLIGHT  )  
 elements["PNT_PARACHUTE"]           = default_button("Dragging Chute",                                      devices.CLICKABLE,  device_commands.CLIC_PARACHUTE     )
+elements["PNT_WAYPOINT"]            = default_axis_limited("Next/Previous Waypoint, Airfield",              devices.CLICKABLE,  device_commands.CLIC_WAYPOINT      )  
+
 
 if  aircraft=="Su-25T" then
 elements["PNT_AUTO_ALT"]            = default_button("Autopilot - Attitude Hold",                           devices.CLICKABLE,  device_commands.CLIC_AUTO_ALT      )
 elements["PNT_FLAPS_MULTI"]         = default_button("Flaps Up/Down",                                       devices.CLICKABLE,  device_commands.CLIC_FLAPS_MULTI   )
 elements["PNT_FLAPS_LAND"]          = default_button("Flaps Landing Position",                              devices.CLICKABLE,  device_commands.CLIC_FLAPS_LAND    )
-elements["PNT_JETTINSON_TANK"]      = default_button("Fuel Tanks Jettison",                                 devices.CLICKABLE,  device_commands.CLIC_JETTINSON_TANK)
 elements["PNT_JETTINSON_TANK"]      = default_button("Fuel Tanks Jettison",                                 devices.CLICKABLE,  device_commands.CLIC_JETTINSON_TANK)
 elements["PNT_JAM_IR"]              = default_button("IR Jamming",                                          devices.CLICKABLE,  device_commands.CLIC_JAM_IR        )
 elements["PNT_RIPPLE_INT"]          = default_axis_limited("Ripple Interval Increase/Decrease",             devices.CLICKABLE,  device_commands.CLIC_RIPPLE_INT    )
@@ -77,12 +71,31 @@ elements["PNT_RIPPLE_QT"]           = default_button("Ripple Quantity Select/SPP
 elements["PNT_CUT_BURST"]           = default_button("Cut Of Burst select",                                 devices.CLICKABLE,  device_commands.CLIC_CUTBURST      )
 
 end
+if  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" then
+elements["PNT_JETTINSON_TANK"]      = default_button("Fuel Tanks Jettison",                                 devices.CLICKABLE,  device_commands.CLIC_JETTINSON_TANK)
+elements["PNT_FLAPS_MULTI"]         = default_button("Flaps Up/Down",                                       devices.CLICKABLE,  device_commands.CLIC_FLAPS_MULTI   )
+elements["PNT_JETTINSON_EMER_BIS"]  = default_button("Emergency Jettison",                                  devices.CLICKABLE,  device_commands.CLIC_JETTINSON_EMER)  
+elements["PNT_SCAN_RDR"]            = default_button("Radar On/Off",                                        devices.CLICKABLE,  device_commands.CLIC_RADAR_ON_OFF  )  
+elements["PNT_RADAR_FREQ"]          = default_axis_limited("Radar Pulse Repeat Frequency Select",           devices.CLICKABLE,  device_commands.CLIC_RADAR_FREQ    )  
+elements["PNT_SCAN_EOS"]            = default_button("Electro-Optical System On/Off",                       devices.CLICKABLE,  device_commands.CLIC_EOS_ON_OFF    )  
+elements["PNT_CTM_CHAFF"]           = default_button("Countermeasures Chaff Dispense",                      devices.CLICKABLE,  device_commands.CLIC_CTM_CHAFF     )
+elements["PNT_CTM_FLARE"]           = default_button("Countermeasures Flares Dispense",                     devices.CLICKABLE,  device_commands.CLIC_CTM_FLARE     )
+    
+    end
+    
+
 if  aircraft=="Su-33" or aircraft=="Su-27"or aircraft=="J-11A"   then
 elements["PNT_AUTO_RESET"]          = default_button("Autopilot Reset",                                     devices.CLICKABLE,  device_commands.CLIC_AUTO_STOP     )
 elements["PNT_FUEL_DUMP"]           = default_2_position_tumb("Fuel Dump",                                  devices.CLICKABLE,  device_commands.CLIC_FUEL_DUMP_ON  )
 elements["PNT_FLAPS_UP"]            = default_button("Flaps Up",                                            devices.CLICKABLE,  device_commands.CLIC_FLAPS_UP      )
 elements["PNT_FLAPS_DOWN"]          = default_button("Flaps Landing Position",                              devices.CLICKABLE,  device_commands.CLIC_FLAPS_DOWN    )
-elements["PNT_SALVO_MODE"]          = default_button("Salvo Mode",                                          devices.CLICKABLE,  device_commands.CLIC_SALVO         )  
+elements["PNT_SALVO_MODE"]          = default_button("Salvo Mode",                                          devices.CLICKABLE,  device_commands.CLIC_SALVO         )
+elements["PNT_SCAN_RDR"]            = default_button("Radar On/Off",                                        devices.CLICKABLE,  device_commands.CLIC_RADAR_ON_OFF  )
+elements["PNT_SCAN_EOS"]            = default_button("Electro-Optical System On/Off",                       devices.CLICKABLE,  device_commands.CLIC_EOS_ON_OFF    )
+elements["PNT_RADAR_MODE"]          = default_button("Radar RWS/TWS Mode Select",                           devices.CLICKABLE,  device_commands.CLIC_RADAR_MODE    )  
+elements["PNT_RADAR_FREQ"]          = default_button("Radar Pulse Repeat Frequency Select",                 devices.CLICKABLE,  device_commands.CLIC_RADAR_FREQ    )  
+
+
 
 end
 --[Su-33] Specifics

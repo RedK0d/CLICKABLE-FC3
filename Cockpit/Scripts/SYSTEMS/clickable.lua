@@ -11,10 +11,11 @@ sensor_data = get_base_data()
 local dev 	    =   GetSelf()
 local aircraft = get_aircraft_type()
 
+local mastermode = 0
+
 function post_initialize()
     print_message_to_user("If you see a Su-25T cockpit appear where it shouldn't, contact me on discord giving me the exact information displayed below.",10)
     print_message_to_user(aircraft,10)
-
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
 
 	local birth = LockOn_Options.init_conditions.birth_place
@@ -35,6 +36,52 @@ end
 
 
 function SetCommand(command,value)
+if command ==  device_commands.CLIC_WAYPOINT and  value >0 then
+    dispatch_action(nil,Keys.iCommandPlaneChangeTarget) 
+elseif command ==  device_commands.CLIC_WAYPOINT and  value <0 then
+    dispatch_action(nil,Keys.iCommandPlaneUFC_STEER_DOWN) 
+end
+
+if command == device_commands.CLIC_MODE  and  value >0 then
+    mastermode = mastermode +1
+    
+   elseif  command == device_commands.CLIC_MODE  and  value <0 then
+    mastermode = mastermode -1
+    
+end
+if mastermode >8 then
+    dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+
+    mastermode = 1
+elseif mastermode <=0 then 
+    mastermode =0
+end
+if      mastermode == 1 then
+dispatch_action(nil,Keys.iCommandPlaneModeNAV)
+elseif  mastermode == 2 then
+dispatch_action(nil,Keys.iCommandPlaneModeBVR)
+elseif  mastermode == 3 then
+dispatch_action(nil,Keys.iCommandPlaneModeVS)
+elseif  mastermode == 4 then
+dispatch_action(nil,Keys.iCommandPlaneModeBore)
+elseif  mastermode == 5 then
+dispatch_action(nil,Keys.iCommandPlaneModeHelmet)
+elseif  mastermode == 6 then
+dispatch_action(nil,Keys.iCommandPlaneModeFI0)
+elseif  mastermode == 7 then
+dispatch_action(nil,Keys.iCommandPlaneModeGround)
+elseif  mastermode == 8 then
+dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+
+
+end 
+    if command == device_commands.CLIC_RADAR_FREQ  then
+        dispatch_action(nil,Keys.iCommandPlaneChangeRadarPRF)
+    end 
+
+    if command == device_commands.CLIC_RADAR_MODE and  value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneRadarChangeMode)
+    end 
 
     if command == device_commands.CLIC_PARACHUTE and  value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneParachute)
@@ -105,8 +152,11 @@ function SetCommand(command,value)
     if command == device_commands.CLIC_CTM and value ==1 then 
         dispatch_action(nil,Keys.iCommandPlaneDropSnar) 
     end    
-    if command == device_commands.CLIC_JAM and value ==1 then 
-        dispatch_action(nil,Keys.iCommandActiveJamming) 
+    if command == device_commands.CLIC_CTM_CHAFF and value ==1 then 
+        dispatch_action(nil,Keys.iCommandPlaneDropChaffOnce) 
+    end 
+    if command == device_commands.CLIC_CTM_FLARE and value ==1 then 
+        dispatch_action(nil,Keys.iCommandPlaneDropFlareOnce) 
     end
     if command == device_commands.CLIC_JAM_IR and value ==1 then 
         dispatch_action(nil,Keys.iCommandActiveIRJamming) 
@@ -385,6 +435,9 @@ end
 	
 
 function update()
+
+
+--print_message_to_user(mastermode)
 
 end
 need_to_be_closed = false -- close lua state after initialization

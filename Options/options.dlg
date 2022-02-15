@@ -120,6 +120,75 @@ dialog = {
 					},
 					["type"] = "CheckBox",
 				},
+				["Mig29a_enabledCheckbox"] = {
+					["params"] = {
+						["bounds"] = {
+							["h"] = 18,
+							["w"] = 125,
+							["x"] = 100,
+							["y"] = 270,
+						},
+						["enabled"] = true,
+						["state"] = true,
+						["tabOrder"] = 0,
+						["text"] = "MIG-29A",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0,
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "checkBoxSkin_options",
+						},
+					},
+					["type"] = "CheckBox",
+				},
+				["Mig29g_enabledCheckbox"] = {
+					["params"] = {
+						["bounds"] = {
+							["h"] = 18,
+							["w"] = 125,
+							["x"] = 100,
+							["y"] = 300,
+						},
+						["enabled"] = true,
+						["state"] = true,
+						["tabOrder"] = 0,
+						["text"] = "MIG-29G",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0,
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "checkBoxSkin_options",
+						},
+					},
+					["type"] = "CheckBox",
+				},
+				["Mig29s_enabledCheckbox"] = {
+					["params"] = {
+						["bounds"] = {
+							["h"] = 18,
+							["w"] = 125,
+							["x"] = 100,
+							["y"] = 330,
+						},
+						["enabled"] = true,
+						["state"] = true,
+						["tabOrder"] = 0,
+						["text"] = "MIG-29S",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0,
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "checkBoxSkin_options",
+						},
+					},
+					["type"] = "CheckBox",
+				},
 				
 			},
 			["params"] = {
