@@ -14,7 +14,7 @@ local aircraft = get_aircraft_type()
 local mastermode = 0
 
 function post_initialize()
-    print_message_to_user("If you see a Su-25T cockpit appear where it shouldn't, contact me on discord giving me the exact information displayed below.",10)
+    print_message_to_user("v0.1.7-alpha     If you see a Su-25T cockpit appear where it shouldn't, contact me on discord giving me the exact information displayed below.",10)
     print_message_to_user(aircraft,10)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
 
