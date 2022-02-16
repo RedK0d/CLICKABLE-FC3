@@ -159,18 +159,23 @@ SU-25T
     .Added Cut Of Burst select
     .Added Dragging Chute
 
-# XX/02/2022 v0.1.7-alpha
+# 16/02/2022 v0.1.7-alpha
 
 Fixed issues
     .Interference issue with Bell-47 Module
 
 Enhancements
+SU-25T
+    .Added Master Modes Select
+    .Added Next/Previous Waypoint, Airfield
+
 SU-27/J-11A/SU-33/
     .Moved Radar On/Off connector
     .Moved Electro-Optical System On/Off connector
     .Added Master Modes Select
     .Added Radar RWS/TWS Mode Select
     .Added Radar Pulse Repeat Frequency Select
+    .Added Master Modes Select
     .Added Next/Previous Waypoint, Airfield
 
 Added MiG-29S and Mig-29A Support
@@ -200,14 +205,12 @@ Added MiG-29S and Mig-29A Support
     .Added Radar RWS/TWS Mode Select
     .Added Radar Pulse Repeat Frequency Select
     .Added Next/Previous Waypoint, Airfield
-
---TODO--
-.Added Autopilot - Damper
-.Added Autopilot - Ground Collision Avoidance
-.Added Autopilot - Barometric Altitude Hold
-.Added Autopilot - Attitude Hold
-.Added Autopilot - Path Control
-.Added Autopilot - Reapproach
-.Added Autopilot - Transition To Level Flight Control
+    .Added Autopilot - Damper
+    .Added Autopilot - Ground Collision Avoidance
+    .Added Autopilot - Barometric Altitude Hold
+    .Added Autopilot - Attitude Hold
+    .Added Autopilot - Path Control
+    .Added Autopilot - Reapproach
+    .Added Autopilot - Transition To Level Flight Control
 
 

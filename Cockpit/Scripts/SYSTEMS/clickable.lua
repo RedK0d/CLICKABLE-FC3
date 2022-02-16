@@ -49,30 +49,51 @@ if command == device_commands.CLIC_MODE  and  value >0 then
     mastermode = mastermode -1
     
 end
-if mastermode >8 then
+if aircraft=="Su-33" or aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" then
+    if mastermode >8 then
+        dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+
+        mastermode = 1
+    elseif mastermode <=0 then 
+        mastermode =0
+    end
+    if      mastermode == 1 then
+    dispatch_action(nil,Keys.iCommandPlaneModeNAV)
+    elseif  mastermode == 2 then
+    dispatch_action(nil,Keys.iCommandPlaneModeBVR)
+    elseif  mastermode == 3 then
+    dispatch_action(nil,Keys.iCommandPlaneModeVS)
+    elseif  mastermode == 4 then
+    dispatch_action(nil,Keys.iCommandPlaneModeBore)
+    elseif  mastermode == 5 then
+    dispatch_action(nil,Keys.iCommandPlaneModeHelmet)
+    elseif  mastermode == 6 then
+    dispatch_action(nil,Keys.iCommandPlaneModeFI0)
+    elseif  mastermode == 7 then
+    dispatch_action(nil,Keys.iCommandPlaneModeGround)
+    elseif  mastermode == 8 then
     dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+    end
 
-    mastermode = 1
-elseif mastermode <=0 then 
-    mastermode =0
-end
-if      mastermode == 1 then
-dispatch_action(nil,Keys.iCommandPlaneModeNAV)
-elseif  mastermode == 2 then
-dispatch_action(nil,Keys.iCommandPlaneModeBVR)
-elseif  mastermode == 3 then
-dispatch_action(nil,Keys.iCommandPlaneModeVS)
-elseif  mastermode == 4 then
-dispatch_action(nil,Keys.iCommandPlaneModeBore)
-elseif  mastermode == 5 then
-dispatch_action(nil,Keys.iCommandPlaneModeHelmet)
-elseif  mastermode == 6 then
-dispatch_action(nil,Keys.iCommandPlaneModeFI0)
-elseif  mastermode == 7 then
-dispatch_action(nil,Keys.iCommandPlaneModeGround)
-elseif  mastermode == 8 then
-dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+end 
 
+if aircraft=="Su-25T" then
+    if mastermode >4 then
+        dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+
+        mastermode = 1
+    elseif mastermode <=0 then 
+        mastermode =0
+    end
+    if      mastermode == 1 then
+    dispatch_action(nil,Keys.iCommandPlaneModeNAV)
+    elseif  mastermode == 2 then
+    dispatch_action(nil,Keys.iCommandPlaneModeFI0)
+    elseif  mastermode == 3 then
+    dispatch_action(nil,Keys.iCommandPlaneModeGround)
+    elseif  mastermode == 4 then
+    dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+    end
 
 end 
     if command == device_commands.CLIC_RADAR_FREQ  then
@@ -109,7 +130,15 @@ end
     end
     if command == device_commands.CLIC_FUEL_DUMP_OFF      then
         dispatch_action(nil,Keys.iCommandPlaneFuelOff)
-    end          
+    end  
+    if command == device_commands.CLIC_AUTO_GCA and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneSAUHRadio)
+        
+    end
+    if command == device_commands.CLIC_AUTO_DAMPER    then
+        dispatch_action(nil,Keys.iCommandPlaneStabHbarBank)
+    end         
+        
     if command == device_commands.CLIC_AUTO_STOP    then
         dispatch_action(nil,Keys.iCommandPlaneStabCancel)
     end         
@@ -233,25 +262,14 @@ end
     end
 
     
-    if command == device_commands.CLIC_NAVMODES then
-        if value == 1 then 
+    if command == device_commands.CLIC_NAVMODES and value > 0 then 
+    dispatch_action(nil,Keys.iCommandPlaneModeNAV)
+    elseif command == device_commands.CLIC_NAVMODES and value < 0 then    
     dispatch_action(nil,Keys.iCommandPlaneModeNAV)
 
-        end
+        
     end
 
-    if command == device_commands.CLIC_MODE_BVR then
-        dispatch_action(nil,Keys.iCommandPlaneModeBVR)
-    end
-    if command == device_commands.CLIC_MODE_VS then
-        dispatch_action(nil,Keys.iCommandPlaneModeVS)
-    end
-    if command == device_commands.CLIC_MODE_BORE then
-        dispatch_action(nil,Keys.iCommandPlaneModeBore)
-    end
-    if command == device_commands.CLIC_MODE_HMD then
-        dispatch_action(nil,Keys.iCommandPlaneModeHelmet)
-    end
     if command == device_commands.CLIC_HUD_COLOR and value == 1 then
         dispatch_action(nil,Keys.iCommandBrightnessILS)
         
@@ -345,10 +363,7 @@ end
 
 --[Su-33] Specifics
 
-    if command == device_commands.CLIC_AUTO_GCA and value == 1 then
-        dispatch_action(nil,Keys.iCommandPlaneSAUHRadio)
-        
-    end
+    
 
     if command == device_commands.CLIC_AUTOTHRUST and value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneAUTOnOff)

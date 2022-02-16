@@ -118,6 +118,7 @@ device_commands =
     CLIC_ASC_DC                 = counter(),
     CLIC_FUEL_DUMP_ON           = counter(),
     CLIC_FUEL_DUMP_OFF          = counter(),
+    CLIC_AUTO_DAMPER            = counter(),
     CLIC_AUTO_STOP              = counter(),
     CLIC_AUTO_BARO              = counter(),
     CLIC_AUTO_LEVEL             = counter(),

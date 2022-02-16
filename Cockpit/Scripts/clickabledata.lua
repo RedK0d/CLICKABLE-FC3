@@ -40,7 +40,6 @@ elements["PNT_SCAN_U"]              = default_button("Scan Zone Up",            
 elements["PNT_SCAN_D"]              = default_button("Scan Zone Down",                                      devices.CLICKABLE,  device_commands.CLIC_SCAN_D        )
 elements["PNT_HUD_COL"]             = default_button("HUD Color",                                           devices.CLICKABLE,  device_commands.CLIC_HUD_COLOR     )
 elements["PNT_MODE"]                = default_axis_limited("Master Modes Select",                           devices.CLICKABLE,  device_commands.CLIC_MODE,nil, 0, 1,true,true)
-elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )
 elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )
 elements["PNT_ENG_INLET"]           = default_button("Engine Inlet Grids Auto/Off",                         devices.CLICKABLE,  device_commands.CLIC_ENG_INLET     )                                                                                                                                 
 elements["PNT_EMERGENCY_BRAKE"]     = default_button("Emergency Brake",                                     devices.CLICKABLE,  device_commands.CLIC_EMER_BRAKE    )     
@@ -69,6 +68,8 @@ elements["PNT_JAM_IR"]              = default_button("IR Jamming",              
 elements["PNT_RIPPLE_INT"]          = default_axis_limited("Ripple Interval Increase/Decrease",             devices.CLICKABLE,  device_commands.CLIC_RIPPLE_INT    )
 elements["PNT_RIPPLE_QT"]           = default_button("Ripple Quantity Select/SPPU select",                  devices.CLICKABLE,  device_commands.CLIC_RIPPLE_QT     )
 elements["PNT_CUT_BURST"]           = default_button("Cut Of Burst select",                                 devices.CLICKABLE,  device_commands.CLIC_CUTBURST      )
+elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )
+
 
 end
 if  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" then
@@ -80,7 +81,13 @@ elements["PNT_RADAR_FREQ"]          = default_axis_limited("Radar Pulse Repeat F
 elements["PNT_SCAN_EOS"]            = default_button("Electro-Optical System On/Off",                       devices.CLICKABLE,  device_commands.CLIC_EOS_ON_OFF    )  
 elements["PNT_CTM_CHAFF"]           = default_button("Countermeasures Chaff Dispense",                      devices.CLICKABLE,  device_commands.CLIC_CTM_CHAFF     )
 elements["PNT_CTM_FLARE"]           = default_button("Countermeasures Flares Dispense",                     devices.CLICKABLE,  device_commands.CLIC_CTM_FLARE     )
-    
+elements["PNT_AUTO_DAMPER"]         = default_button("Autopilot - Damper",                                  devices.CLICKABLE,  device_commands.CLIC_AUTO_DAMPER   )
+elements["PNT_AUTO_ATT_HOLD"]       = default_button("Autopilot - Attitude Hold",                           devices.CLICKABLE,  device_commands.CLIC_AUTO_ALT      )
+elements["PNT_AUTO_ALT_HOLD"]       = default_button("Autopilot - Transition To Level Flight Control",      devices.CLICKABLE,  device_commands.CLIC_AUTO_LEVEL    )
+elements["PNT_AUTO_GCA"]            = default_button("Autopilot - Ground Collision Avoidance",              devices.CLICKABLE,  device_commands.CLIC_AUTO_GCA      )
+elements["PNT_NAVPROGRAM"]          = default_axis_limited("Navigation Modes",                              devices.CLICKABLE,  device_commands.CLIC_NAVMODES,nil, 0, 1,true,true)
+
+   
     end
     
 
@@ -94,6 +101,8 @@ elements["PNT_SCAN_RDR"]            = default_button("Radar On/Off",            
 elements["PNT_SCAN_EOS"]            = default_button("Electro-Optical System On/Off",                       devices.CLICKABLE,  device_commands.CLIC_EOS_ON_OFF    )
 elements["PNT_RADAR_MODE"]          = default_button("Radar RWS/TWS Mode Select",                           devices.CLICKABLE,  device_commands.CLIC_RADAR_MODE    )  
 elements["PNT_RADAR_FREQ"]          = default_button("Radar Pulse Repeat Frequency Select",                 devices.CLICKABLE,  device_commands.CLIC_RADAR_FREQ    )  
+elements["PNT_NAVPROGRAM"]          = default_axis_limited("Navigation Modes",                              devices.CLICKABLE,  device_commands.CLIC_NAVMODES,nil, 0, 1,true,true)
+
 
 
 
