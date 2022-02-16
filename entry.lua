@@ -38,6 +38,9 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["Su-27"] 				= {enable_options_key_for_unit = 'Su27_enabled'},
 	["Su-33"] 				= {enable_options_key_for_unit = 'Su33_enabled'},
 	["Su-25T"] 				= {enable_options_key_for_unit = 'Su25t_enabled'},
+	["MiG-29A"] 			= {enable_options_key_for_unit = 'Mig29a_enabled'},
+	["MiG-29G"] 			= {enable_options_key_for_unit = 'Mig29g_enabled'},
+	["MiG-29S"] 			= {enable_options_key_for_unit = 'Mig29s_enabled'},
 	
 	--Not yet implemented
 	["F-15C"]				= {enable_options_key_for_unit='dontuseit'},
@@ -46,11 +49,9 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["A-10C II"]			= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["Su-25"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["Su-25A"] 				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
-	["MiG-29A"]				= {enable_options_key_for_unit='dontuseit'},
-	["MiG-29G"]				= {enable_options_key_for_unit='dontuseit'},
-	["MiG-29S"]				= {enable_options_key_for_unit='dontuseit'},
 
 	--Excluded, list to be enlarged to avoid conflicts 	
+	["Bell-47"]				= {enable_options_key_for_unit='dontuseit'},
 	["AV8BNA"]				= {enable_options_key_for_unit='dontuseit'},
 	["SpitfireLFMkIXCW"]	= {enable_options_key_for_unit='dontuseit'},
 	["SpitfireLFMkIX"]		= {enable_options_key_for_unit='dontuseit'},

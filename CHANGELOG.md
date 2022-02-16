@@ -159,3 +159,58 @@ SU-25T
     .Added Cut Of Burst select
     .Added Dragging Chute
 
+# 16/02/2022 v0.1.7-alpha
+
+Fixed issues
+    .Interference issue with Bell-47 Module
+
+Enhancements
+SU-25T
+    .Added Master Modes Select
+    .Added Next/Previous Waypoint, Airfield
+
+SU-27/J-11A/SU-33/
+    .Moved Radar On/Off connector
+    .Moved Electro-Optical System On/Off connector
+    .Added Master Modes Select
+    .Added Radar RWS/TWS Mode Select
+    .Added Radar Pulse Repeat Frequency Select
+    .Added Master Modes Select
+    .Added Next/Previous Waypoint, Airfield
+
+Added MiG-29S and Mig-29A Support
+    .Added Canopy Open/Close
+    .Added Flight Clock Start/Stop/Reset
+    .Added Elapsed Time Clock Start/Stop/Reset
+    .Added Eject (3 times)
+    .Added Engine Left Start
+    .Added Engine Right Start
+    .Added Engine Left Stop
+    .Added Engine Right Stop
+    .Added Landing Gear Up/Down
+    .Added HUD Brightness Up/Down
+    .Added HUD Color
+    .Added HUD Color Filter On/Off
+    .Added Weapons Jettison
+    .Added Emergency Jettison
+    .Added Fuel Tanks Jettison
+    .Added Navigation lights
+    .Added Navigation Modes
+    .Added Electric Power Switch
+    .Added RWR/SPO Mode Select
+    .Added RWR/SPO Sound Signals Volume Up/Down
+    .Added Audible Warning Reset
+    .Added Flaps Up/Down
+    .Added Master Modes Select
+    .Added Radar RWS/TWS Mode Select
+    .Added Radar Pulse Repeat Frequency Select
+    .Added Next/Previous Waypoint, Airfield
+    .Added Autopilot - Damper
+    .Added Autopilot - Ground Collision Avoidance
+    .Added Autopilot - Barometric Altitude Hold
+    .Added Autopilot - Attitude Hold
+    .Added Autopilot - Path Control
+    .Added Autopilot - Reapproach
+    .Added Autopilot - Transition To Level Flight Control
+
+
