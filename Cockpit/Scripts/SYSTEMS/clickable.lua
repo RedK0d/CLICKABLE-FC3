@@ -12,11 +12,14 @@ local dev 	    =   GetSelf()
 local aircraft = get_aircraft_type()
 
 local mastermode = 0
+local chutestate 
 
 function post_initialize()
-    print_message_to_user("v0.1.7-alpha     If you see a Su-25T cockpit appear where it shouldn't, contact me on discord giving me the exact information displayed below.",10)
+    print_message_to_user("v0.1.8-alpha",10)
     print_message_to_user(aircraft,10)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
+    chutestate = 0
+
 
 	local birth = LockOn_Options.init_conditions.birth_place
 
@@ -76,6 +79,26 @@ if aircraft=="Su-33" or aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-
     end
 
 end 
+
+if aircraft=="Su-27"or aircraft=="J-11A" then
+    
+    if command == device_commands.CLIC_CHUTE_DEP then	
+		if value == 1 then
+			if chutestate == 0 then
+				dispatch_action(true, Keys.iCommandPlaneParachute)
+				chutestate = 1
+			end
+		end
+	elseif command == device_commands.CLIC_CHUTE_REL then	
+    	if value == 1 then
+			if chutestate == 1 then
+				dispatch_action(true, Keys.iCommandPlaneParachute)
+                chutestate = -1
+			end
+		end
+    end
+
+end
 
 if aircraft=="Su-25T" then
     if mastermode >4 then

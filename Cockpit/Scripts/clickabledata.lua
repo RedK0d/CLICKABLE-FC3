@@ -102,9 +102,10 @@ elements["PNT_SCAN_EOS"]            = default_button("Electro-Optical System On/
 elements["PNT_RADAR_MODE"]          = default_button("Radar RWS/TWS Mode Select",                           devices.CLICKABLE,  device_commands.CLIC_RADAR_MODE    )  
 elements["PNT_RADAR_FREQ"]          = default_button("Radar Pulse Repeat Frequency Select",                 devices.CLICKABLE,  device_commands.CLIC_RADAR_FREQ    )  
 elements["PNT_NAVPROGRAM"]          = default_axis_limited("Navigation Modes",                              devices.CLICKABLE,  device_commands.CLIC_NAVMODES,nil, 0, 1,true,true)
-
-
-
+end
+if  aircraft=="Su-27"or aircraft=="J-11A"   then
+elements["PNT_CHUTE_DEP"]          = default_button("Parachute Deployment",                                 devices.CLICKABLE,  device_commands.CLIC_CHUTE_DEP     )  
+elements["PNT_CHUTE_REL"]          = default_button("Parachute Release",                                    devices.CLICKABLE,  device_commands.CLIC_CHUTE_REL     )  
 
 end
 --[Su-33] Specifics

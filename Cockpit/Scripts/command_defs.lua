@@ -184,4 +184,6 @@ device_commands =
     CLIC_CUTBURST               = counter(),
     CLIC_PARACHUTE              = counter(),
     CLIC_WAYPOINT               = counter(),
+    CLIC_CHUTE_DEP              = counter(),
+    CLIC_CHUTE_REL              = counter(),
 }
