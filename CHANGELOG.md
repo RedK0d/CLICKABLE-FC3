@@ -1,14 +1,22 @@
-# XX/XX/2022 v0.1.8-alpha
+# XX/02/2022 v0.1.8-alpha
+
+Changelog now in descending order
 
 Enhancements
 SU-27/J-11A
     .Added Parachute Deployment
     .Added Parachute Release
-SU-25T
---    .Added Parachute Deployment
---    .Added Parachute Release
+    .Added Airbrake
+    .Added Countermeasures Release
+    .Added Target Unlock
+    .Added Target Lock
+    .Added Weapon Change
+    
+    
 
-Changelog in descending order
+
+
+
 # 16/02/2022 v0.1.7-alpha
 
 Fixed issues

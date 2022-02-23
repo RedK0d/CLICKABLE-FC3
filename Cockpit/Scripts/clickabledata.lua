@@ -11,6 +11,11 @@ show_element_boxes = true --connector debug
 
 elements = {}
 
+elements["PNT_AIRBRAKE"]            = default_button("Airbrake",                                            devices.CLICKABLE,  device_commands.CLIC_AIRBRAKE      )
+elements["PNT_CTM_ONCE"]            = default_button("Countermeasures Release",                             devices.CLICKABLE,  device_commands.CLIC_CTM_ONCE      )
+elements["PNT_UNLOCK"]              = default_button("Target Unlock",                                       devices.CLICKABLE,  device_commands.CLIC_LOCK_REL      )
+elements["PNT_LOCK"]                = default_button("Target Lock",                                         devices.CLICKABLE,  device_commands.CLIC_LOCK          )
+elements["PNT_STATION"]             = default_button("Weapon Change",                                       devices.CLICKABLE,  device_commands.CLIC_STATION       )
 
 
 elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",                             devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS)
@@ -40,7 +45,9 @@ elements["PNT_SCAN_U"]              = default_button("Scan Zone Up",            
 elements["PNT_SCAN_D"]              = default_button("Scan Zone Down",                                      devices.CLICKABLE,  device_commands.CLIC_SCAN_D        )
 elements["PNT_HUD_COL"]             = default_button("HUD Color",                                           devices.CLICKABLE,  device_commands.CLIC_HUD_COLOR     )
 elements["PNT_MODE"]                = default_axis_limited("Master Modes Select",                           devices.CLICKABLE,  device_commands.CLIC_MODE,nil, 0, 1,true,true)
-elements["PNT_MIRROR_UP"]           = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROIR       )
+elements["PNT_MIRROR_U"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR_UPDU,1)
+elements["PNT_MIRROR_L"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR_UPDL,1)
+elements["PNT_MIRROR_R"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR_UPDR,1)
 elements["PNT_ENG_INLET"]           = default_button("Engine Inlet Grids Auto/Off",                         devices.CLICKABLE,  device_commands.CLIC_ENG_INLET     )                                                                                                                                 
 elements["PNT_EMERGENCY_BRAKE"]     = default_button("Emergency Brake",                                     devices.CLICKABLE,  device_commands.CLIC_EMER_BRAKE    )     
 elements["PNT_NOSE_WHEEL"]          = default_button("Nose Wheel Steering",                                 devices.CLICKABLE,  device_commands.CLIC_NOSE_WHEEL    )     

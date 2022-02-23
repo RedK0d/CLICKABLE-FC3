@@ -13,8 +13,19 @@ elseif  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S"      the
     shape_name		   = "MIG-29-CLICKABLE"
 end
 
+local controllers = LoRegisterPanelControls()
 
+THROTTLE_L						= CreateGauge("parameter")
+THROTTLE_L.arg_number			= 1
+THROTTLE_L.input				= {0,1}
+THROTTLE_L.output				= {-1,0}
+THROTTLE_L.parameter_name		= "THROTTLE_L"
 
+THROTTLE_R						= CreateGauge("parameter")
+THROTTLE_R.arg_number			= 2
+THROTTLE_R.input				= {0,1}
+THROTTLE_R.output				= {-1,0}
+THROTTLE_R.parameter_name		= "THROTTLE_R"
 
 
 
@@ -22,3 +33,4 @@ end
 
 
 need_to_be_closed  = true -- close lua state after initialization
+

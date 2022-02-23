@@ -52,6 +52,7 @@ Keys =
     iCommandLeftEngineStop                      =   313;
     iCommandRightEngineStop                     =   314;
     iCommandPlaneDropSnar                       =   77;
+    iCommandPlaneDropSnarOnce                   =   176;
     iCommandPlaneDropFlareOnce                  =   357;
     iCommandPlaneDropChaffOnce                  =   358;
     iCommandActiveJamming                       =   136;
@@ -100,6 +101,11 @@ Keys =
     iCommandPlaneParachute                      =   76;
     iCommandPlaneChangeTarget                   =   102;
     iCommandPlaneUFC_STEER_DOWN                 =   1315;
+    iCommandThrottleIncrease                    =   1032;
+    iCommandThrottleDecrease                    =   1033;
+    iCommandThrottleStop                        =   1034;
+    iCommandPlaneChangeWeapon                   =   101;
+    iCommandPlaneAirBrake                       =   73;
 
 
 
@@ -157,7 +163,10 @@ device_commands =
     CLIC_HUD_COLOR              = counter(),
     CLIC_HUD_BRT                = counter(),
     CLIC_NAVMODES               = counter(),
-    CLIC_MIRROIR                = counter(),
+    CLIC_MIRROR                 = counter(),
+    CLIC_MIRROR_UPDL            = counter(),
+    CLIC_MIRROR_UPDR            = counter(),
+    CLIC_MIRROR_UPDU            = counter(),
     CLIC_ENG_INLET              = counter(),
     CLIC_EMER_BRAKE             = counter(),
     CLIC_NOSE_WHEEL             = counter(),
@@ -186,4 +195,10 @@ device_commands =
     CLIC_WAYPOINT               = counter(),
     CLIC_CHUTE_DEP              = counter(),
     CLIC_CHUTE_REL              = counter(),
+
+    CLIC_AIRBRAKE               = counter(),
+    CLIC_CTM_ONCE               = counter(),
+    CLIC_LOCK_REL               = counter(),
+    CLIC_LOCK                   = counter(),
+    CLIC_STATION                = counter(),
 }
