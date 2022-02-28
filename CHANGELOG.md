@@ -2,20 +2,20 @@
 
 Changelog now in descending order
 
+Added LowFidelityAircraftManual by Zeitgeist. 
+
 Enhancements
 SU-27/J-11A
     .Added Parachute Deployment
     .Added Parachute Release
-    .Added Airbrake
-    .Added Countermeasures Release
-    .Added Target Unlock
-    .Added Target Lock
-    .Added Weapon Change
-    
-    
-
-
-
+    .Added Animated HOTAS Airbrake
+    .Added Animated HOTAS Countermeasures Release
+    .Added Animated HOTAS Target Unlock
+    .Added Animated HOTAS Target Lock
+    .Added Animated HOTAS Weapon Change
+    .Added Animated HOTAS Autopilot - Transition To Level Flight Control
+    .Added Animated HOTAS Autopilot - Reset
+    .Added Animated HOTAS AA Modes Select
 
 # 16/02/2022 v0.1.7-alpha
 
@@ -68,7 +68,6 @@ Added MiG-29S and Mig-29A Support
     .Added Autopilot - Barometric Altitude Hold
     .Added Autopilot - Attitude Hold
     .Added Autopilot - Path Control
-    .Added Autopilot - Reapproach
     .Added Autopilot - Transition To Level Flight Control
 # 12/02/2022 v0.1.6-alpha
 
