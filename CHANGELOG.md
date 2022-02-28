@@ -2,6 +2,8 @@
 
 Changelog now in descending order
 
+Added LowFidelityAircraftManual by Zeitgeist. 
+
 Enhancements
 SU-27/J-11A
     .Added Parachute Deployment
