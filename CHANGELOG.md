@@ -13,9 +13,6 @@ SU-27/J-11A
     .Added Animated HOTAS Target Unlock
     .Added Animated HOTAS Target Lock
     .Added Animated HOTAS Weapon Change
-    .Added Animated HOTAS Autopilot - Transition To Level Flight Control
-    .Added Animated HOTAS Autopilot - Reset
-    .Added Animated HOTAS AA Modes Select
 
 # 16/02/2022 v0.1.7-alpha
 
