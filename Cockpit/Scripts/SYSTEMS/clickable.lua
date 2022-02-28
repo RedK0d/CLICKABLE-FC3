@@ -239,6 +239,9 @@ end
     if command == device_commands.CLIC_JAM_IR and value ==1 then 
         dispatch_action(nil,Keys.iCommandActiveIRJamming) 
     end  
+    if command == device_commands.CLIC_JAM and value ==1 then 
+        dispatch_action(nil,Keys.iCommandActiveJamming) 
+    end
 
 
     if command == device_commands.CLIC_HUD_FILTER  and value ==1 then  
