@@ -9,6 +9,28 @@ clickable_mode_initial_status = cursor_mode.CUMODE_CAMERA
 use_pointer_name = true
 anim_speed_default = 16
 
+function default_movable_axis(hint_,device_,command_,arg_, default_, gain_,updatable_,relative_)
+	
+	local default = default_ or 1
+	local gain = gain_ or 0.1
+	local updatable = updatable_ or false
+	local relative  = relative_ or false
+	
+	return  {	
+				class 		= {class_type.MOVABLE_LEV},
+				hint  		= hint_,
+				device 		= device_,
+				action 		= {command_},
+				arg 	  	= {arg_},
+				arg_value 	= {default}, 
+				arg_lim   	= {{0,1}},
+				updatable 	= updatable, 
+				use_OBB 	= true,
+				gain		= {gain},
+				relative    = {relative}, 				
+			}
+end
+
 function default_button(hint_, device_, command_, arg_, arg_val_, arg_lim_, sound_)
     local arg_val_ = arg_val_ or 1
     local arg_lim_ = arg_lim_ or {0, 1}
@@ -27,6 +49,7 @@ function default_button(hint_, device_, command_, arg_, arg_val_, arg_lim_, soun
         sound = sound_ and {{sound_}, {sound_}} or nil
     }
 end
+
 
 -- not in use
 function default_1_position_tumb(hint_, device_, command_, arg_, arg_val_, arg_lim_)

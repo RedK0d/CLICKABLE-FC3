@@ -8,15 +8,24 @@ dofile(LockOn_Options.script_path.."dump.lua")
 update_time_step = 0.02 --update will be called 50 times per second
 make_default_activity(update_time_step) 
 sensor_data = get_base_data()
-local dev 	    =   GetSelf()
+local dev = GetSelf()
 local aircraft = get_aircraft_type()
 
 local mastermode = 0
+local chutestate 
+
+
+
+
+
+
 
 function post_initialize()
-    print_message_to_user("v0.1.7-alpha     If you see a Su-25T cockpit appear where it shouldn't, contact me on discord giving me the exact information displayed below.",10)
+    print_message_to_user("v0.1.8-alpha",10)
     print_message_to_user(aircraft,10)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
+    chutestate = 0
+
 
 	local birth = LockOn_Options.init_conditions.birth_place
 
@@ -34,8 +43,28 @@ end
 
 
 
-
 function SetCommand(command,value)
+
+if command ==  device_commands.CLIC_STATION and value == 1  then
+    dispatch_action(nil,Keys.iCommandPlaneChangeWeapon) 
+end 
+
+if command ==  device_commands.CLIC_LOCK and value == 1  then
+    dispatch_action(nil,Keys.iCommandPlaneChangeLock) 
+end 
+
+if command ==  device_commands.CLIC_LOCK_REL and value == 1  then
+    dispatch_action(nil,Keys.iCommandSensorReset) 
+end  
+
+if command ==  device_commands.CLIC_CTM_ONCE and value == 1  then
+    dispatch_action(nil,Keys.iCommandPlaneDropSnarOnce) 
+end    
+
+if command ==  device_commands.CLIC_AIRBRAKE and value == 1  then
+    dispatch_action(nil,Keys.iCommandPlaneAirBrake) 
+end
+
 if command ==  device_commands.CLIC_WAYPOINT and  value >0 then
     dispatch_action(nil,Keys.iCommandPlaneChangeTarget) 
 elseif command ==  device_commands.CLIC_WAYPOINT and  value <0 then
@@ -76,6 +105,26 @@ if aircraft=="Su-33" or aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-
     end
 
 end 
+
+if aircraft=="Su-27"or aircraft=="J-11A" then
+    
+    if command == device_commands.CLIC_CHUTE_DEP then	
+		if value == 1 then
+			if chutestate == 0 then
+				dispatch_action(true, Keys.iCommandPlaneParachute)
+				chutestate = 1
+			end
+		end
+	elseif command == device_commands.CLIC_CHUTE_REL then	
+    	if value == 1 then
+			if chutestate == 1 then
+				dispatch_action(true, Keys.iCommandPlaneParachute)
+                chutestate = -1
+			end
+		end
+    end
+
+end
 
 if aircraft=="Su-25T" then
     if mastermode >4 then
@@ -199,8 +248,12 @@ end
     if command == device_commands.CLIC_GEAR   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneGear) 
     end     
-    if command == device_commands.CLIC_CANOPY   and value ==1 then  
-        dispatch_action(nil,Keys.iCommandPlaneFonar) 
+    if command == device_commands.CLIC_CANOPY   and value ==1 then 
+          
+        dispatch_action(nil,Keys.iCommandPlaneFonar)
+        --dev:performClickableAction(device_commands.CLIC_MIRROR_UPDU,get_cockpit_draw_argument_value(181),true)
+        updatemirror()
+
     end 
     if command == device_commands.CLIC_NAVLIGHTS   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneLightsOnOff) 
@@ -291,7 +344,7 @@ end
 
 
     end
-    if command == device_commands.CLIC_MIRROIR and value == 1 then
+    if command == device_commands.CLIC_MIRROR and value == 1 then
         dispatch_action(nil,Keys.iCommandToggleMirrors)
         
     end
@@ -451,8 +504,8 @@ end
 
 function update()
 
-
---print_message_to_user(mastermode)
+    
+  
 
 end
 need_to_be_closed = false -- close lua state after initialization
