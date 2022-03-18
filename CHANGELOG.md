@@ -1,3 +1,72 @@
+# 18/03/2022 v0.2.0-alpha
+
+Changelog now in descending order
+
+Fixed issues
+    .Interference issue with AH-64D Module
+    .Interference issue with AH-6 Module
+    .Interference issue with Rafale Module
+    .Some buttons were not giving consistent output
+    .Position of connectors was not updated.
+
+Enhancements
+
+Su-25T
+    .Added LLTV Night Vision On/Off
+    .Added ELINT Pod On/Off
+    .Added Laser Ranger On/Off
+    .Added (FLIR or LLTV) On/Off
+    .Added Gear Light Near/Far/Off
+    .Added Parachute Deployment
+    .Added Parachute Release
+    .Added Animated HOTAS Target Designator
+    .Added Animated HOTAS Trim Controler
+    .Added Animated HOTAS Airbrake
+    .Added Animated HOTAS Countermeasures Release
+    .Added Animated HOTAS Target Lock
+    .Added Animated HOTAS Autopilot - Transition To Level Flight Control
+    .Added Animated HOTAS Autopilot - Reset
+    .Added Animated Canopy Open/Close
+    .Added Animated Toggle Mirrors
+    .Added Animated Landing Gear Up/Down
+
+MiG-29S/A/G
+    .Added Animated HOTAS Target Designator
+    .Added Animated HOTAS Trim Controler
+    .Added Animated HOTAS Airbrake
+    .Added Animated HOTAS Countermeasures Release
+    .Added Animated HOTAS Target Unlock
+    .Added Animated HOTAS Target Lock
+    .Added Animated HOTAS Autopilot - Transition To Level Flight Control
+    .Added Animated HOTAS Autopilot - Reset
+    .Added Animated Canopy Open/Close
+    .Added Animated Toggle Mirrors
+    .Added Animated Landing Gear Up/Down
+
+SU-33
+    .Added Animated HOTAS Target Designator
+    .Added Animated HOTAS Trim Controler
+    .Added Animated HOTAS Airbrake
+    .Added Animated HOTAS Countermeasures Release
+    .Added Animated HOTAS Target Unlock
+    .Added Animated HOTAS Target Lock
+    .Added Animated HOTAS Weapon Change
+    .Added Animated HOTAS Autopilot - Transition To Level Flight Control
+    .Added Animated HOTAS Autopilot - Reset
+    .Added Animated Toggle Mirrors
+    .Added Animated Landing Gear Up/Down
+
+SU-27/J-11A
+    .Added Animated HOTAS Target Designator
+    .Added Animated HOTAS Trim Controler
+    .Added Animated HOTAS Autopilot - Transition To Level Flight Control
+    .Added Animated HOTAS Autopilot - Reset
+    .Added Animated HOTAS AA Modes Select
+    .Added Animated Toggle Mirrors
+    .Added Animated Landing Gear Up/Down
+
+
+
 # 28/02/2022 v0.1.8-alpha
 
 Changelog now in descending order
@@ -13,6 +82,7 @@ SU-27/J-11A
     .Added Animated HOTAS Target Unlock
     .Added Animated HOTAS Target Lock
     .Added Animated HOTAS Weapon Change
+
 
 # 16/02/2022 v0.1.7-alpha
 

@@ -106,6 +106,15 @@ Keys =
     iCommandThrottleStop                        =   1034;
     iCommandPlaneChangeWeapon                   =   101;
     iCommandPlaneAirBrake                       =   73;
+    iCommandPlaneLaserRangerOnOff               =   392;
+    iCommandPlaneTrimLeft                       =   93;
+    iCommandPlaneTrimRight                      =   94;
+    iCommandPlaneTrimUp                         =   95;
+    iCommandPlaneTrimDown                       =   96;
+    iCommandPlaneTrimStop                       =   215;
+    iCommandPlaneNightTVOnOff                   =   393;
+
+
 
 
 
@@ -195,10 +204,23 @@ device_commands =
     CLIC_WAYPOINT               = counter(),
     CLIC_CHUTE_DEP              = counter(),
     CLIC_CHUTE_REL              = counter(),
-
     CLIC_AIRBRAKE               = counter(),
     CLIC_CTM_ONCE               = counter(),
     CLIC_LOCK_REL               = counter(),
     CLIC_LOCK                   = counter(),
     CLIC_STATION                = counter(),
+    CLIC_MODE_AA                = counter(),
+    CLIC_LASER                  = counter(),
+    CLIC_TV                     = counter(),
+    CLIC_TV_NIGHT               = counter(),
+    CLIC_TGT_D                  = counter(),
+    CLIC_TGT_U                  = counter(),
+    CLIC_TGT_L                  = counter(),
+    CLIC_TGT_R                  = counter(),
+    CLIC_ZOOM                   = counter(),
+    CLIC_TRIM_L                 = counter(),
+    CLIC_TRIM_R                 = counter(),
+    CLIC_TRIM_U                 = counter(),
+    CLIC_TRIM_D                 = counter(),
+
 }

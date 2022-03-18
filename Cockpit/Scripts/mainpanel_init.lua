@@ -15,22 +15,51 @@ end
 
 local controllers = LoRegisterPanelControls()
 
-THROTTLE_L						= CreateGauge("parameter")
-THROTTLE_L.arg_number			= 1
-THROTTLE_L.input				= {0,1}
-THROTTLE_L.output				= {-1,0}
-THROTTLE_L.parameter_name		= "THROTTLE_L"
+if   aircraft=="Su-33"or   aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" then
+THROTTLE_L_PNTS						= CreateGauge("parameter")
+THROTTLE_L_PNTS.arg_number			= 1
+THROTTLE_L_PNTS.input				= {0,1}
+THROTTLE_L_PNTS.output				= {-1,0}
+THROTTLE_L_PNTS.parameter_name		= "THROTTLE_L_PNTS"
 
-THROTTLE_R						= CreateGauge("parameter")
-THROTTLE_R.arg_number			= 2
-THROTTLE_R.input				= {0,1}
-THROTTLE_R.output				= {-1,0}
-THROTTLE_R.parameter_name		= "THROTTLE_R"
+THROTTLE_R_PNTS						= CreateGauge("parameter")
+THROTTLE_R_PNTS.arg_number			= 2
+THROTTLE_R_PNTS.input				= {0,1}
+THROTTLE_R_PNTS.output				= {-1,0}
+THROTTLE_R_PNTS.parameter_name		= "THROTTLE_R_PNTS"
+
+STICK_PITCH_PNTS						= CreateGauge("parameter")
+STICK_PITCH_PNTS.arg_number			= 3
+STICK_PITCH_PNTS.input				= {-1,1}
+STICK_PITCH_PNTS.output				= {-1,1}
+STICK_PITCH_PNTS.parameter_name		= "STICK_PITCH_PNTS"
+
+STICK_ROLL_PNTS						= CreateGauge("parameter")
+STICK_ROLL_PNTS.arg_number			= 4
+STICK_ROLL_PNTS.input				= {-1,1}
+STICK_ROLL_PNTS.output				= {-1,1}
+STICK_ROLL_PNTS.parameter_name		= "STICK_ROLL_PNTS"
+
+CANOPY_PNTS						    = CreateGauge("parameter")
+CANOPY_PNTS.arg_number			    = 5
+CANOPY_PNTS.input				    = {-1,1}
+CANOPY_PNTS.output				    = {-1,1}
+CANOPY_PNTS.parameter_name		    = "CANOPY_PNTS"
+
+GEARLEVER_PNTS						= CreateGauge("parameter")
+GEARLEVER_PNTS.arg_number			= 6
+GEARLEVER_PNTS.input				= {-1,1}
+GEARLEVER_PNTS.output				= {-1,1}
+GEARLEVER_PNTS.parameter_name		= "GEARLEVER_PNTS"
+
+CANOPYLEVER_PNTS						= CreateGauge("parameter")
+CANOPYLEVER_PNTS.arg_number			= 7
+CANOPYLEVER_PNTS.input				= {-1,1}
+CANOPYLEVER_PNTS.output				= {-1,1}
+CANOPYLEVER_PNTS.parameter_name		= "CANOPYLEVER_PNTS"
 
 
-
-
-
+end
 
 need_to_be_closed  = true -- close lua state after initialization
 

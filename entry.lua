@@ -51,6 +51,12 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["Su-25A"] 				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 
 	--Excluded, list to be enlarged to avoid conflicts 	
+	["AH-64D"]				= {enable_options_key_for_unit='dontuseit'},
+	["AH-6"]				= {enable_options_key_for_unit='dontuseit'},
+	["Rafale_C"]			= {enable_options_key_for_unit='dontuseit'},
+	["Rafale_M"]			= {enable_options_key_for_unit='dontuseit'},
+	["Rafale_B"]			= {enable_options_key_for_unit='dontuseit'},
+	["Rafale_A_S"]			= {enable_options_key_for_unit='dontuseit'},
 	["Bell-47"]				= {enable_options_key_for_unit='dontuseit'},
 	["AV8BNA"]				= {enable_options_key_for_unit='dontuseit'},
 	["SpitfireLFMkIXCW"]	= {enable_options_key_for_unit='dontuseit'},

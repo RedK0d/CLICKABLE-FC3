@@ -5,11 +5,17 @@
  Su-27
  J-11A
  Su-33
+ Su-25T
  More to come...
 
  # INSTALLATION 
-Very simple installation.
-Simply unzip the contents of the archive into your "Saved Games\DCS\Mods\tech\" directory.
+
+1: Unzip the contents of the archive in your "Saved Games\DCS\Mods\tech\" directory.
+
+2: Copy the device_init.zip archive to your "Install Path\DCSWorld\Mods\aircraft\" directory
+
+3: Unzip the archive overwriting the files.
+
 Then launch the game.
 You can you can manage the activation of the module in the options.
 Lalt+C to click
@@ -21,6 +27,6 @@ Join us on Discord.
 
 # SUPPORT US
 You can support us via Patreon 
-https://www.patreon.com/RedK0d
+https://www.patreon.com/posts/63700042
 
 

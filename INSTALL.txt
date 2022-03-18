@@ -2,9 +2,14 @@
 A partially clickable mod for the FC3 Planes
 
 # INSTALLATION 
-Very simple installation.
-Simply unzip the contents of the archive into your "Saved Games\DCS\Mods\tech\" directory.
+
+1: Unzip the contents of the archive in your "Saved Games\DCS\Mods\tech\" directory.
+
+2: Copy the device_init.zip archive to your "Install Path\DCSWorld\Mods\aircraft\" directory
+
+3: Unzip the archive overwriting the files.
+
 Then launch the game.
-You can you can manage the activation of the module in the options.
+You can manage the activation of the module in the options.
 Lalt+C to click
-Please report conflicts with others mods by opening an issue on GitHub and uploading the mod's entry.lua file.
+Please report any issues in the dedicated section on Discord or Github. 

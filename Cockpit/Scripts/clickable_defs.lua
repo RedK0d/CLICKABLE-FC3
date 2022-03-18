@@ -46,6 +46,7 @@ function default_button(hint_, device_, command_, arg_, arg_val_, arg_lim_, soun
         arg_lim = {arg_lim_},
         use_release_message = {true},
         updatable = true,
+        relative  = true,
         sound = sound_ and {{sound_}, {sound_}} or nil
     }
 end
@@ -86,6 +87,7 @@ function default_2_position_tumb(hint_, device_, command_, arg_, sound_, animati
     }
 end
 
+-- default_3_position_tumb = bouton 3 positions -1,0,1 souris gauche ou souris droite indiff�remment
 function default_3_position_tumb(hint_, device_, command_, arg_, cycled_, inversed_, sound_, animation_speed_)
     local animation_speed_ = animation_speed_ or anim_speed_default
     local cycled = false
