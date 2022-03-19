@@ -1,3 +1,8 @@
+# 19/03/2022 v0.2.1-alpha
+Fixed issues
+    .The player spawns in the cockpit of the Su-25T instead of the cockpit of the chosen aircraft.
+Known issues
+    .Cockpit liveries are no longer supported since v0.2.0-alpha
 # 18/03/2022 v0.2.0-alpha
 
 Changelog now in descending order
