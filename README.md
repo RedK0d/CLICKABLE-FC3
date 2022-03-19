@@ -20,6 +20,10 @@ Then launch the game.
 You can you can manage the activation of the module in the options.
 Lalt+C to click
 Please report conflicts with others mods by opening an issue on GitHub and uploading the mod's entry.lua file.
+
+# KNOWN ISSUES 
+
+Cockpit liveries are no longer supported since v0.2.0-alpha
  
  # DISCORD
 Join us on Discord. 
