@@ -23,7 +23,7 @@ Please report conflicts with others mods by opening an issue on GitHub and uploa
 
 # KNOWN ISSUES 
 
-Cockpit liveries are no longer supported since v0.2.0-alpha
+Cockpit liveries are no longer supported since the position of connectors can move since v0.2.0-alpha
  
  # DISCORD
 Join us on Discord. 
