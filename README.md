@@ -18,16 +18,14 @@
 
 Then launch the game.
 You can you can manage the activation of the module in the options.
-Lalt+C to click
-Please report conflicts with others mods by opening an issue on GitHub and uploading the mod's entry.lua file.
 
-# KNOWN ISSUES 
+Please report conflicts with others mods.
 
-Cockpit liveries are no longer supported since the position of connectors can move since v0.2.0-alpha
+If DCS updates or if you repair it, you will have to repeat step 2 and 3, because the files will be overwritten during the operation. 
  
  # DISCORD
 Join us on Discord. 
- https://discord.com/invite/CrExr87dP9
+https://discord.com/invite/CrExr87dP9
 
 # SUPPORT US
 You can support us via Patreon 
