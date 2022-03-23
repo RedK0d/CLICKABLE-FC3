@@ -10,6 +10,7 @@ Removed
     
 Enhancements
     .Added menu icons
+    
 # 20/03/2022 v0.2.2-alpha
 Fixed issues
     .Cockpit liveries are no longer supported since the position of connectors can move since v0.2.0-alpha
