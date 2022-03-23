@@ -21,7 +21,7 @@ local CLIC_MODE_AA_COUNTER
 
 
 function post_initialize()
-    print_message_to_user("v0.2.2-alpha",10)
+    print_message_to_user("v0.2.3-alpha",10)
     print_message_to_user(aircraft,10)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
     chutestate              = 0
