@@ -1,3 +1,15 @@
+# 23/03/2022 v0.2.3-alpha
+Fixed issues
+    .Cockpit liveries problems.
+    .The game crashes when you are killed.
+    .Problem with cockpit lighting.
+    .Problem with SRS
+    
+Removed 
+    .All the moving connectors.
+    
+Enhancements
+    .Added menu icons
 # 20/03/2022 v0.2.2-alpha
 Fixed issues
     .Cockpit liveries are no longer supported since the position of connectors can move since v0.2.0-alpha
