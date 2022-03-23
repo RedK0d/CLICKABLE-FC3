@@ -6,7 +6,7 @@ end
 -------DEVICE ID-------
 devices = {}
 devices["CLICKABLE"]     			= counter()
-devices["PNT_UPD"]     				= counter()
+--devices["PNT_UPD"]     				= counter()
 
 
 
