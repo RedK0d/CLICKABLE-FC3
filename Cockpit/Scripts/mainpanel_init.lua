@@ -12,10 +12,10 @@ elseif  aircraft=="Su-25"                       then
 elseif  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S"      then
     shape_name		   = "MIG-29-CLICKABLE"
 end
-
+--[[
 local controllers = LoRegisterPanelControls()
 
-if   aircraft=="Su-33"or   aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" then
+if   aircraft=="Su-33"or   aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" or aircraft=="Su-25" then
 THROTTLE_L_PNTS						= CreateGauge("parameter")
 THROTTLE_L_PNTS.arg_number			= 1
 THROTTLE_L_PNTS.input				= {0,1}
@@ -60,6 +60,8 @@ CANOPYLEVER_PNTS.parameter_name		= "CANOPYLEVER_PNTS"
 
 
 end
+]]
+
 
 need_to_be_closed  = true -- close lua state after initialization
 

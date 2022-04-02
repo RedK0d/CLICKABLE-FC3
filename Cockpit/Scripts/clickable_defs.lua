@@ -233,6 +233,7 @@ function default_axis_limited(hint_, device_, command_, arg_, default_, gain_, u
         hint        = hint_,
         device      = device_,
         action      = {command_},
+        stop_action = {command_}, 
         arg         = {arg_},
         arg_value   = {default},
         arg_lim     = {arg_lim_},
@@ -240,7 +241,7 @@ function default_axis_limited(hint_, device_, command_, arg_, default_, gain_, u
         use_OBB     = false,
         gain        = {gain},
         relative    = {relative},
-        cycle       = false
+        cycle       = true
     }
 end
 

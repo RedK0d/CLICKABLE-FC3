@@ -204,6 +204,7 @@ device_commands =
     CLIC_WAYPOINT               = counter(),
     CLIC_CHUTE_DEP              = counter(),
     CLIC_CHUTE_REL              = counter(),
+    CLIC_CHUTE                  = counter(),
     CLIC_AIRBRAKE               = counter(),
     CLIC_CTM_ONCE               = counter(),
     CLIC_LOCK_REL               = counter(),
@@ -222,5 +223,8 @@ device_commands =
     CLIC_TRIM_R                 = counter(),
     CLIC_TRIM_U                 = counter(),
     CLIC_TRIM_D                 = counter(),
-
+    CLIC_ASP                    = counter(),
+    CLIC_TARGET_UD              = counter(),
+    CLIC_TARGET_LR              = counter(),
+    CLIC_GRID                   = counter(),
 }

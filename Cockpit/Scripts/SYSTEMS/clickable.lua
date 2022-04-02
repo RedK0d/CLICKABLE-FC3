@@ -21,7 +21,7 @@ local CLIC_MODE_AA_COUNTER
 
 
 function post_initialize()
-    print_message_to_user("v0.2.3-alpha",10)
+    print_message_to_user("v0.2.4-alpha",10)
     print_message_to_user(aircraft,10)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
     chutestate              = 0
@@ -45,12 +45,14 @@ function detect_aircraft_type(aircraft)
     return false
     end
 end
+
+
 function reset_mastermode(mastermode,AA)
     local   max_mastermode  = 3
         if AA == true then
             max_mastermode  = 7
         end
-        
+                
         if mastermode >max_mastermode then
                
     
@@ -64,6 +66,7 @@ function reset_mastermode(mastermode,AA)
         
     
 end
+
     
 
 
@@ -71,8 +74,38 @@ end
 
 
 function SetCommand(command,value)
-    local AA = detect_aircraft_type(aircraft)
+    
+    local AA    = detect_aircraft_type(aircraft)
+    
+    if command ==  device_commands.CLIC_TARGET_UD and  value ==1 then
+        dispatch_action(nil,Keys.iCommandPlaneRadarUp)
+        
+    elseif command ==  device_commands.CLIC_TARGET_UD and  value==-1 then
+        dispatch_action(nil,Keys.iCommandPlaneRadarDown)
+        
+    elseif command ==  device_commands.CLIC_TARGET_UD and  value==0 then
+        dispatch_action(nil,Keys.iCommandPlaneRadarStop)
+        
+    end  
+    if command ==  device_commands.CLIC_TARGET_LR and  value ==1 then
+        dispatch_action(nil,Keys.iCommandPlaneRadarLeft)
+        
+    elseif command ==  device_commands.CLIC_TARGET_LR and  value ==-1 then
+        dispatch_action(nil,Keys.iCommandPlaneRadarRight)
+        
+    elseif command ==  device_commands.CLIC_TARGET_LR and  value==0 then
+        dispatch_action(nil,Keys.iCommandPlaneRadarStop)
+        
+    end 
 
+    if command == device_commands.CLIC_GRID and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+        
+    end
+
+            if command == device_commands.CLIC_ASP    then 
+        dispatch_action(nil,Keys.iCommandPlaneHUDFilterOnOff)
+    end
     if command == device_commands.CLIC_TRIM_L   then 
         dispatch_action(nil,Keys.iCommandPlaneTrimLeft)
         if value ~=1 then
@@ -167,7 +200,7 @@ function SetCommand(command,value)
         
     end
     mastermode = reset_mastermode(mastermode,AA)
-
+   
 
     if command == device_commands.CLIC_MODE_AA  and value ==1 then
         CLIC_MODE_AA_COUNTER = CLIC_MODE_AA_COUNTER +1
@@ -207,18 +240,26 @@ function SetCommand(command,value)
             dispatch_action(nil,Keys.iCommandPlaneModeGround)
             end
 
-        else       
-            if      mastermode == 2 then
+        elseif      mastermode == 2 then
             dispatch_action(nil,Keys.iCommandPlaneModeFI0)
-            --print_message_to_user(value)
+            --
             elseif  mastermode == 3 then
             dispatch_action(nil,Keys.iCommandPlaneModeGround)
-            --print_message_to_user(value)
+            --
             end
         end
-    end     
-        if AA == false then
-            if command == device_commands.CLIC_LASER and  value == 1 then
+        if Su25 == true then
+            if      mastermode == 2 then
+                dispatch_action(nil,Keys.iCommandPlaneModeFI0)
+                elseif  mastermode == 3 then
+                dispatch_action(nil,Keys.iCommandPlaneModeGround)
+                      
+            
+            end
+
+         end     
+        if AA == false and Su25 == false then
+            if command == device_commands.CLIC_LASER and  value ==1  then
                 dispatch_action(nil, Keys.iCommandPlaneLaserRangerOnOff)
             end
             if command == device_commands.CLIC_TV_NIGHT and  value == 1 then
@@ -253,7 +294,9 @@ function SetCommand(command,value)
         end
 
     end
-
+    if command == device_commands.CLIC_CHUTE  and  value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneParachute)
+    end 
     if command == device_commands.CLIC_RADAR_FREQ  and  value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneChangeRadarPRF)
     end 
@@ -359,8 +402,6 @@ function SetCommand(command,value)
     if command == device_commands.CLIC_CANOPY   and value ==1 then 
           
         dispatch_action(nil,Keys.iCommandPlaneFonar)
-        --dev:performClickableAction(device_commands.CLIC_MIRROR_UPDU,get_cockpit_draw_argument_value(181),true)
-        updatemirror()
 
     end 
     if command == device_commands.CLIC_NAVLIGHTS   and value ==1 then  
@@ -390,7 +431,8 @@ function SetCommand(command,value)
     if command == device_commands.CLIC_RADAR_ON_OFF   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneRadarOnOff) 
     end
-    if command == device_commands.CLIC_EOS_ON_OFF or command == device_commands.CLIC_TV   and value ==1 then  
+ 
+    if command == device_commands.CLIC_TV   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneEOSOnOff) 
     end
 
@@ -595,17 +637,16 @@ function SetCommand(command,value)
 
     
 
-     
+
  
     
 
 
 end
-	
+
 
 function update()
-
-
+    --print_message_to_user(mastermode)
 end
 need_to_be_closed = false -- close lua state after initialization
 
