@@ -1,3 +1,48 @@
+# 02/04/2022 v0.2.4-alpha
+
+Added Su-25 Support
+    .Added Flight Clock Start/Stop/Reset
+    .Added Elapsed Time Clock Start/Stop/Reset
+    .Added Eject (3 times)
+    .Added Emergency Brake
+    .Added Engine Left Start
+    .Added Engine Right Start
+    .Added Engine Left Stop
+    .Added Engine Right Stop
+    .Added Weapons Jettison
+    .Added Emergency Jettison
+    .Added Fuel Tanks Jettison
+    .Added Navigation lights
+    .Added Nose Wheel Steering
+    .Added Electric Power Switch
+    .Added RWR/SPO Mode Select
+    .Added RWR/SPO Sound Signals Volume Up/Down
+    .Added Audible Warning Reset
+    .Added Gear Light Near/Far/Off
+    .Added ECM
+    .Added Ripple Interval Increase/Decrease.
+    .Added Ripple Quantity Select/SPPU select
+    .Added Altimeter Pressure Increase/Decrease
+    .Added Dragging Chute
+    .Added Flaps Up/Down
+    .Added Flaps Landing Position
+    .Added ASP-17 Glass Up/Down
+    .Added Navigation Modes
+    .Added Countermeasures Continuously Dispense
+    .Added Countermeasures Dispense
+    .Added Toggle Mirrors
+    .Added Landing Gear Up/Down
+    .Added HUD Brightness Up/Down
+    .Added HUD Color
+    .Added Laser Ranger On/Off
+    .Added Gunsight Reticle Switch
+    .Added Master Modes Select
+    .Added Target Designator Up/Down
+    .Added Target Designator Left/Right
+    .Added Target Lock
+    .Added Target UnLock
+
+
 # 23/03/2022 v0.2.3-alpha
 Fixed issues
     .Cockpit liveries problems.
@@ -10,14 +55,14 @@ Removed
     
 Enhancements
     .Added menu icons
-    
+
 # 20/03/2022 v0.2.2-alpha
 Fixed issues
     .Cockpit liveries are no longer supported since the position of connectors can move since v0.2.0-alpha
-
+    
 # 19/03/2022 v0.2.1-alpha
 Fixed issues
-    .The player spawns in the cockpit of the Su-25T instead of the cockpit of the chosen aircraft.
+    .The player spawns in the cockpit of the Su-25T instead of the cockpit of the chosen aircraft
 Known issues
     .Cockpit liveries are no longer supported since the position of connectors can move since v0.2.0-alpha
 
@@ -30,7 +75,7 @@ Fixed issues
     .Interference issue with AH-6 Module
     .Interference issue with Rafale Module
     .Some buttons were not giving consistent output
-    .Position of connectors was not updated.
+    .Position of connectors was not updated
 
 Enhancements
 
@@ -66,7 +111,7 @@ MiG-29S/A/G
     .Added Animated Toggle Mirrors
     .Added Animated Landing Gear Up/Down
 
-SU-33
+Su-33
     .Added Animated HOTAS Target Designator
     .Added Animated HOTAS Trim Controler
     .Added Animated HOTAS Airbrake
@@ -79,7 +124,7 @@ SU-33
     .Added Animated Toggle Mirrors
     .Added Animated Landing Gear Up/Down
 
-SU-27/J-11A
+Su-27/J-11A
     .Added Animated HOTAS Target Designator
     .Added Animated HOTAS Trim Controler
     .Added Animated HOTAS Autopilot - Transition To Level Flight Control
@@ -97,7 +142,7 @@ Changelog now in descending order
 Added LowFidelityAircraftManual by Zeitgeist. 
 
 Enhancements
-SU-27/J-11A
+Su-27/J-11A
     .Added Parachute Deployment
     .Added Parachute Release
     .Added Animated HOTAS Airbrake
@@ -113,11 +158,11 @@ Fixed issues
     .Interference issue with Bell-47 Module
 
 Enhancements
-SU-25T
+Su-25T
     .Added Master Modes Select
     .Added Next/Previous Waypoint, Airfield
 
-SU-27/J-11A/SU-33/
+Su-27/J-11A/Su-33/
     .Moved Radar On/Off connector
     .Moved Electro-Optical System On/Off connector
     .Added Master Modes Select
@@ -180,12 +225,12 @@ Fixed issues
     .Interference issue with P-51D-30-NA Module
     .Interference issue with P-51D Module
 
-SU-25T
+Su-25T
     . Solved Su-25T Possible bug between Attitude Hold Autopilot and Auto pilot Reset #32 
-SU-27/J-11A/SU-33/
+Su-27/J-11A/Su-33/
     . Solved "Internal Lights Switch Missing #38"
 Enhancements
-SU-25T 
+Su-25T 
     .Moved the cannopy connector
     .Added ECM
     .Added IR Jamming
@@ -200,7 +245,7 @@ Fixed issues
     .Interference issue with MOSQUITOFBMKVI Module
     .Interference issue with Mi-8MT Module
 Enhancements
-Added SU-25T Support
+Added Su-25T Support
     .Added Altimeter Pressure Increase/Decrease
     .Added Autopilot - Attitude Hold
     .Added Autopilot - Altitude And Roll Hold
@@ -304,7 +349,7 @@ Added for Su/33
 
 # 29/01/2022  v0.0.4-alpha
 
-Added SU-33 Support
+Added Su-33 Support
 
 # 27/01/2022  v0.0.3-alpha
 

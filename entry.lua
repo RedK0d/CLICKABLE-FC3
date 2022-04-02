@@ -1,6 +1,7 @@
 
 declare_plugin("CLICKABLE-FC3_Module",
 {
+	installed 	  = true,
 	dirName		  = current_mod_path,
 	displayName   = "CLICKABLE-FC3_Module",
 	shortName	  = "CLICKABLE-FC3_Module",
@@ -11,6 +12,13 @@ declare_plugin("CLICKABLE-FC3_Module",
 	
 	load_immediately = true,
 	binaries	 = {},
+	Skins	=
+	{
+		{
+			name	= _("CLICKABLE-FC3_Module"),
+			dir		= "Skins"
+		},
+	},
 	Options =
 	{
 		{
@@ -41,13 +49,13 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["MiG-29A"] 			= {enable_options_key_for_unit = 'Mig29a_enabled'},
 	["MiG-29G"] 			= {enable_options_key_for_unit = 'Mig29g_enabled'},
 	["MiG-29S"] 			= {enable_options_key_for_unit = 'Mig29s_enabled'},
-	
+	["Su-25"] 				= {enable_options_key_for_unit = 'Su25_enabled'},
+
 	--Not yet implemented
 	["F-15C"]				= {enable_options_key_for_unit='dontuseit'},
 	["A-10A"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["A-10C"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["A-10C II"]			= {enable_options_key_for_unit='dontuseit'},	--Which version ?
-	["Su-25"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["Su-25A"] 				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 
 	--Excluded, list to be enlarged to avoid conflicts 	
