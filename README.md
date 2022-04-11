@@ -18,7 +18,6 @@ You can you can manage the activation of the module in the options.
 
 Please report conflicts with others mods.
 
-
  
  # DISCORD
 Join us on Discord. 
