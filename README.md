@@ -12,6 +12,7 @@
 
 1: Unzip the contents of the archive in your "Saved Games\DCS\Mods\tech\" directory.
 
+
 Then launch the game.
 You can you can manage the activation of the module in the options.
 
