@@ -20,7 +20,7 @@ Please report conflicts with others mods.
 
  # SUPPORT US
   
-                             [![Donate](https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)
+[![Donate](https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)
                              
 
  
