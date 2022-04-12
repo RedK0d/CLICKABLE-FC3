@@ -24,6 +24,10 @@ You can support us via Paypal or Patreon
                              
                              https://www.patreon.com/RedK0d
  
+ # SUPPORT US
+You can support us via Patreon 
+https://www.patreon.com/RedK0d
+
  # DISCORD
 Join us on Discord. 
 https://discord.com/invite/CrExr87dP9
