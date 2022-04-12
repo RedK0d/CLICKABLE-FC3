@@ -12,7 +12,7 @@
 
  # INSTALLATION 
 
-1: Unzip the contents of the archive in your "Saved Games\DCS\Mods\tech\" directory.
+Simply unzip the contents of the archive in your "Saved Games\DCS\Mods\tech\" directory.
 
 
 Then launch the game.
