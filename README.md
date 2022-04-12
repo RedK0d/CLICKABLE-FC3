@@ -22,7 +22,7 @@ Please report conflicts with others mods.
 You can support us via Paypal or Patreon 
                              [![Donate](https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)
                              
-                             https://www.patreon.com/RedK0d
+
  
  # SUPPORT US
 You can support us via Patreon 
