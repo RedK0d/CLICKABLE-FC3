@@ -18,6 +18,8 @@ You can you can manage the activation of the module in the options.
 
 Please report conflicts with others mods.
 
+ # DONATE
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)
  
  # DISCORD
 Join us on Discord. 
