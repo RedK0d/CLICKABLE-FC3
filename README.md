@@ -6,7 +6,9 @@
  J-11A
  Su-33
  Su-25T
- More to come...
+ Su-25
+ A-10A
+ F-15C to come ...
 
  # INSTALLATION 
 

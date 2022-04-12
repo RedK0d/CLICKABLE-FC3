@@ -29,11 +29,11 @@ declare_plugin("CLICKABLE-FC3_Module",
 		},
 	},
 })
-mount_vfs_texture_path  (current_mod_path ..  "/Textures")
-mount_vfs_model_path    (current_mod_path ..  "/Shapes")
+
 
 local path 		= current_mod_path..'/Cockpit/Scripts/'
-
+mount_vfs_texture_path  (current_mod_path ..  "/Textures")
+mount_vfs_model_path    (current_mod_path ..  "/Shapes")
 
 		
 
@@ -50,10 +50,10 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["MiG-29G"] 			= {enable_options_key_for_unit = 'Mig29g_enabled'},
 	["MiG-29S"] 			= {enable_options_key_for_unit = 'Mig29s_enabled'},
 	["Su-25"] 				= {enable_options_key_for_unit = 'Su25_enabled'},
+	["A-10A"]				= {enable_options_key_for_unit = 'A10a_enabled'},
 
 	--Not yet implemented
 	["F-15C"]				= {enable_options_key_for_unit='dontuseit'},
-	["A-10A"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["A-10C"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["A-10C II"]			= {enable_options_key_for_unit='dontuseit'},	--Which version ?
 	["Su-25A"] 				= {enable_options_key_for_unit='dontuseit'},	--Which version ?
@@ -136,5 +136,4 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	
 	}
 )
-
 plugin_done()

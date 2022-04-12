@@ -113,8 +113,9 @@ Keys =
     iCommandPlaneTrimDown                       =   96;
     iCommandPlaneTrimStop                       =   215;
     iCommandPlaneNightTVOnOff                   =   393;
-
-
+    iCommandPlaneWheelBrakeOn                   =   74;
+    iCommandPlaneWheelBrakeOff                  =   75;
+    iCommandChangeReleaseMode                   =   284;
 
 
 
@@ -227,4 +228,6 @@ device_commands =
     CLIC_TARGET_UD              = counter(),
     CLIC_TARGET_LR              = counter(),
     CLIC_GRID                   = counter(),
+    CLIC_WHEELBRAKE             = counter(),
+    CLIC_PRS_SGL                = counter(),
 }

@@ -21,8 +21,10 @@ local CLIC_MODE_AA_COUNTER
 
 
 function post_initialize()
-    print_message_to_user("v0.2.4-alpha",10)
+    print_message_to_user("v0.2.5-alpha",10)
+   -- print_message_to_user("Do not redistribute",10)
     print_message_to_user(aircraft,10)
+    --print_message_to_user(LockOn_Options.common_script_path..)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
     chutestate              = 0
     CLIC_MODE_AA_COUNTER    = 0
@@ -76,6 +78,13 @@ end
 function SetCommand(command,value)
     
     local AA    = detect_aircraft_type(aircraft)
+
+    if command == device_commands.CLIC_WHEELBRAKE   then  
+        dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOn) 
+        if value ~=1 then
+            dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOff)	
+        end
+    end
     
     if command ==  device_commands.CLIC_TARGET_UD and  value ==1 then
         dispatch_action(nil,Keys.iCommandPlaneRadarUp)
@@ -238,27 +247,14 @@ function SetCommand(command,value)
             dispatch_action(nil,Keys.iCommandPlaneModeFI0)
             elseif  mastermode == 7 then
             dispatch_action(nil,Keys.iCommandPlaneModeGround)
-            end
-
-        elseif      mastermode == 2 then
-            dispatch_action(nil,Keys.iCommandPlaneModeFI0)
-            --
-            elseif  mastermode == 3 then
-            dispatch_action(nil,Keys.iCommandPlaneModeGround)
-            --
-            end
-        end
-        if Su25 == true then
+            end      
+        else 
+            
             if      mastermode == 2 then
                 dispatch_action(nil,Keys.iCommandPlaneModeFI0)
-                elseif  mastermode == 3 then
+            elseif  mastermode == 3 then
                 dispatch_action(nil,Keys.iCommandPlaneModeGround)
-                      
-            
-            end
-
-         end     
-        if AA == false and Su25 == false then
+            end 
             if command == device_commands.CLIC_LASER and  value ==1  then
                 dispatch_action(nil, Keys.iCommandPlaneLaserRangerOnOff)
             end
@@ -273,7 +269,7 @@ function SetCommand(command,value)
         end
 
 
-
+    end
 
     if aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" then
         
@@ -621,7 +617,7 @@ function SetCommand(command,value)
 
     end
 
-    if command == device_commands.CLIC_RIPPLE_QT and value == 1 then
+    if command == device_commands.CLIC_RIPPLE_QT  then
         dispatch_action(nil,Keys.iCommandChangeRippleQuantity)
         
     end
@@ -631,8 +627,13 @@ function SetCommand(command,value)
         
     end
 
-    
+    if command == device_commands.CLIC_PRS_SGL  then
+        dispatch_action(nil,Keys.iCommandChangeReleaseMode)
+        
+    end
 
+    
+   
 
 
     

@@ -31,4 +31,5 @@ return {
 		Su25t_enabled = DbOption.new():setValue(true):checkbox(),
 		Su27_enabled = DbOption.new():setValue(true):checkbox(),
 		Su33_enabled = DbOption.new():setValue(true):checkbox(),
+		A10a_enabled = DbOption.new():setValue(true):checkbox(),
 		}

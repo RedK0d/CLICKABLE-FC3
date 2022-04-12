@@ -19,7 +19,7 @@ elements = {}
 --elements["PNT_TGT_D"]               = default_button("Target Designator Down",                              devices.CLICKABLE,  device_commands.CLIC_TGT_D         )
 --elements["PNT_TRIM_L"]              = default_button("Trim: Left Wing Down",                                devices.CLICKABLE,  device_commands.CLIC_TRIM_L        )
 --elements["PNT_TRIM_R"]              = default_button("Trim: Right Wing Down",                               devices.CLICKABLE,  device_commands.CLIC_TRIM_R        )
---elements["PNT_TRIM_U"]              = default_button("Trim: Nose Down",                                       devices.CLICKABLE,  device_commands.CLIC_TRIM_U        )
+--elements["PNT_TRIM_U"]              = default_button("Trim: Nose Down",                                     devices.CLICKABLE,  device_commands.CLIC_TRIM_U        )
 --elements["PNT_TRIM_D"]              = default_button("Trim: Nose Up",                                       devices.CLICKABLE,  device_commands.CLIC_TRIM_D        )
 elements["PNT_AUTO_BARO"]           = default_button("Autopilot - Altitude And Roll Hold",                  devices.CLICKABLE,  device_commands.CLIC_AUTO_BARO     )
 elements["PNT_AUTO_RADAR"]          = default_button("Autopilot - Radar Altitude Hold",                     devices.CLICKABLE,  device_commands.CLIC_AUTO_RADAR    )
@@ -117,7 +117,9 @@ elements["PNT_DSP_ZOOMOUT"]         = default_button("Display Zoom Out",		      
 elements["PNT_LIGHT"]               = default_button("Illumination Cockpit",                                devices.CLICKABLE,  device_commands.CLIC_COCKPITLIGHT  )  
 elements["PNT_CTM"]                 = default_button("Countermeasures Continuously Dispense",               devices.CLICKABLE,  device_commands.CLIC_CTM           )
 elements["PNT_NAVPROGRAM"]          = default_axis_limited("Navigation Modes",                              devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
-elements["PNT_MODE"]                = default_axis_limited("Master Modes Select",                           devices.CLICKABLE,  device_commands.CLIC_MODE)
+elements["PNT_MODE"]                = default_axis_limited("Master Modes Select",                           devices.CLICKABLE,  device_commands.CLIC_MODE          )
+elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",                             devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS)
+
 end
     
 
@@ -223,3 +225,26 @@ elements["PNT_LOCK"]                = default_button("Target Lock",             
 
 end
 
+if  aircraft=="A-10A"                       then
+elements["PNT_FLAPS_MULTI"]         = default_button("Flaps Up/Down",                                       devices.CLICKABLE,  device_commands.CLIC_FLAPS_MULTI   )
+elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",                             devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS)
+elements["PNT_MODE"]                = default_axis_limited("Master Modes Select",                           devices.CLICKABLE,  device_commands.CLIC_MODE)
+elements["PNT_TRIM_L"]              = default_button("Trim: Left Wing Down",                                devices.CLICKABLE,  device_commands.CLIC_TRIM_L        )
+elements["PNT_TRIM_R"]              = default_button("Trim: Right Wing Down",                               devices.CLICKABLE,  device_commands.CLIC_TRIM_R        )
+elements["PNT_TRIM_U"]              = default_button("Trim: Nose Down",                                     devices.CLICKABLE,  device_commands.CLIC_TRIM_U        )
+elements["PNT_TRIM_D"]              = default_button("Trim: Nose Up",                                       devices.CLICKABLE,  device_commands.CLIC_TRIM_D        )
+elements["PNT_CTM_CHAFF"]           = default_button("Countermeasures Chaff Dispense",                      devices.CLICKABLE,  device_commands.CLIC_CTM_CHAFF     )
+elements["PNT_CTM_FLARE"]           = default_button("Countermeasures Flares Dispense",                     devices.CLICKABLE,  device_commands.CLIC_CTM_FLARE     )
+elements["PNT_CTM"]                 = default_button("Countermeasures Continuously Dispense",               devices.CLICKABLE,  device_commands.CLIC_CTM           )
+elements["PNT_RIPPLE_INT"]          = default_axis_limited("Ripple Interval Increase/Decrease",             devices.CLICKABLE,  device_commands.CLIC_RIPPLE_INT    )
+elements["PNT_RIPPLE_QT"]           = default_axis_limited("Ripple Quantity Select/SPPU select",            devices.CLICKABLE,  device_commands.CLIC_RIPPLE_QT     )
+elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )
+elements["PNT_MIRROR_U"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR        )
+elements["PNT_MIRROR_L"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR        )
+elements["PNT_MIRROR_R"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR        )
+elements["PNT_FUEL_PROBE"]          = default_button("Refueling Bay",                                       devices.CLICKABLE,  device_commands.CLIC_RBOOM         )  
+elements["PNT_WHEEL_BRAKE"]         = default_button("Wheel Brake",                                         devices.CLICKABLE,  device_commands.CLIC_WHEELBRAKE    )  
+elements["PNT_PRS_SGL"]             = default_axis_limited("PRS/SGL Release Submodes Cycle",                devices.CLICKABLE,  device_commands.CLIC_PRS_SGL       )
+elements["PNT_CYCL01"]              = default_button("Weapon Change",                                       devices.CLICKABLE,  device_commands.CLIC_STATION       ) 
+elements["PNT_CYCL02"]              = default_button("Weapon Change",                                       devices.CLICKABLE,  device_commands.CLIC_STATION       ) 
+end

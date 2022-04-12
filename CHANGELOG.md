@@ -1,3 +1,43 @@
+# 12/04/2022 v0.2.5-alpha
+
+Added A-10A Support
+    .Added Weapon Change
+    .Added PRS/SGL Release Submodes Cycle
+    .Added Toggle Mirrors
+    .Added Refueling Port
+    .Added Navigation Modes
+    .Added Altimeter Pressure Increase/Decrease
+    .Added Canopy Open/Close
+    .Added Eject (3 times)
+    .Added Flaps Up/Down
+    .Added Gear Light Near/Far/Off
+    .Added Landing Gear Up/Down
+    .Added ECM
+    .Added Weapons Jettison
+    .Added Master Modes Select
+    .Added Trim Controler
+    .Added Electric Power Switch
+    .Added HUD Brightness Up/Down
+    .Added Engine Left Start
+    .Added Engine Right Start
+    .Added Engine Left Stop
+    .Added Engine Right Stop
+    .Added Navigation lights
+    .Added Next/Previous Waypoint, Airfield
+    .Added RWR/SPO Mode Select
+    .Added RWR/SPO Sound Signals Volume Up/Down
+    .Added Audible Warning Reset
+    .Added Wheel Brake
+    .Added Countermeasures Chaff Dispense
+    .Added Countermeasures Flares Dispense
+    .Added Countermeasures Continuously Dispense
+    .Added Elapsed Time Clock Start/Stop/Reset
+    .Added Ripple Interval Increase/Decrease
+    .Added Ripple Quantity Select/SPPU select
+
+MiG-29S/A/G
+    .Added Gear Light Near/Far/Off
+
 # 02/04/2022 v0.2.4-alpha
 
 Added Su-25 Support

@@ -212,6 +212,29 @@ dialog = {
 					},
 					["type"] = "CheckBox",
 				},
+				["A10a_enabledCheckbox"] = {
+					["params"] = {
+						["bounds"] = {
+							["h"] = 18,
+							["w"] = 125,
+							["x"] = 100,
+							["y"] = 390,
+						},
+						["enabled"] = true,
+						["state"] = true,
+						["tabOrder"] = 0,
+						["text"] = "A-10A",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0,
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "checkBoxSkin_options",
+						},
+					},
+					["type"] = "CheckBox",
+				},
 				
 			},
 			["params"] = {

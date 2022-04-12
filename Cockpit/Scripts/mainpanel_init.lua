@@ -11,6 +11,8 @@ elseif  aircraft=="Su-25"                       then
     shape_name		   = "SU-25-CLICKABLE"
 elseif  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S"      then
     shape_name		   = "MIG-29-CLICKABLE"
+elseif  aircraft=="A-10A"                       then
+    shape_name		   = "A-10A-CLICKABLE"
 end
 --[[
 local controllers = LoRegisterPanelControls()
