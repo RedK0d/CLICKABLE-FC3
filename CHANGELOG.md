@@ -1,3 +1,7 @@
+# XX/XX/2022 v0.2.6-pre-alpha
+
+A-10A 
+    .Fixed Navigation lights bug
 # 12/04/2022 v0.2.5-alpha
 
 Added A-10A Support

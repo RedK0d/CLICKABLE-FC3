@@ -21,7 +21,7 @@ local CLIC_MODE_AA_COUNTER
 
 
 function post_initialize()
-    print_message_to_user("v0.2.5-alpha",10)
+    print_message_to_user("v0.2.6-pre-alpha",10)
    -- print_message_to_user("Do not redistribute",10)
     print_message_to_user(aircraft,10)
     --print_message_to_user(LockOn_Options.common_script_path..)
