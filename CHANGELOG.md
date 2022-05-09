@@ -1,7 +1,103 @@
-# XX/XX/2022 v0.2.6-pre-alpha
+# 09/05/2022 v0.3.0-alpha
+
+Fixed issues
+    .Interference issue with Eurofighter Module
+    .Interference issue with PUCARA Module
+    .Interference issue with WW1FlyingCircus Module
+    .Interference issue with RAFB Module
+    .Issue with Ripple Quantity Select/SPPU select on Su-25T,Su-25
+
+General Improvement
+    .Added a new method to retrieve parameters from flight controls without crashing the game when killed.
+
+Su-33
+    .Added  HOTAS Target Designator
+    .Added  HOTAS Trim Controler
+    .Added  HOTAS Autopilot - Transition To Level Flight Control
+    .Added  HOTAS Autopilot - Reset
+    .Added  HOTAS AA Modes Select
+    .Toggle Mirrors         Now follow the canopy
+    .Landing Gear Up/Down   Now follow the lever
+    .Added  HOTAS Airbrake
+    .Added  HOTAS Countermeasures Release
+    .Added  HOTAS Target Unlock
+    .Added  HOTAS Target Lock
+    .Added  HOTAS Weapon Change
+
+Su-27/J-11A
+    .Added  HOTAS Target Designator
+    .Added  HOTAS Trim Controler
+    .Added  HOTAS Autopilot - Transition To Level Flight Control
+    .Added  HOTAS Autopilot - Reset
+    .Added  HOTAS AA Modes Select
+    .Toggle Mirrors         Now follow the canopy
+    .Landing Gear Up/Down   Now follow the lever
+    .Added  HOTAS Airbrake
+    .Added  HOTAS Countermeasures Release
+    .Added  HOTAS Target Unlock
+    .Added  HOTAS Target Lock
+    .Added  HOTAS Weapon Change
 
 A-10A 
     .Fixed Navigation lights bug
+    .Toggle Mirrors         Now follow the canopy
+    .Landing Gear Up/Down   Now follow the lever
+    .Added  HOTAS Weapon Change
+    .Added  HOTAS Target Lock 
+    .Added  HOTAS Airbrake
+
+MiG-29S/A/G
+    .Added  HOTAS Target Designator
+    .Added  HOTAS Trim Controler
+    .Added  HOTAS Airbrake
+    .Added  HOTAS Countermeasures Release
+    .Added  HOTAS Target Unlock
+    .Added  HOTAS Target Lock
+    .Added  HOTAS Autopilot - Transition To Level Flight Control
+    .Added  HOTAS Autopilot - Reset
+    .Added  Canopy Open/Close
+    .Toggle Mirrors         Now follow the canopy
+    .Landing Gear Up/Down   Now follow the lever
+
+Su-25T
+    .Added  HOTAS Target Designator
+    .Added  HOTAS Trim Controler
+    .Added  HOTAS Autopilot - Transition To Level Flight Control
+    .Added  HOTAS Autopilot - Reset
+    .Added  HOTAS Airbrake
+    .Added  HOTAS Flaps Up/Down
+    .Added  HOTAS Countermeasures Release
+    .Added  HOTAS Target Unlock
+    .Added  HOTAS Target Lock
+    .Added  Canopy Open/Close
+    .Toggle Mirrors         Now follow the canopy
+    .Landing Gear Up/Down   Now follow the lever
+
+Su-25
+    .Added  HOTAS Target Designator
+    .Added  HOTAS Trim Controler
+    .Added  HOTAS Autopilot - Transition To Level Flight Control
+    .Added  HOTAS Autopilot - Reset
+    .Added  HOTAS Airbrake
+    .Added  HOTAS Countermeasures Chaff Dispense
+    .Added  HOTAS Countermeasures Flares Dispense
+    .Added  HOTAS Flaps Up/Down
+    .Added  Canopy Open/Close
+    .Toggle Mirrors         Now follow the canopy
+    .Landing Gear Up/Down   Now follow the lever
+
+Added F-15C Support
+    .Added Canopy Open/Close
+    .Added Engine Left Start
+    .Added Engine Right Start
+    .Added Engine Left Stop
+    .Added Engine Right Stop
+    .Added Landing Gear Up/Down
+    .Added Electric Power Switch
+    .Added Toggle Mirrors 
+
+
+
 # 12/04/2022 v0.2.5-alpha
 
 Added A-10A Support
@@ -37,7 +133,7 @@ Added A-10A Support
     .Added Countermeasures Continuously Dispense
     .Added Elapsed Time Clock Start/Stop/Reset
     .Added Ripple Interval Increase/Decrease
-    .Added Ripple Quantity Select/SPPU select
+    .Added Ripple Quantity Increase
 
 MiG-29S/A/G
     .Added Gear Light Near/Far/Off

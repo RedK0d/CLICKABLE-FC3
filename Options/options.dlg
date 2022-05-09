@@ -235,6 +235,29 @@ dialog = {
 					},
 					["type"] = "CheckBox",
 				},
+				["F15c_enabledCheckbox"] = {
+					["params"] = {
+						["bounds"] = {
+							["h"] = 18,
+							["w"] = 125,
+							["x"] = 100,
+							["y"] = 420,
+						},
+						["enabled"] = true,
+						["state"] = true,
+						["tabOrder"] = 0,
+						["text"] = "F-15C",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0,
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "checkBoxSkin_options",
+						},
+					},
+					["type"] = "CheckBox",
+				},
 				
 			},
 			["params"] = {

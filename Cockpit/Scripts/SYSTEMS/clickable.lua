@@ -14,21 +14,19 @@ local aircraft = get_aircraft_type()
 local mastermode = 0
 local chutestate 
 local CLIC_MODE_AA_COUNTER
-
+--local test  =   get_param_handle("BASE_SENSOR_RIGHT_THROTTLE_POS")
 
 
 
 
 
 function post_initialize()
-    print_message_to_user("v0.2.6-pre-alpha",10)
-   -- print_message_to_user("Do not redistribute",10)
+    print_message_to_user("v0.3.0-alpha",10)
     print_message_to_user(aircraft,10)
-    --print_message_to_user(LockOn_Options.common_script_path..)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
     chutestate              = 0
     CLIC_MODE_AA_COUNTER    = 0
-
+    --dump("list_cockpit_params",list_cockpit_params())
 	local birth = LockOn_Options.init_conditions.birth_place
 
     if birth=="GROUND_HOT" or birth=="AIR_HOT" then
@@ -617,7 +615,12 @@ function SetCommand(command,value)
 
     end
 
-    if command == device_commands.CLIC_RIPPLE_QT  then
+    if command == device_commands.CLIC_RIPPLE_QT  and value == 1 then
+        dispatch_action(nil,Keys.iCommandChangeRippleQuantity)
+        
+    end
+
+    if command == device_commands.CLIC_RIPPLE_QTA10  then
         dispatch_action(nil,Keys.iCommandChangeRippleQuantity)
         
     end
@@ -647,7 +650,7 @@ end
 
 
 function update()
-    --print_message_to_user(mastermode)
+    --print_message_to_user(test:get())
 end
 need_to_be_closed = false -- close lua state after initialization
 

@@ -2,7 +2,7 @@ dt = 0.0001
 make_default_activity(dt)
 local  aircraft = get_aircraft_type()
 
-if   aircraft=="Su-33"or   aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" or aircraft=="Su-25"then
+
 
 
 local PNT_AIRBRAKE 			= nil
@@ -32,7 +32,7 @@ local PNT_CTM_CHAFF			= nil
 local PNT_CTM_FLARE			= nil
 local PNT_FLAPS_MULTI_BIS	= nil
 
-
+--[[
 local THROTTLE_L_PNTS 			= get_param_handle("THROTTLE_L_PNTS")
 local THROTTLE_R_PNTS 			= get_param_handle("THROTTLE_R_PNTS")
 local STICK_PITCH_PNTS 			= get_param_handle("STICK_PITCH_PNTS")
@@ -40,7 +40,7 @@ local STICK_ROLL_PNTS 			= get_param_handle("STICK_ROLL_PNTS")
 local CANOPY_PNTS 				= get_param_handle("CANOPY_PNTS")
 local GEARLEVER_PNTS			= get_param_handle("GEARLEVER_PNTS")
 local CANOPYLEVER_PNTS			= get_param_handle("CANOPYLEVER_PNTS")
-
+]]
 function post_initialize()
 
 	PNT_AIRBRAKE 			= get_clickable_element_reference("PNT_AIRBRAKE")
@@ -72,6 +72,8 @@ function post_initialize()
 end
 
 function update()
+	--[[
+		
 	THROTTLE_L_PNTS:set(get_cockpit_draw_argument_value(104))
 	THROTTLE_R_PNTS:set(get_cockpit_draw_argument_value(105))
 	STICK_PITCH_PNTS:set(get_cockpit_draw_argument_value(74))
@@ -83,6 +85,7 @@ function update()
 	elseif  aircraft=="Su-25T"then
 	CANOPYLEVER_PNTS:set(get_cockpit_draw_argument_value(181))
 	end
+	]]
 
     if PNT_AIRBRAKE then
 		PNT_AIRBRAKE:update()
@@ -165,5 +168,5 @@ function update()
 end
 
 
-end
+
 need_to_be_closed = false -- close lua state after initialization

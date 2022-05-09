@@ -200,6 +200,7 @@ device_commands =
     CLIC_ALTIMETER              = counter(),
     CLIC_RIPPLE_INT             = counter(),
     CLIC_RIPPLE_QT              = counter(),   
+    CLIC_RIPPLE_QTA10           = counter(),
     CLIC_CUTBURST               = counter(),
     CLIC_PARACHUTE              = counter(),
     CLIC_WAYPOINT               = counter(),
