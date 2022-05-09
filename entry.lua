@@ -52,9 +52,7 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["Su-25"] 					= {enable_options_key_for_unit = 'Su25_enabled'},
 	["A-10A"]					= {enable_options_key_for_unit = 'A10a_enabled'},
 	["F-15C"]					= {enable_options_key_for_unit = 'F15c_enabled'},
-	--Not yet implemented
 	
-		
 
 	--Excluded, list to be enlarged to avoid conflicts 
 	["RAFB"]					= {enable_options_key_for_unit='dontuseit'},
@@ -74,9 +72,6 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["FokkerDVII"]				= {enable_options_key_for_unit='dontuseit'},
 	["Sopwith-Camel"]			= {enable_options_key_for_unit='dontuseit'},
 	["SopwithCuckooT1"]			= {enable_options_key_for_unit='dontuseit'},
-	["A-10C"]					= {enable_options_key_for_unit='dontuseit'},	
-	["A-10C II"]				= {enable_options_key_for_unit='dontuseit'},	
-	["Su-25A"] 					= {enable_options_key_for_unit='dontuseit'},	
 	["AH-64D_BLK_II"]			= {enable_options_key_for_unit='dontuseit'},
 	["AH-6"]					= {enable_options_key_for_unit='dontuseit'},
 	["Rafale_C"]				= {enable_options_key_for_unit='dontuseit'},
