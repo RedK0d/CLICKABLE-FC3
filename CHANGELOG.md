@@ -1,4 +1,6 @@
 # 12/05/2022 v1.0.1c-beta
+Fixed issues
+    .Interference issue with F-16I SUFA Module
 F-15C
 .Added HOTAS Target Lock
 .Added HOTAS Radar - Return To Search/NDTWS
