@@ -52,10 +52,12 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["Su-25"] 					= {enable_options_key_for_unit = 'Su25_enabled'},
 	["A-10A"]					= {enable_options_key_for_unit = 'A10a_enabled'},
 	["F-15C"]					= {enable_options_key_for_unit = 'F15c_enabled'},
-	
 
 	--Excluded, list to be enlarged to avoid conflicts 
 	["RAFB"]					= {enable_options_key_for_unit='dontuseit'},
+	["F-16I"]					= {enable_options_key_for_unit='dontuseit'},
+	["F-16C"]					= {enable_options_key_for_unit='dontuseit'},	--Check and delete if not needed
+	["F-16C-BARAK 2020"]		= {enable_options_key_for_unit='dontuseit'},	--Check and delete if not needed
 	["Eurofighter"]				= {enable_options_key_for_unit='dontuseit'},
 	["PUCARA"]					= {enable_options_key_for_unit='dontuseit'},
 	["Fokker-DR1"]				= {enable_options_key_for_unit='dontuseit'},

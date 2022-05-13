@@ -217,9 +217,9 @@ elements["PNT_MIRROR_R"]            = default_button("Toggle Mirrors",          
 elements["PNT_AUTO_LEVEL_STICK"]    = default_button("Autopilot - Transition To Level Flight Control",      devices.CLICKABLE,  device_commands.CLIC_AUTO_LEVEL    )
 elements["PNT_AUTO_RESET_STICK"]    = default_button("Autopilot Reset",                                     devices.CLICKABLE,  device_commands.CLIC_AUTO_STOP     )
 
-elements["PNT_TARGET_UD"]           = default_axis_limited("Target Designator Up/Down",                     devices.CLICKABLE,  device_commands.CLIC_TARGET_UD,0,0,100/15,false, false, {-1,1})
+elements["PNT_TARGET_UD"]           = default_axis_limited("Target Designator Up/Down",                     devices.CLICKABLE,  device_commands.CLIC_TARGET_UD,0,0,100/15,false, false, {0,1})
 elements["PNT_TARGET_UD"].cycle = false
-elements["PNT_TARGET_LR"]           = default_axis_limited("Target Designator Left/Right",                  devices.CLICKABLE,  device_commands.CLIC_TARGET_LR,0,0,100/15,false, false, {-1,1})
+elements["PNT_TARGET_LR"]           = default_axis_limited("Target Designator Left/Right",                  devices.CLICKABLE,  device_commands.CLIC_TARGET_LR,0,0,100/15,false, false, {0,1})
 elements["PNT_TARGET_LR"].cycle = false
 elements["PNT_MODE"]                = default_axis_limited("Master Modes Select",                           devices.CLICKABLE,  device_commands.CLIC_MODE)
 elements["PNT_UNLOCK"]              = default_button("Target Unlock",                                       devices.CLICKABLE,  device_commands.CLIC_LOCK_REL      )
@@ -258,5 +258,65 @@ if  aircraft=="F-15C"                       then
 elements["PNT_MIRROR_U"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR        )
 elements["PNT_MIRROR_L"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR        )
 elements["PNT_MIRROR_R"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR        )
+elements["PNT_HUD_BRT_BIS"]         = default_axis_limited("HUD Brightness Up/Down",                        devices.CLICKABLE,  device_commands.CLIC_HUD_BRT,nil, 0, 1,true,true)
+elements["PNT_EJECT_BIS"]           = default_button("Eject (3 times)",                                     devices.CLICKABLE,  device_commands.CLIC_EJECT         )  
+elements["PNT_MODE_F15"]                = default_axis_limited("Master Combat Mode \nBeyond Visual Range\nClose Air Combat Vertical Scan \nClose Air Combat Bore \nLongitudinal Missile Aiming /FLOOD mode",
+                                                                                                            devices.CLICKABLE,  device_commands.CLIC_MODE_F15)
+elements["PNT_JETTINSON_TANK"]      = default_button("Fuel Tanks Jettison",                                 devices.CLICKABLE,  device_commands.CLIC_JETTINSON_TANK)
+elements["PNT_JETTINSON_TANK_BIS"]  = default_button("Fuel Tanks Jettison",                                 devices.CLICKABLE,  device_commands.CLIC_JETTINSON_TANK)
+elements["PNT_CTM_CHAFF"]           = default_button("Countermeasures Chaff Dispense",                      devices.CLICKABLE,  device_commands.CLIC_CTM_CHAFF     )
+elements["PNT_CTM_FLARE"]           = default_button("Countermeasures Flares Dispense",                     devices.CLICKABLE,  device_commands.CLIC_CTM_FLARE     )
+--elements["PNT_CTM_ONCE"]            = default_button("Countermeasures Release",                             devices.CLICKABLE,  device_commands.CLIC_CTM_ONCE      )
+elements["PNT_CTM"]                 = default_button("Countermeasures Continuously Dispense",               devices.CLICKABLE,  device_commands.CLIC_CTM           )
+elements["PNT_JAM_BIS"]             = default_button("ECM",                                                 devices.CLICKABLE,  device_commands.CLIC_JAM           )
+elements["PNT_NAVPROGRAM"]          = default_axis_limited("Navigation Modes",                               devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
+elements["PNT_RWR_MULTI"]           = default_button_axis("RWR\n(Click):Mode Select\n(Scroll):Signals Volume Up/Down",
 
-    end
+                                                                                                            devices.CLICKABLE,  device_commands.CLIC_RWR_MODE,device_commands.CLIC_RWR_SOUND)  
+elements["PNT_RWR_MULTI"].class     = {class_type.TUMB, class_type.LEV}
+elements["PNT_RWR_MULTI"].relative  = {false,true}
+elements["PNT_RWR_MULTI"].arg_lim   = {{0, 1}, {-1, 1}}
+elements["PNT_RWR_MULTI"].stop_action    = {device_commands.CLIC_RWR_SOUND, 0}
+elements["PNT_SCAN_RDR"]            = default_axis_limited("Radar Off",                                     devices.CLICKABLE,  device_commands.CLIC_RADAR_ON_OFF_F15  )  
+elements["PNT_RADAR_FREQ"]          = default_axis_limited("Radar Pulse Repeat Frequency Select",           devices.CLICKABLE,  device_commands.CLIC_RADAR_FREQ_F15    )  
+elements["PNT_RADAR_MODE"]          = default_button("Radar RWS/TWS Mode Select",                           devices.CLICKABLE,  Keys.iCommandPlaneRadarChangeMode  )
+elements["PNT_RADAR_MODE"].stop_action        = nil
+elements["PNT_RADAR_AZ"]            = default_axis_limited("Radar Scan Zone Increase/Decrease",             devices.CLICKABLE,  device_commands.CLIC_RADAR_AZ       )
+elements["PNT_RADAR_EL"]            = default_axis_limited("Radar Scan Zone Up/Down",                       devices.CLICKABLE,  device_commands.CLIC_RADAR_EL,0,0,100/15,false, false, {0,1})
+elements["PNT_RADAR_EL"].cycle = false
+elements["PNT_RADAR_RANGE"]         = default_axis_limited("Radar Display Zoom In/Out",                     devices.CLICKABLE,  device_commands.CLIC_ZOOM_F15,nil, 0, 1,true,true)
+elements["PNT_FUEL_DUMP"]           = default_button_tumb("Fuel Dump",                                      devices.CLICKABLE, Keys.iCommandPlaneFuelOn,Keys.iCommandPlaneFuelOff)
+elements["PNT_FUEL_DUMP"].action    ={Keys.iCommandPlaneFuelOn}
+elements["PNT_FUEL_DUMP"].stop_action    ={Keys.iCommandPlaneFuelOff}
+elements["PNT_FUEL_PROBE"]          = default_button("Refueling Bay",                                       devices.CLICKABLE,  device_commands.CLIC_RBOOM         )
+elements["PNT_CAS_YAW"]             = default_button("CAS Yaw",                                             devices.CLICKABLE,  Keys.iCommandHelicopter_PPR_button_H_up       )
+elements["PNT_CAS_YAW"].stop_action        = nil
+elements["PNT_CAS_ROLL"]            = default_button("CAS Roll",                                            devices.CLICKABLE,  Keys.iCommandHelicopter_PPR_button_K_up       )
+elements["PNT_CAS_ROLL"].stop_action        = nil
+elements["PNT_CAS_PITCH"]           = default_button("CAS Pitch",                                           devices.CLICKABLE,  Keys.iCommandHelicopter_PPR_button_T_up       )
+elements["PNT_CAS_PITCH"].stop_action        = nil
+elements["PNT_CAS_ALT-HOLD"]        = default_button("Autopilot - Altitude Hold",                           devices.CLICKABLE,  Keys.iCommandPlaneStabHbar          )
+elements["PNT_CAS_ALT-HOLD"].stop_action        = nil
+elements["PNT_CAS_ATT-HOLD"]        = default_button("Autopilot - Attitude Hold",                           devices.CLICKABLE,  Keys.iCommandPlaneAutopilot         )
+elements["PNT_CAS_ATT-HOLD"].stop_action        = nil
+elements["PNT_TMB_CAS_T/O"]         = default_button("Autopilot Disengage",                                 devices.CLICKABLE,  Keys.iCommandPlaneStabCancel        )
+elements["PNT_TMB_CAS_T/O"].stop_action        = nil
+elements["PNT_FUEL_QTY"]           = default_button_axis("Fuel Indicator\n(Click):Quantity Test\n(Scroll):Quantity Selector",
+                                                                                                            devices.CLICKABLE,  Keys.iCommandPlaneFSQuantityIndicatorTest,Keys.iCommandPlaneFSQuantityIndicatorSelectorMAIN)  
+elements["PNT_FUEL_QTY"].class     = {class_type.TUMB, class_type.LEV}
+elements["PNT_FUEL_QTY"].relative  = {false,true}
+elements["PNT_FUEL_QTY"].arg_lim   = {{0, 1}, {-1, 1}}
+elements["PNT_FUEL_QTY"].stop_action    = {Keys.iCommandPlaneFSQuantityIndicatorSelectorMAIN, 0}
+elements["PNT_AIRBRAKE"]            = default_button("Airbrake",                                            devices.CLICKABLE,  device_commands.CLIC_AIRBRAKE      )
+elements["PNT_FLAPS_MULTI_BIS"]     = default_button("Flaps Up/Down",                                       devices.CLICKABLE,  device_commands.CLIC_FLAPS_MULTI   )
+elements["PNT_STATION"]             = default_button("Weapon Change",                                       devices.CLICKABLE,  device_commands.CLIC_STATION       )
+elements["PNT_CTM_ONCE"]            = default_button("Countermeasures Release",                             devices.CLICKABLE,  device_commands.CLIC_CTM_ONCE      )
+elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",                             devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS_F15)
+elements["PNT_BRAKE"]               = default_button_tumb("Parking Brakes\n(Left Click):Engage\n(Right Click):Disengage",devices.CLICKABLE,  device_commands.CLIC_PARKING_BRAKES_F15_ON,device_commands.CLIC_PARKING_BRAKES_F15_OFF)
+elements["PNT_BRAKE"].stop_action   = nil
+elements["PNT_STICK_LOCK"]          = default_button("Target Lock",                                         devices.CLICKABLE,  device_commands.CLIC_LOCK          )
+elements["PNT_STICK_UNLOCK"]        = default_button("Radar - Return To Search/NDTWS",                      devices.CLICKABLE,  device_commands.CLIC_LOCK_REL      )
+elements["PNT_STICK_STATION"]       = default_button("Weapon Change",                                       devices.CLICKABLE,  device_commands.CLIC_STATION       )
+elements["PNT_STICK_SHOOT"]         = default_button("Weapon Release",                                      devices.CLICKABLE,  device_commands.CLIC_FIRE          )
+
+end

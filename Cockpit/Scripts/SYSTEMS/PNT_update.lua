@@ -31,7 +31,12 @@ local PNT_TRIM_D			= nil
 local PNT_CTM_CHAFF			= nil			
 local PNT_CTM_FLARE			= nil
 local PNT_FLAPS_MULTI_BIS	= nil
+local PNT_STICK_LOCK		= nil
+local PNT_STICK_UNLOCK		= nil
+local PNT_STICK_STATION		= nil
+local PNT_STICK_SHOOT		= nil
 
+--local TEST					= nil
 --[[
 local THROTTLE_L_PNTS 			= get_param_handle("THROTTLE_L_PNTS")
 local THROTTLE_R_PNTS 			= get_param_handle("THROTTLE_R_PNTS")
@@ -69,6 +74,11 @@ function post_initialize()
 	PNT_CTM_CHAFF			= get_clickable_element_reference("PNT_CTM_CHAFF")
 	PNT_CTM_FLARE			= get_clickable_element_reference("PNT_CTM_FLARE")
 	PNT_FLAPS_MULTI_BIS		= get_clickable_element_reference("PNT_FLAPS_MULTI_BIS")
+	PNT_STICK_LOCK			= get_clickable_element_reference("PNT_STICK_LOCK")
+	PNT_STICK_UNLOCK		= get_clickable_element_reference("PNT_STICK_UNLOCK")
+	PNT_STICK_STATION		= get_clickable_element_reference("PNT_STICK_STATION")
+	PNT_STICK_SHOOT			= get_clickable_element_reference("PNT_STICK_SHOOT")
+
 end
 
 function update()
@@ -165,6 +175,19 @@ function update()
 	if PNT_FLAPS_MULTI_BIS then
 		PNT_FLAPS_MULTI_BIS:update()
 	end
+	if PNT_STICK_LOCK	 then
+		PNT_STICK_LOCK:update()
+	end
+	if PNT_STICK_UNLOCK	 then
+		PNT_STICK_UNLOCK:update()
+	end
+	if PNT_STICK_STATION	 then
+		PNT_STICK_STATION:update()
+	end
+	if PNT_STICK_SHOOT		then
+		PNT_STICK_SHOOT:update()
+	end
+	
 end
 
 

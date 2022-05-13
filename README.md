@@ -19,21 +19,27 @@ Then launch the game.
 You can you can manage the activation of the module in the options.
 
 Please report conflicts with others mods.
-
-
-  
-[![Donate](https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)
-                             
-
  
  # SUPPORT US
-You can support us via Patreon 
+You can support us via 
+
+Patreon 
 https://www.patreon.com/RedK0d
+
+Or Paypal
+[![Donate](https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)
 
  # DISCORD
 Join us on Discord. 
 https://discord.com/invite/CrExr87dP9
 
-
+ # SPECIAL THANKS
+ Tobsen                             (Edm Exporter for Blender)
+ Grim Reapers and MatAWG            (YouTube content creators)
+ Aether,ImAPanzer and Emerald 467   (For Discord Management)
+ Emerald 467 and snowman            (For tests and feedback)
+ Zeitgeist                          (LowFidelityAircraftManual)
+ 
+ And for you all                    (For your interest in this mod)
 
 

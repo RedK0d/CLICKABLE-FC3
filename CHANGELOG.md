@@ -1,3 +1,101 @@
+# 12/05/2022 v1.0.1c-beta
+F-15C
+.Added HOTAS Target Lock
+.Added HOTAS Radar - Return To Search/NDTWS
+.Added HOTAS Weapon Change
+.Added HOTAS Weapon Release
+.Added HOTAS Target Designator
+.Added HOTAS Trim Controler
+
+# 11/05/2022 v1.0.1b-beta
+Su-25
+.Fixed  Target Designator Issue
+F-15C
+.Fixed  Radar Scan Zone Up/Down Issue
+.Label_Change   Fuel Quantity Selector  (Click) Fuel Quantity Selector (Scroll)
+            >   Fuel Indicator  
+                (Click):Quantity Test  
+                (Scroll):Quantity Selector
+.Label_Change   RWR Mode Select (Click) RWRSound Signals Volume Up/Down (Scroll)
+            >   "RWR  
+                (Click):Mode Select  
+                (Scroll):Signals Volume Up/Down"
+.Label_Change   Emergency Brake 
+            >   Parking Brakes  
+                (Left Click):Engage  
+                (Right Click):Disengage
+.Label_Change   Master Modes Select 
+            >   Master Combat Mode 
+                Beyond Visual Range
+                Close Air Combat Vertical Scan 
+                Close Air Combat Bore 
+                Longitudinal Missile Aiming /FLOOD mode
+.Fixed Master Combat Mode Issue                      
+
+# 10/05/2022 v1.0.1-beta
+F-15C
+    .Removed Flight Clock Start/Stop/Reset
+        [The F-15C does not support this command]
+    .Fixed Emergency Brake
+    .Fixed Master Modes Select
+        [Need further testings]
+    .Fixed Gear Light Near/Far/Off
+    .Fixed Navigation Modes
+        [Need further testings]
+    .Fixed Radar On/Off
+        [Need further testings]
+
+# 09/05/2022 v1.0.0-beta
+
+F-15C
+    .Moved Engine Left Start
+    .Moved Engine Right Start 
+    .Added HUD Brightness Up/Down
+    .Added Altimeter Pressure Increase/Decrease
+    .Added Elapsed Time Clock Start/Stop/Reset
+    .Added Flight Clock Start/Stop/Reset
+    .Added Eject (3 times)
+    .Added Emergency Brake
+    .Added Fuel Dump
+    .Added Weapons Jettison
+    .Added Emergency Jettison
+    .Added Fuel Tanks Jettison
+    .Added Master Modes Select    
+    .Added Navigation lights
+    .Added Gear Light Near/Far/Off
+    .Added Next/Previous Waypoint, Airfield
+    .Added ECM
+    .Added Navigation Modes
+    .Added RWR/SPO Mode Select
+    .Added RWR/SPO Sound Signals Volume Up/Down
+    .Added Radar On/Off
+    .Added Radar Pulse Repeat Frequency Select
+    .Added Radar RWS/TWS Mode Select
+    .Added Radar Scan Zone Increase/Decrease 
+    .Added Radar Scan Zone Up/Down
+    .Added Radar Display Zoom In/Out
+    .Added Fuel Dump On
+    .Added Fuel Dump Off
+    .Added Refueling Bay
+    .Added Fuel Dump
+    .Added Refueling Bay
+    .Added CAS Yaw
+    .Added CAS Roll
+    .Added CAS Pitch
+    .Added Autopilot - Altitude Hold
+    .Added Autopilot - Attitude Hold
+    .Added Autopilot Disengage
+    .Added Fuel Quantity Selector (Click) Fuel Quantity Selector (Scroll)
+    .Added Countermeasures Continuously Dispense
+    .Added HOTAS Airbrake
+    .Added HOTAS Flaps Up/Down
+    .Added HOTAS Weapon Change
+    .Added HOTAS Countermeasures Release
+    
+    
+
+ 
+
 # 09/05/2022 v0.3.0-alpha
 
 Fixed issues
@@ -11,77 +109,77 @@ General Improvement
     .Added a new method to retrieve parameters from flight controls without crashing the game when killed.
 
 Su-33
-    .Added  HOTAS Target Designator
-    .Added  HOTAS Trim Controler
-    .Added  HOTAS Autopilot - Transition To Level Flight Control
-    .Added  HOTAS Autopilot - Reset
-    .Added  HOTAS AA Modes Select
+    .Added HOTAS Target Designator
+    .Added HOTAS Trim Controler
+    .Added HOTAS Autopilot - Transition To Level Flight Control
+    .Added HOTAS Autopilot - Reset
+    .Added HOTAS AA Modes Select
     .Toggle Mirrors         Now follow the canopy
     .Landing Gear Up/Down   Now follow the lever
-    .Added  HOTAS Airbrake
-    .Added  HOTAS Countermeasures Release
-    .Added  HOTAS Target Unlock
-    .Added  HOTAS Target Lock
-    .Added  HOTAS Weapon Change
+    .Added HOTAS Airbrake
+    .Added HOTAS Countermeasures Release
+    .Added HOTAS Target Unlock
+    .Added HOTAS Target Lock
+    .Added HOTAS Weapon Change
 
 Su-27/J-11A
-    .Added  HOTAS Target Designator
-    .Added  HOTAS Trim Controler
-    .Added  HOTAS Autopilot - Transition To Level Flight Control
-    .Added  HOTAS Autopilot - Reset
-    .Added  HOTAS AA Modes Select
+    .Added HOTAS Target Designator
+    .Added HOTAS Trim Controler
+    .Added HOTAS Autopilot - Transition To Level Flight Control
+    .Added HOTAS Autopilot - Reset
+    .Added HOTAS AA Modes Select
     .Toggle Mirrors         Now follow the canopy
     .Landing Gear Up/Down   Now follow the lever
-    .Added  HOTAS Airbrake
-    .Added  HOTAS Countermeasures Release
-    .Added  HOTAS Target Unlock
-    .Added  HOTAS Target Lock
-    .Added  HOTAS Weapon Change
+    .Added HOTAS Airbrake
+    .Added HOTAS Countermeasures Release
+    .Added HOTAS Target Unlock
+    .Added HOTAS Target Lock
+    .Added HOTAS Weapon Change
 
 A-10A 
     .Fixed Navigation lights bug
     .Toggle Mirrors         Now follow the canopy
     .Landing Gear Up/Down   Now follow the lever
-    .Added  HOTAS Weapon Change
-    .Added  HOTAS Target Lock 
-    .Added  HOTAS Airbrake
+    .Added HOTAS Weapon Change
+    .Added HOTAS Target Lock 
+    .Added HOTAS Airbrake
 
 MiG-29S/A/G
-    .Added  HOTAS Target Designator
-    .Added  HOTAS Trim Controler
-    .Added  HOTAS Airbrake
-    .Added  HOTAS Countermeasures Release
-    .Added  HOTAS Target Unlock
-    .Added  HOTAS Target Lock
-    .Added  HOTAS Autopilot - Transition To Level Flight Control
-    .Added  HOTAS Autopilot - Reset
+    .Added HOTAS Target Designator
+    .Added HOTAS Trim Controler
+    .Added HOTAS Airbrake
+    .Added HOTAS Countermeasures Release
+    .Added HOTAS Target Unlock
+    .Added HOTAS Target Lock
+    .Added HOTAS Autopilot - Transition To Level Flight Control
+    .Added HOTAS Autopilot - Reset
     .Added  Canopy Open/Close
     .Toggle Mirrors         Now follow the canopy
     .Landing Gear Up/Down   Now follow the lever
 
 Su-25T
-    .Added  HOTAS Target Designator
-    .Added  HOTAS Trim Controler
-    .Added  HOTAS Autopilot - Transition To Level Flight Control
-    .Added  HOTAS Autopilot - Reset
-    .Added  HOTAS Airbrake
-    .Added  HOTAS Flaps Up/Down
-    .Added  HOTAS Countermeasures Release
-    .Added  HOTAS Target Unlock
-    .Added  HOTAS Target Lock
+    .Added HOTAS Target Designator
+    .Added HOTAS Trim Controler
+    .Added HOTAS Autopilot - Transition To Level Flight Control
+    .Added HOTAS Autopilot - Reset
+    .Added HOTAS Airbrake
+    .Added HOTAS Flaps Up/Down
+    .Added HOTAS Countermeasures Release
+    .Added HOTAS Target Unlock
+    .Added HOTAS Target Lock
     .Added  Canopy Open/Close
     .Toggle Mirrors         Now follow the canopy
     .Landing Gear Up/Down   Now follow the lever
 
 Su-25
-    .Added  HOTAS Target Designator
-    .Added  HOTAS Trim Controler
-    .Added  HOTAS Autopilot - Transition To Level Flight Control
-    .Added  HOTAS Autopilot - Reset
-    .Added  HOTAS Airbrake
-    .Added  HOTAS Countermeasures Chaff Dispense
-    .Added  HOTAS Countermeasures Flares Dispense
-    .Added  HOTAS Flaps Up/Down
+    .Added HOTAS Target Designator
+    .Added HOTAS Trim Controler
+    .Added HOTAS Autopilot - Transition To Level Flight Control
+    .Added HOTAS Autopilot - Reset
+    .Added HOTAS Airbrake
+    .Added HOTAS Countermeasures Chaff Dispense
+    .Added HOTAS Countermeasures Flares Dispense
+    .Added HOTAS Flaps Up/Down
     .Added  Canopy Open/Close
     .Toggle Mirrors         Now follow the canopy
     .Landing Gear Up/Down   Now follow the lever

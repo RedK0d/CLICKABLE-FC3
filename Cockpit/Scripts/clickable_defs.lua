@@ -245,6 +245,7 @@ function default_axis_limited(hint_, device_, command_, arg_, default_, gain_, u
     }
 end
 
+
 function default_movable_axis(hint_,device_,command_,arg_, default_, gain_,updatable_,relative_)
 	
 	local default = default_ or 1
@@ -370,19 +371,28 @@ function default_animated_lever(hint_, device_, command_, arg_, animation_speed_
         animation_speed = {animation_speed_, animation_speed_}
     }
 end
-
-function default_button_tumb(hint_, device_, command1_, command2_, arg_)
-    return {
-        class               = {class_type.BTN, class_type.TUMB},
-        hint                = hint_,
-        device              = device_,
-        action              = {command1_, command2_},
-        stop_action         = {command1_, 0},
-        arg                 = {arg_, arg_},
-        arg_value           = {-1, 1},
-        arg_lim             = {{-1, 0}, {0, 1}},
-        updatable           = true,
-        use_OBB             = true,
-        use_release_message = {true, false}
-    }
+-- default_button_tumb = bouton � deux commandes
+-- bouton gauche commande 1
+-- bouton droit commande 2
+-- stop_action = {command1_,0}, => le bouton gauche revient au 0, alors que le bouton droit non/ the left button returns to 0, while the right button does not
+-- stop_action = {command1_,command2_}, => le bouton gauche et le bouton droit reviennent au 0/ left button and right button return to 0
+function default_button_tumb(hint_, device_, command1_, command2_, arg_,style)
+	if style == 1 or style == nil then
+		stop_action_ = {command1_,0}
+	elseif style == 2 then -- speedbrake
+		stop_action_ = {command1_,command2_}
+	end
+	return  {	
+				class 		= {class_type.TUMB,class_type.TUMB},
+				hint  		= hint_,
+				device 		= device_,
+				action 		= {command1_,command2_},
+				stop_action = stop_action_,
+				arg 	  	= {arg_,arg_},
+				arg_value 	= {1,1},
+				arg_lim   	= {{0,1},{0,1}},
+				updatable 	= true, 
+				use_OBB 	= true,
+				use_release_message = {true,false}
+			}
 end

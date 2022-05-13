@@ -33,6 +33,7 @@ THROTTLE_R_PNTS.input				= {0,1}
 THROTTLE_R_PNTS.output				= {-1,0}
 THROTTLE_R_PNTS.parameter_name		= "BASE_SENSOR_RIGHT_THROTTLE_POS"
 
+
 STICK_PITCH_PNTS						= CreateGauge("parameter")
 STICK_PITCH_PNTS.arg_number			= 3
 STICK_PITCH_PNTS.input				= {-1,1}
@@ -62,6 +63,14 @@ CANOPYLEVER_PNTS.arg_number			= 7
 CANOPYLEVER_PNTS.input				= {-1,1}
 CANOPYLEVER_PNTS.output				= {-1,1}
 CANOPYLEVER_PNTS.parameter_name		= "CANOPYLEVER_PNTS"
+
+if  aircraft=="F-15C"                       then
+    THROTTLE_R_PNTS						= CreateGauge("parameter")
+    THROTTLE_R_PNTS.arg_number			= 2
+    THROTTLE_R_PNTS.input				= {-1,1}
+    THROTTLE_R_PNTS.output				= {-1,1}
+    THROTTLE_R_PNTS.parameter_name		= "BASE_SENSOR_RIGHT_THROTTLE_POS"
+end
 
 
 
