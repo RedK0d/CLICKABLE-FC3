@@ -1,6 +1,59 @@
+# 21/05/2022 v1.0.2a-beta
+Fixed issues
+.Interference issue with All Modules
+    Reworked mod logic. 
+    The mod only starts if the aircraft is supported.
+
+Su-27/J-11A
+.Moved Scan Zone Left
+.Moved Scan Zone Right
+--Todo Code Scan Zone Return to center
+.Removed Scan Zone Up
+.Removed Scan Zone Down
+.Added Scan Zone Up/Down 
+
+Su-33
+.Moved Scan Zone Left
+.Moved Scan Zone Right
+--Todo Code Scan Zone Return to center
+.Removed Scan Zone Up
+.Removed Scan Zone Down
+.Added Scan Zone Up/Down 
+
+MiG-29A/G/S
+.Added Scan Zone Up/Down
+
+Su-25T
+.Removed HOTAS Target Lock (Handle)
+.Added HOTAS Quick A-A to A-G Switch
+
+Su-25
+.Removed HOTAS Target Lock (Handle)
+.Added HOTAS Quick A-A to A-G Switch
+.Fixed ASP-17 Glass Up/Down (Only cycled down)
+
+F-15C
+.Added          Bingo Fuel Index CW/CCW
+.Label_Change   Radar Off
+            >   Radar On/Off 
+.Label_Change   Parking Brakes
+            >   Emergency Brakes 
+                (Left Click):Engage  
+                (Right Click):Disengage
+.Added_Message  Emergency Brakes now triggers a user message             
+A-10A
+.Label_Change   Wheel Brake
+            >   Emergency Brakes 
+                (Left Click):Engage  
+                (Right Click):Disengage 
+.Added_Message  Emergency Brakes now triggers a user message                
+
+
+
+
 # 12/05/2022 v1.0.1c-beta
 Fixed issues
-    .Interference issue with F-16I SUFA Module
+.Interference issue with F-16I SUFA Module
 F-15C
 .Added HOTAS Target Lock
 .Added HOTAS Radar - Return To Search/NDTWS
@@ -101,10 +154,10 @@ F-15C
 # 09/05/2022 v0.3.0-alpha
 
 Fixed issues
-    .Interference issue with Eurofighter Module
-    .Interference issue with PUCARA Module
-    .Interference issue with WW1FlyingCircus Module
-    .Interference issue with RAFB Module
+.Interference issue with Eurofighter Module
+.Interference issue with PUCARA Module
+.Interference issue with WW1FlyingCircus Module
+.Interference issue with RAFB Module
     .Issue with Ripple Quantity Select/SPPU select on Su-25T,Su-25
 
 General Improvement
@@ -311,9 +364,9 @@ Known issues
 Changelog now in descending order
 
 Fixed issues
-    .Interference issue with AH-64D Module
-    .Interference issue with AH-6 Module
-    .Interference issue with Rafale Module
+.Interference issue with AH-64D Module
+.Interference issue with AH-6 Module
+.Interference issue with Rafale Module
     .Some buttons were not giving consistent output
     .Position of connectors was not updated
 
@@ -395,7 +448,7 @@ Su-27/J-11A
 # 16/02/2022 v0.1.7-alpha
 
 Fixed issues
-    .Interference issue with Bell-47 Module
+.Interference issue with Bell-47 Module
 
 Enhancements
 Su-25T
@@ -447,23 +500,23 @@ Added MiG-29S and Mig-29A Support
 # 12/02/2022 v0.1.6-alpha
 
 Fixed issues
-    .Interference issue with F-5E-3 Module
-    .Interference issue with AV8BNA Module
-    .Interference issue with Spitfire LF Mk. IX Module
-    .Interference issue with Bf-109K-4 Module 
-    .Interference issue with P-47D-40 Module
-    .Interference issue with P-47D-30bl1 Module       
-    .Interference issue with SA342L Module
-    .Interference issue with SA342M Module
-    .Interference issue with SA342Minigun Module
-    .Interference issue with SA342Mistral Module
-    .Interference issue with C-101CC Module
-    .Interference issue with C-101EB Module
-    .Interference issue with FW-190A8 Module
-    .Interference issue with L-39C Module
-    .Interference issue with L-39ZA Module
-    .Interference issue with P-51D-30-NA Module
-    .Interference issue with P-51D Module
+.Interference issue with F-5E-3 Module
+.Interference issue with AV8BNA Module
+.Interference issue with Spitfire LF Mk. IX Module
+.Interference issue with Bf-109K-4 Module 
+.Interference issue with P-47D-40 Module
+.Interference issue with P-47D-30bl1 Module       
+.Interference issue with SA342L Module
+.Interference issue with SA342M Module
+.Interference issue with SA342Minigun Module
+.Interference issue with SA342Mistral Module
+.Interference issue with C-101CC Module
+.Interference issue with C-101EB Module
+.Interference issue with FW-190A8 Module
+.Interference issue with L-39C Module
+.Interference issue with L-39ZA Module
+.Interference issue with P-51D-30-NA Module
+.Interference issue with P-51D Module
 
 Su-25T
     . Solved Su-25T Possible bug between Attitude Hold Autopilot and Auto pilot Reset #32 
@@ -481,9 +534,9 @@ Su-25T
 
 # 09/02/2022 v0.1.5-alpha
 Fixed issues
-    .Interference issue with Yak-52 Module
-    .Interference issue with MOSQUITOFBMKVI Module
-    .Interference issue with Mi-8MT Module
+.Interference issue with Yak-52 Module
+.Interference issue with MOSQUITOFBMKVI Module
+.Interference issue with Mi-8MT Module
 Enhancements
 Added Su-25T Support
     .Added Altimeter Pressure Increase/Decrease
@@ -521,8 +574,8 @@ Added Su-25T Support
 # 05/02/2022 v0.1.4-alpha
 
 Fixed issues
-    .Interference issue with Su-25T Module
-    .Interference issue with TF-51D Module
+.Interference issue with Su-25T Module
+.Interference issue with TF-51D Module
 Su-27/33/J-11A
     .AP Auto button should be Attitude Hold #21 
     ."Toggle Mirrors" action still appears when cockpit is open #24 

@@ -15,10 +15,13 @@ local aircraft = get_aircraft_type()
 local mastermode        = 0
 local mastermodeF15     = 0
 local radarScanAreaf15  = 1
-local selecter_timer    = 0  
+local selecter_timer    = 0
+local radar_pos_az      = 0   
 local planeradar_timer  = 0
+local bingo_timer       = 0
 local chutestate 
 local CLIC_MODE_AA_COUNTER
+local CLIC_MODE_QUICK_COUNTER 
 --------------------------------------------------------------------
 --local test  =   get_param_handle("BASE_SENSOR_RIGHT_THROTTLE_POS")
 
@@ -27,11 +30,12 @@ local CLIC_MODE_AA_COUNTER
 
 
 function post_initialize()
-    print_message_to_user("v1.0.1c-beta",10)
+    print_message_to_user("v1.0.2a-beta",10)
     print_message_to_user(aircraft,10)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
     chutestate              = 0
     CLIC_MODE_AA_COUNTER    = 0
+    CLIC_MODE_QUICK_COUNTER = 0
     --dump("list_cockpit_params",list_cockpit_params())
 	local birth = LockOn_Options.init_conditions.birth_place
 
@@ -138,8 +142,12 @@ function SetCommand(command,value)
         
     end
 
-            if command == device_commands.CLIC_ASP    then 
-        dispatch_action(nil,Keys.iCommandPlaneHUDFilterOnOff)
+    
+    if command == device_commands.CLIC_ASP and value >0 then
+        dispatch_action(0,Keys.iCommandPlaneHUDFilterOnOff,-1.0)
+    end
+    if command == device_commands.CLIC_ASP and value <0 then
+        dispatch_action(0,Keys.iCommandPlaneHUDFilterOnOff,1.0)
     end
     if command == device_commands.CLIC_TRIM_L   then 
         dispatch_action(nil,Keys.iCommandPlaneTrimLeft)
@@ -255,6 +263,24 @@ function SetCommand(command,value)
         
     end
 
+    if command == device_commands.CLIC_MODE_QUICK  and value ==1 then
+        CLIC_MODE_QUICK_COUNTER = CLIC_MODE_QUICK_COUNTER +1
+        if mastermode == 6 then
+            dispatch_action(nil,Keys.iCommandPlaneModeGrid)
+            
+        end
+        mastermode = 0
+
+        if CLIC_MODE_QUICK_COUNTER == 1 then
+            dispatch_action(nil,Keys.iCommandPlaneModeFI0)
+        end
+        if CLIC_MODE_QUICK_COUNTER == 2 then
+            dispatch_action(nil,Keys.iCommandPlaneModeGround)
+            CLIC_MODE_QUICK_COUNTER = 0
+        end
+        
+    end
+
 
     if command == device_commands.CLIC_MODE then
         
@@ -351,6 +377,14 @@ function SetCommand(command,value)
     end  
     if command == device_commands.CLIC_AUTO_GCA and value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneSAUHRadio)
+        
+    end
+    if command == device_commands.CLIC_AUTO_PATH and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneRouteAutopilot)
+        
+    end
+    if command == device_commands.CLIC_AUTO_REAP and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneStabHrad)
         
     end
     if command == device_commands.CLIC_AUTO_DAMPER    then
@@ -455,34 +489,41 @@ function SetCommand(command,value)
     if command == device_commands.CLIC_TV   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneEOSOnOff) 
     end
-
-    if command == device_commands.CLIC_SCAN_L   then 
-        dispatch_action(nil,Keys.iCommandSelecterLeft)
-		if value ~=1 then
-    	dispatch_action(nil,Keys.iCommandSelecterStop)	
-		end
-    end
-
-    if command == device_commands.CLIC_SCAN_R   then  
-        dispatch_action(nil,Keys.iCommandSelecterRight) 
-        if value ~=1 then
+   
+        if command == device_commands.CLIC_SCAN_L   then 
+            dispatch_action(nil,Keys.iCommandSelecterLeft)
+           if value ~=1 then
             dispatch_action(nil,Keys.iCommandSelecterStop)	
+            end
         end
-    end
 
-    if command == device_commands.CLIC_SCAN_U   then  
-        dispatch_action(nil,Keys.iCommandSelecterUp) 
-        if value ~=1 then
-            dispatch_action(nil,Keys.iCommandSelecterStop)	
+        if command == device_commands.CLIC_SCAN_R   then  
+            dispatch_action(nil,Keys.iCommandSelecterRight)
+           
+            if value ~=1 then
+                dispatch_action(nil,Keys.iCommandSelecterStop)	
+            end
         end
-    end
+        
+        if command ==  device_commands.CLIC_SCAN_EL then
+            selecter_timer = 0.025
+        
+            if command ==  device_commands.CLIC_SCAN_EL and value ==-1  then 
+                dispatch_action(nil,Keys.iCommandSelecterDown)   
+                --print_message_to_user("iCommandSelecterDown")
+            end
+            if command ==  device_commands.CLIC_SCAN_EL and value ==1  then
+                dispatch_action(nil,Keys.iCommandSelecterUp) 
+                --print_message_to_user("iCommandSelecterUp")   
+            end
+        end
+       
+        
+
+        
     
-    if command == device_commands.CLIC_SCAN_D   then  
-        dispatch_action(nil,Keys.iCommandSelecterDown) 
-        if value ~=1 then
-            dispatch_action(nil,Keys.iCommandSelecterStop)	
-        end
-    end
+
+    
 
     
 
@@ -699,6 +740,14 @@ function SetCommand(command,value)
         dispatch_action(nil,Keys.iCommandChangeRippleIntervalDown)  
 
     end
+    if command == device_commands.CLIC_EMERGENCY_BRAKES_ON and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOn)
+        print_message_to_user("Emergency Brakes\nEngaged")
+    end
+    if command == device_commands.CLIC_EMERGENCY_BRAKES_OFF and value == 1 then 
+        dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOff)
+        print_message_to_user("Emergency Brakes\nDisengaged")
+    end
     --F-15C Specifics
     if aircraft=="F-15C" then
                 if command == device_commands.CLIC_FIRE and value == 1 then
@@ -710,12 +759,17 @@ function SetCommand(command,value)
                 if command == device_commands.CLIC_LANDING_LIGHTS_F15 then
                     dispatch_action(nil,Keys.iCommandPlaneHeadLightOnOff)   
                 end  
-                if command == device_commands.CLIC_PARKING_BRAKES_F15_ON and value == 1 then
-                    dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOn)
+
+                if command ==  device_commands.CLIC_BINGO then
+                    bingo_timer = 0.25
+
+                    if  value ==-1  then 
+                        dispatch_action(0,Keys.iCommandPlaneFSQuantityIndicatorSelectorINT,-1)   
+                    elseif  value ==1  then
+                        dispatch_action(0,Keys.iCommandPlaneFSQuantityIndicatorSelectorINT,1) 
+                    end
                 end
-                if command == device_commands.CLIC_PARKING_BRAKES_F15_OFF and value == 1 then 
-                    dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOff)
-                end
+                
             end
             -- Master Combat Mode Controls
             -- To be reworked to implement the Navigation mod which has two sub mods, which causes problems.
@@ -803,6 +857,15 @@ function update()
             dispatch_action(nil,Keys.iCommandPlaneRadarStop)
         end
     end
+    if bingo_timer > 0 then
+        bingo_timer = bingo_timer - update_time_step
+        if bingo_timer <= 0 then
+            bingo_timer = 0
+            dispatch_action(0,Keys.iCommandPlaneFSQuantityIndicatorSelectorINT,0) 
+
+        end
+    end
+
 end
 
 need_to_be_closed = false -- close lua state after initialization

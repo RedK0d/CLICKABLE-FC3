@@ -1,4 +1,4 @@
-# CLICKABLE-FC3
+# RedK0d Clickable
 A partially clickable mod for the FC3 Planes
 
 # INSTALLATION 
