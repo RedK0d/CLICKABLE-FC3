@@ -16,21 +16,26 @@ local mastermode        = 0
 local mastermodeF15     = 0
 local radarScanAreaf15  = 1
 local selecter_timer    = 0
+local selecter_rcl      = 0     
 local radar_pos_az      = 0   
 local planeradar_timer  = 0
 local bingo_timer       = 0
+local null_timer        = 0
+dev:listen_command(Keys.iCommandSelecterRight)
+dev:listen_command(Keys.iCommandSelecterLeft)
+
 local chutestate 
 local CLIC_MODE_AA_COUNTER
 local CLIC_MODE_QUICK_COUNTER 
 --------------------------------------------------------------------
---local test  =   get_param_handle("BASE_SENSOR_RIGHT_THROTTLE_POS")
+local CLIC_EMERGENCY_BRAKES  =   get_param_handle("CLIC_EMERGENCY_BRAKES")
 
 
 
 
 
 function post_initialize()
-    print_message_to_user("v1.0.2a-beta",10)
+    print_message_to_user("v1.0.2c-beta",10)
     print_message_to_user(aircraft,10)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
     chutestate              = 0
@@ -124,6 +129,16 @@ function SetCommand(command,value)
     
     local AA    = detect_rusian_air_to_air(aircraft)
 
+    if command == device_commands.CLIC_COM_R  then
+        dispatch_action(true,Keys.iCommandToggleReceiveMode)
+        
+    end
+    
+    if command == device_commands.CLIC_COM  and value == 1 then
+        dispatch_action(true,Keys.iCommandToggleCommandMenu)
+        
+    end
+
     if command == device_commands.CLIC_RBOOM and value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneAirRefuel)
         
@@ -175,7 +190,7 @@ function SetCommand(command,value)
     end
 
 
-
+   
     if command == device_commands.CLIC_TGT_L   then 
         dispatch_action(nil,Keys.iCommandPlaneRadarLeft)
         if value ~=1 then
@@ -197,6 +212,10 @@ function SetCommand(command,value)
         end
     end
     
+    if command == device_commands.CLIC_TGT_C and value ==1 then
+            dispatch_action(nil,Keys.iCommandPlaneRadarCenter)	
+    end
+
     if command == device_commands.CLIC_TGT_D   then  
         dispatch_action(nil,Keys.iCommandPlaneRadarDown) 
         if value ~=1 then
@@ -231,8 +250,10 @@ function SetCommand(command,value)
 
     if command ==  device_commands.CLIC_WAYPOINT and  value >0 then
         dispatch_action(nil,Keys.iCommandPlaneChangeTarget) 
+        print_message_to_user("Next Waypoint, Airfield Or Target")
     elseif command ==  device_commands.CLIC_WAYPOINT and  value <0 then
         dispatch_action(nil,Keys.iCommandPlaneUFC_STEER_DOWN) 
+        print_message_to_user("Previous Waypoint, Airfield Or Target")
     end
 
     if command == device_commands.CLIC_MODE  and  value >0 then
@@ -321,6 +342,9 @@ function SetCommand(command,value)
         end
 
 
+    end
+    if command == device_commands.CLIC_LASER and  value ==1  then
+        dispatch_action(nil, Keys.iCommandPlaneLaserRangerOnOff)
     end
     --One-button parachute control
     if command == device_commands.CLIC_CHUTE        and  value == 1 then
@@ -460,6 +484,7 @@ function SetCommand(command,value)
     end 
     if command == device_commands.CLIC_NAVLIGHTS   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneLightsOnOff) 
+        
     end  
     if command == device_commands.CLIC_COCKPITLIGHT   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneCockpitIllumination) 
@@ -489,22 +514,90 @@ function SetCommand(command,value)
     if command == device_commands.CLIC_TV   and value ==1 then  
         dispatch_action(nil,Keys.iCommandPlaneEOSOnOff) 
     end
-   
-        if command == device_commands.CLIC_SCAN_L   then 
+    if command == device_commands.CLIC_SCAN_L   then 
+        dispatch_action(nil,Keys.iCommandSelecterLeft)
+       if value ~=1 then
+        dispatch_action(nil,Keys.iCommandSelecterStop)	
+        end
+    end
+
+    if command == device_commands.CLIC_SCAN_R   then  
+        dispatch_action(nil,Keys.iCommandSelecterRight)
+       
+        if value ~=1 then
+        dispatch_action(nil,Keys.iCommandSelecterStop)	
+        end
+    end
+    if command == device_commands.CLIC_SCAN_C   then 
+        if value ==1 then
+        print_message_to_user("Scan Zone Center\nIn development\nNot implemented yet",2)	
+        end
+    end
+    --[[
+        if  selecter_rcl == 0    and  command == Keys.iCommandSelecterLeft          then 
+            selecter_rcl = selecter_rcl-1
+        end
+        if  selecter_rcl == 0    and  command == Keys.iCommandSelecterRight      then 
+            selecter_rcl = selecter_rcl+1
+        end
+        if  selecter_rcl == -1   and  command == Keys.iCommandSelecterRight         then 
+            selecter_rcl = selecter_rcl+1
+        end
+        if  selecter_rcl == 1   and  command == Keys.iCommandSelecterLeft         then 
+            selecter_rcl = selecter_rcl-1
+        end      
+        if  selecter_rcl == 0    and  command == device_commands.CLIC_SCAN_L    and value ==1      then 
             dispatch_action(nil,Keys.iCommandSelecterLeft)
-           if value ~=1 then
-            dispatch_action(nil,Keys.iCommandSelecterStop)	
-            end
+            selecter_rcl = -1
+            selecter_timer = 0.25
+        end
+        if  selecter_rcl == 0    and  command == device_commands.CLIC_SCAN_R    and value ==1      then 
+                        
+            dispatch_action(nil,Keys.iCommandSelecterRight)
+            selecter_rcl = 1
+            selecter_timer = 0.25
+        end
+        if  selecter_rcl == -1   and command == device_commands.CLIC_SCAN_R     and value ==1      then
+            print_message_to_user("Please First Center Scan Area",2)                                    -- User message while waiting to be able to correctly code Scan Zone Center
+            dispatch_action(nil,Keys.iCommandSelecterRight)
+            --selecter_timer  = 0.25
+            null_timer      = 0.25
+            dispatch_action(nil,Keys.iCommandSelecterStop)
+            null_timer      = 0.25
+            selecter_rcl    = selecter_rcl+1
+            dispatch_action(nil,Keys.iCommandSelecterRight)
+            --selecter_timer  = 0.25
+            null_timer      = 0.25
+            dispatch_action(nil,Keys.iCommandSelecterStop)
+            null_timer      = 0.25
+            selecter_rcl    = selecter_rcl+1
+        end
+        if  selecter_rcl == 1   and command == device_commands.CLIC_SCAN_L      and value ==1      then 
+            print_message_to_user("Please First Center Scan Area",2)                                    -- User message while waiting to be able to correctly code Scan Zone Center
+            dispatch_action(nil,Keys.iCommandSelecterLeft)
+            --selecter_timer  = 0.25
+            null_timer      = 0.25
+            dispatch_action(nil,Keys.iCommandSelecterStop)
+            null_timer      = 0.25
+            selecter_rcl    = selecter_rcl-1
+            dispatch_action(nil,Keys.iCommandSelecterLeft)
+            --selecter_timer  = 0.25
+            null_timer      = 0.25
+            dispatch_action(nil,Keys.iCommandSelecterStop)
+            null_timer      = 0.25
+            selecter_rcl    = selecter_rcl-1
         end
 
-        if command == device_commands.CLIC_SCAN_R   then  
-            dispatch_action(nil,Keys.iCommandSelecterRight)
-           
-            if value ~=1 then
-                dispatch_action(nil,Keys.iCommandSelecterStop)	
+        if  command == device_commands.CLIC_SCAN_C  then                    
+            if      selecter_rcl == -1  and value ==1      then
+                dispatch_action(nil,Keys.iCommandSelecterRight)
             end
-        end
-        
+            if      selecter_rcl == 1   and value ==1      then
+                dispatch_action(nil,Keys.iCommandSelecterLeft)
+            end
+            selecter_rcl = 0
+            selecter_timer = 0.25
+        end]]
         if command ==  device_commands.CLIC_SCAN_EL then
             selecter_timer = 0.025
         
@@ -743,20 +836,47 @@ function SetCommand(command,value)
     if command == device_commands.CLIC_EMERGENCY_BRAKES_ON and value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOn)
         print_message_to_user("Emergency Brakes\nEngaged")
+        CLIC_EMERGENCY_BRAKES:set(1)
+        
     end
     if command == device_commands.CLIC_EMERGENCY_BRAKES_OFF and value == 1 then 
         dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOff)
         print_message_to_user("Emergency Brakes\nDisengaged")
+        CLIC_EMERGENCY_BRAKES:set(0)
+    end
+    
+    if command == device_commands.CLIC_LA and value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneLaunchPermissionOverride)
+        print_message_to_user("Launch Permission Override")
     end
     --F-15C Specifics
     if aircraft=="F-15C" then
+                if  command  == device_commands.CLIC_COL_LIGHTS     and 
+                    value    == 1                                   then
+                                dispatch_action(nil,Keys.iCommandPlaneAntiCollisionLights)              
+                end
+                if command == device_commands.CLIC_TAKEOFFTRIMF15  then
+                    if      value == 1 then
+                            dispatch_action(nil,Keys.iCommandPlaneTrimOn)
+                    elseif  value == 0 then
+                            dispatch_action(nil,Keys.iCommandPlaneTrimOff)
+                    end
+                        
+                end
+                
+                if command == device_commands.CLIC_HUD_COLOR_F15  then
+                    dispatch_action(nil,Keys.iCommandBrightnessILS)              
+                end
+                if command == device_commands.CLIC_COCKPITLIGHT_F15    then  
+                dispatch_action(nil,Keys.iCommandPlaneCockpitIllumination) 
+                end
                 if command == device_commands.CLIC_FIRE and value == 1 then
                     dispatch_action(nil,Keys.iCommandPlanePickleOn)
                 else
                     dispatch_action(nil,Keys.iCommandPlanePickleOff)
                 end
 
-                if command == device_commands.CLIC_LANDING_LIGHTS_F15 then
+                if command == device_commands.CLIC_LANDING_LIGHTS_F15 and value == 1 then
                     dispatch_action(nil,Keys.iCommandPlaneHeadLightOnOff)   
                 end  
 
@@ -841,8 +961,13 @@ function SetCommand(command,value)
 
 
 function update()
---print_message_to_user(mastermodeF15)
-
+--print_message_to_user(selecter_rcl)
+    if null_timer > 0 then
+        null_timer = null_timer - update_time_step
+        if null_timer <= 0 then
+            null_timer = 0
+        end
+    end
     if selecter_timer > 0 then
         selecter_timer = selecter_timer - update_time_step
         if selecter_timer <= 0 then

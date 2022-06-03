@@ -5,10 +5,13 @@ end
 
 Keys =
 {
+    iCommandToggleReceiveMode	                =   1626;
+    iCommandPlaneAttackMyTarget	                =   118;
+    iCommandToggleCommandMenu                   =   179;
     iCommandPlanePickleOn                       =   350;
     iCommandPlanePickleOff                      =   351;
-    iCommandPlaneFire                           =   84,
-    iCommandPlaneFireOff                        =   85,
+    iCommandPlaneFire                           =   84;
+    iCommandPlaneFireOff                        =   85;
     iCommandSensorReset	                        =   1635;
     iCommandPlaneRadarChangeMode                =	285;
     iCommandPlaneRadarCenter	                =   92;
@@ -133,6 +136,10 @@ Keys =
     iCommandPlaneWheelBrakeOff                  =   75;
     iCommandChangeReleaseMode                   =   284;
     iCommandPlaneFSQuantityIndicatorSelectorINT =   1092;
+    iCommandPlaneLaunchPermissionOverride	    =   349;
+    iCommandPlaneTrimOn	                        =   957;
+    iCommandPlaneTrimOff	                    =   958;
+    iCommandPlaneAntiCollisionLights	        =   518;
 
 
 
@@ -165,7 +172,7 @@ device_commands =
     CLIC_AUTO_GCA               = counter(),
     CLIC_AUTO_PATH              = counter(),
     CLIC_AUTO_REAP              = counter(),
-    
+    CLIC_LA                     = counter(),
     CLIC_HUD_REPEATER           = counter(),
     CLIC_POWER                  = counter(),
     CLIC_ENG_L_START            = counter(),
@@ -181,7 +188,9 @@ device_commands =
     CLIC_GEAR                   = counter(),
     CLIC_CANOPY                 = counter(),
     CLIC_NAVLIGHTS              = counter(),
+    CLIC_COL_LIGHTS             = counter(),
     CLIC_COCKPITLIGHT           = counter(),
+    CLIC_COCKPITLIGHT_F15       = counter(),
     CLIC_JETTINSON              = counter(),
     CLIC_JETTINSON_EMER         = counter(),
     CLIC_JETTINSON_TANK         = counter(),
@@ -202,6 +211,7 @@ device_commands =
     CLIC_MODE_QUICK             = counter(),
     CLIC_MODE_F15               = counter(),
     CLIC_HUD_COLOR              = counter(),
+    CLIC_HUD_COLOR_F15          = counter(),
     CLIC_HUD_BRT                = counter(),
     CLIC_NAVMODES               = counter(),
     CLIC_MIRROR                 = counter(),
@@ -254,6 +264,7 @@ device_commands =
     CLIC_TGT_U                  = counter(),
     CLIC_TGT_L                  = counter(),
     CLIC_TGT_R                  = counter(),
+    CLIC_TGT_C                  = counter(),
     CLIC_ZOOM                   = counter(),
     CLIC_ZOOM_F15               = counter(),
     CLIC_TRIM_L                 = counter(),
@@ -266,4 +277,9 @@ device_commands =
     CLIC_GRID                   = counter(),
     CLIC_WHEELBRAKE             = counter(),
     CLIC_PRS_SGL                = counter(),
+    CLIC_COM                    = counter(),
+    CLIC_COM_R                  = counter(),
+    CLIC_TAKEOFFTRIMF15         = counter(),
+    CLIC_COL_LIGHTS             = counter(),
+
 }

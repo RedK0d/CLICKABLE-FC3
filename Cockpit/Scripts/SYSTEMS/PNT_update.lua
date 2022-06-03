@@ -35,6 +35,7 @@ local PNT_STICK_LOCK		= nil
 local PNT_STICK_UNLOCK		= nil
 local PNT_STICK_STATION		= nil
 local PNT_STICK_SHOOT		= nil
+local PNT_COM				= nil
 
 --local TEST					= nil
 --[[
@@ -78,6 +79,7 @@ function post_initialize()
 	PNT_STICK_UNLOCK		= get_clickable_element_reference("PNT_STICK_UNLOCK")
 	PNT_STICK_STATION		= get_clickable_element_reference("PNT_STICK_STATION")
 	PNT_STICK_SHOOT			= get_clickable_element_reference("PNT_STICK_SHOOT")
+	PNT_COM					= get_clickable_element_reference("PNT_COM")
 
 end
 
@@ -187,7 +189,9 @@ function update()
 	if PNT_STICK_SHOOT		then
 		PNT_STICK_SHOOT:update()
 	end
-	
+	if PNT_COM	then
+		PNT_COM:update()
+	end
 end
 
 

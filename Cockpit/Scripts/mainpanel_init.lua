@@ -55,7 +55,7 @@ CANOPY_PNTS.parameter_name		    = "BASE_SENSOR_CANOPY_POS"
 GEARLEVER_PNTS						= CreateGauge("parameter")
 GEARLEVER_PNTS.arg_number			= 6
 GEARLEVER_PNTS.input				= {0,1}
-GEARLEVER_PNTS.output				= {100,-100}
+GEARLEVER_PNTS.output				= {100,-100} 
 GEARLEVER_PNTS.parameter_name		= "BASE_SENSOR_GEAR_HANDLE"
 
 CANOPYLEVER_PNTS						= CreateGauge("parameter")

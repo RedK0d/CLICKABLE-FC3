@@ -6,7 +6,7 @@ declare_plugin("RedK0d Clickable",
 	displayName   = "RedK0d Clickable",
 	shortName	  = "RedK0d Clickable",
 	fileMenuName  = "RedK0d Clickable",
-	version		 = "v1.0.2a-beta",			
+	version		 = "v1.0.2c-beta",			
 
 	state		  = "installed",
 	developerName = "RedK0d",

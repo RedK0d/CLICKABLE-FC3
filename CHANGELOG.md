@@ -1,4 +1,54 @@
+# 03/06/2022 v1.0.2c-beta
+
+Added Help Images produced by @denissoliveira#9693 thanks to him.
+
+All 
+.Added_Message  Next/Previous Waypoint, Airfield now triggers a user message             
+
+Su-27/J-11A
+.Added Launch Permission Override
+.Moved Radar Pulse Repeat Frequency Select
+.Moved Electro-Optical System On/Off
+.Added Receive Mode
+.Removed HOTAS Target Unlock (Throttle)
+.Added HOTAS Communication menu (Throttle)
+
+Su-33
+.Added Launch Permission Override
+.Moved Radar Pulse Repeat Frequency Select
+.Moved Electro-Optical System On/Off
+.Added Receive Mode
+.Removed HOTAS Target Unlock (Throttle)
+.Added HOTAS Communication menu (Throttle)
+
+MiG-29S/A/G
+.Added Launch Permission Override
+
+Su-25T
+.Moved Canopy Lever 
+    Now follows the canopy and lever
+.Fixed Laser Ranger
+    Was not working    
+
+Su-25
+.Moved Canopy Lever 
+    Now follows the canopy and lever
+.Removed HOTAS Autopilot - Transition To Level Flight Control
+.Removed HOTAS Autopilot - Reset
+.Added HOTAS Target Designator To Center
+ 
+F-15C
+.Added Illumination Cockpit
+.Added HUD Color
+.Fixed Gear Light Near/Far/Off Bug
+       The command was executing twice
+.Fixed T/O Trim
+        Renamed "Autopilot Disengage" to "T/O Trim" and fixed the command
+.Moved Navigation lights
+.Added Anti-collision lights
+        
 # 21/05/2022 v1.0.2a-beta
+
 Fixed issues
 .Interference issue with All Modules
     Reworked mod logic. 
@@ -7,7 +57,6 @@ Fixed issues
 Su-27/J-11A
 .Moved Scan Zone Left
 .Moved Scan Zone Right
---Todo Code Scan Zone Return to center
 .Removed Scan Zone Up
 .Removed Scan Zone Down
 .Added Scan Zone Up/Down 
@@ -15,7 +64,6 @@ Su-27/J-11A
 Su-33
 .Moved Scan Zone Left
 .Moved Scan Zone Right
---Todo Code Scan Zone Return to center
 .Removed Scan Zone Up
 .Removed Scan Zone Down
 .Added Scan Zone Up/Down 
