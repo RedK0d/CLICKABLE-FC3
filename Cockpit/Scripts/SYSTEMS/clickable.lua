@@ -3,47 +3,53 @@ dofile(LockOn_Options.script_path.."devices.lua")
 dofile(LockOn_Options.script_path.."command_defs.lua")
 dofile(LockOn_Options.script_path.."utils.lua")
 dofile(LockOn_Options.script_path.."dump.lua")
+dofile(lfs.writedir().."Config\\options.lua")
 
 
 local update_time_step = 0.02 --update will be called 50 times per second
 make_default_activity(update_time_step) 
 sensor_data = get_base_data()
 local dev = GetSelf()
-local aircraft = get_aircraft_type()
+        
 --------------------------------------------------------------------
 --Variable declaration
-local mastermode        = 0
-local mastermodeF15     = 0
-local radarScanAreaf15  = 1
-local selecter_timer    = 0
-local selecter_rcl      = 0     
-local radar_pos_az      = 0   
-local planeradar_timer  = 0
-local bingo_timer       = 0
-local null_timer        = 0
+local   mastermode          =   0
+local   mastermodeF15       =   0
+local   radarScanAreaf15    =   1
+local   selecter_timer      =   0
+local   selecter_rcl        =   0     
+local   radar_pos_az        =   0   
+local   planeradar_timer    =   0
+local   bingo_timer         =   0
+local   null_timer          =   0
+local   mod_version         =   options.plugins["RedK0d Clickable"].Version
+
 dev:listen_command(Keys.iCommandSelecterRight)
 dev:listen_command(Keys.iCommandSelecterLeft)
+dev:listen_command(Keys.iCommandPlaneWingtipSmokeOnOff)
+
 
 local chutestate 
 local CLIC_MODE_AA_COUNTER
 local CLIC_MODE_QUICK_COUNTER 
+local CMD_ONOFF    = 10000
 --------------------------------------------------------------------
-local CLIC_EMERGENCY_BRAKES  =   get_param_handle("CLIC_EMERGENCY_BRAKES")
-
+local CLIC_EMERGENCY_BRAKES     =   get_param_handle("CLIC_EMERGENCY_BRAKES")
+local CTM_F15                   =   get_param_handle("CTM_F15")
 
 
 
 
 function post_initialize()
-    print_message_to_user("v1.0.2c-beta",10)
-    print_message_to_user(aircraft,10)
+    --print_message_to_user(mod_version)
+    --print_message_to_user(aircraft,10)
     dispatch_action(nil,Keys.iCommandCockpitClickModeOnOff) 
     chutestate              = 0
     CLIC_MODE_AA_COUNTER    = 0
     CLIC_MODE_QUICK_COUNTER = 0
-    --dump("list_cockpit_params",list_cockpit_params())
-	local birth = LockOn_Options.init_conditions.birth_place
 
+	local birth = LockOn_Options.init_conditions.birth_place
+    --dump("_G", getmetatable(_G))
     if birth=="GROUND_HOT" or birth=="AIR_HOT" then
     elseif birth=="GROUND_COLD" then
     end
@@ -120,12 +126,16 @@ function reset_radarScanAreaf15(radarScanAreaf15)
 end   
 
 
-
+local LMFD_OSB_01 = 10000
+dev:listen_command(LMFD_OSB_01)
 
 
 function SetCommand(command,value)
-   
-    --print_message_to_user(value)
+
+    if command == Keys.iCommandPlaneWingtipSmokeOnOff   then
+        --print_message_to_user("value")
+        
+    end
     
     local AA    = detect_rusian_air_to_air(aircraft)
 
@@ -371,7 +381,10 @@ function SetCommand(command,value)
 
     end
     
-    if command == device_commands.CLIC_RADAR_FREQ  and  value == 1 then
+    if  aircraft~="MiG-29A"or aircraft~="MiG-29G"or aircraft~="MiG-29S" and command == device_commands.CLIC_RADAR_FREQ  and  value == 1 then
+        dispatch_action(nil,Keys.iCommandPlaneChangeRadarPRF)
+    end
+    if  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" and command == device_commands.CLIC_RADAR_FREQ   then
         dispatch_action(nil,Keys.iCommandPlaneChangeRadarPRF)
     end 
 
@@ -456,6 +469,7 @@ function SetCommand(command,value)
  
     if command == device_commands.CLIC_CTM and value ==1 then 
         dispatch_action(nil,Keys.iCommandPlaneDropSnar) 
+        
     end    
     if command == device_commands.CLIC_CTM_CHAFF and value ==1 then 
         dispatch_action(nil,Keys.iCommandPlaneDropChaffOnce) 
@@ -765,7 +779,7 @@ function SetCommand(command,value)
     end
     
 
-    if command == device_commands.CLIC_RIPPLE_INT and value >0 then
+    if command == device_commands.CLIC_RIPPLE_INT  and  value >0 then
         dispatch_action(nil,Keys.iCommandChangeRippleInterval)
 
 
@@ -824,15 +838,7 @@ function SetCommand(command,value)
     
 
 
-    if command == device_commands.CLIC_RIPPLE_INT and value >0 then
-        dispatch_action(nil,Keys.iCommandChangeRippleInterval)
-
-
-
-    elseif command == device_commands.CLIC_RIPPLE_INT and  value <0 then
-        dispatch_action(nil,Keys.iCommandChangeRippleIntervalDown)  
-
-    end
+  
     if command == device_commands.CLIC_EMERGENCY_BRAKES_ON and value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneWheelBrakeOn)
         print_message_to_user("Emergency Brakes\nEngaged")
@@ -851,6 +857,11 @@ function SetCommand(command,value)
     end
     --F-15C Specifics
     if aircraft=="F-15C" then
+
+                if  command     ==  device_commands.CLIC_CTM_F15        and value == 1 then 
+                    dispatch_action(nil,CMD_ONOFF)     
+                        --print_message_to_user("CTM_F15")  
+                end
                 if  command  == device_commands.CLIC_COL_LIGHTS     and 
                     value    == 1                                   then
                                 dispatch_action(nil,Keys.iCommandPlaneAntiCollisionLights)              
@@ -961,7 +972,7 @@ function SetCommand(command,value)
 
 
 function update()
---print_message_to_user(selecter_rcl)
+--print_message_to_user(CTM_F15:get())
     if null_timer > 0 then
         null_timer = null_timer - update_time_step
         if null_timer <= 0 then

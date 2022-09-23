@@ -13,6 +13,10 @@ elseif  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S"      the
     shape_name		   = "MIG-29-CLICKABLE"
 elseif  aircraft=="A-10A"                       then
     shape_name		   = "A-10A-CLICKABLE"
+elseif  aircraft=="VSN_MirageIIIC"                       then
+    shape_name		   = "F-15C-CLICKABLE"
+elseif  aircraft=="VSN_MirageIIIS"                       then
+    shape_name		   = "F-15C-CLICKABLE"
 elseif  aircraft=="F-15C"                       then
     shape_name		   = "F-15C-CLICKABLE"
 end

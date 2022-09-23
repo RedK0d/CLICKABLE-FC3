@@ -8,6 +8,8 @@ if 	aircraft 	== "Su-27" 	or
 	aircraft	=="MiG-29G"	or 
 	aircraft	=="MiG-29S"	or
 	aircraft	=="A-10A"	or
+	aircraft	=="VSN_MirageIIIS"	or
+	aircraft	=="VSN_MirageIIIC"	or
 	aircraft	=="F-15C"	then 
 supported 		= 	true														--The mod will start
 	else

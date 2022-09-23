@@ -6,10 +6,10 @@ dialog = {
 					["params"] = {
 						["angle"] = 0,
 						["bounds"] = {
-							["h"] = 25,
-							["w"] = 300,
-							["x"] = 100,
-							["y"] = 42,
+							["h"] = 75,
+							["w"] = 320,
+							["x"] = 300,
+							["y"] = 60,
 						},
 						["enabled"] = true,
 						["pivotPoint"] = {
@@ -26,13 +26,13 @@ dialog = {
 							["name"] = "staticOptionsTitleSkin",
 						},
 					},
-					["type"] = "Static",
+					["type"] = "Static",		
 				},
 				["Su27_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 150,
 						},
@@ -54,8 +54,8 @@ dialog = {
 				["J11a_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 180,
 						},
@@ -77,8 +77,8 @@ dialog = {
 				["Su33_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 210,
 						},
@@ -100,8 +100,8 @@ dialog = {
 				["Su25t_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 240,
 						},
@@ -123,8 +123,8 @@ dialog = {
 				["Su25_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 270,
 						},
@@ -146,8 +146,8 @@ dialog = {
 				["Mig29a_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 300,
 						},
@@ -169,8 +169,8 @@ dialog = {
 				["Mig29g_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 330,
 						},
@@ -192,8 +192,8 @@ dialog = {
 				["Mig29s_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 360,
 						},
@@ -215,8 +215,8 @@ dialog = {
 				["A10a_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 390,
 						},
@@ -238,8 +238,8 @@ dialog = {
 				["F15c_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
-							["h"] = 18,
-							["w"] = 125,
+							["h"] = 24,
+							["w"] = 75,
 							["x"] = 100,
 							["y"] = 420,
 						},
@@ -258,7 +258,204 @@ dialog = {
 					},
 					["type"] = "CheckBox",
 				},
-				
+				--[[["F15c_extended"] = {
+					["params"] = {
+						["bounds"] = {
+							["h"] = 24,
+							["w"] = 200,
+							["x"] = 200,
+							["y"] = 420,
+						},
+						["enabled"] = true,
+						["text"] = "$Extended",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "staticOptionsCaptionSkin"
+						}
+					},
+					["type"] = "Static",
+				},
+				["F15c_extendedComboList"] = {
+					["params"] = {
+						["bounds"] = {
+							["h"] = 24,
+							["w"] = 75,
+							["x"] = 400,
+							["y"] = 420
+						},
+						["enabled"] = true,
+						["tabOrder"] = 0,
+						["text"] = "Item1",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "comboListSkin_options",
+						},					
+					},
+					["type"] = "ComboList",
+				},
+				["btnIntegrityCheckNo"] = {
+									["params"] = {
+										["bounds"] = {
+											["h"] = 30,
+											["w"] = 50,
+											["x"] = 625,
+											["y"] = 415,
+										},
+										["enabled"] = true,
+										["tabOrder"] = 0,
+										["text"] = "",
+										["visible"] = true,
+										["tooltip"] = "",
+									},
+									["skin"] = {
+										["params"] = {
+											["name"] = "staticSkin",
+										},
+										["states"] = {
+											["released"] = {
+												[1] = {
+													["picture"] = {
+														["color"] = "0xffffffff",
+														["file"] = "dxgui\\skins\\skinme\\images\\buttons\\red icon - pressed.png",
+														["horzAlign"] = {
+															["type"] = "middle",
+														},
+														["userTexSampler"] = 1,
+														["vertAlign"] = {
+															["type"] = "middle",
+														},
+													},
+												},
+											},
+										},
+									},
+									["type"] = "Static",
+					},	
+					["btnIntegrityCheckYes"] = {
+									["params"] = {
+										["bounds"] = {
+											["h"] = 30,
+											["w"] = 50,
+											["x"] = 550,
+											["y"] = 415,
+										},
+										["enabled"] = true,
+										["tabOrder"] = 0,
+										["text"] = "",
+										["visible"] = true,
+										["tooltip"] = "",
+									},
+									["skin"] = {
+										["params"] = {
+											["name"] = "staticSkin",
+										},
+										["states"] = {
+											["released"] = {
+												[1] = {
+													["picture"] = {
+														["color"] = "0xffffffff",
+														["file"] = "dxgui\\skins\\skinme\\images\\buttons\\Green icon - hover.png",
+														["horzAlign"] = {
+															["type"] = "middle",
+														},
+														["userTexSampler"] = 1,
+														["vertAlign"] = {
+															["type"] = "middle",
+														},
+													},
+												},
+											},
+										},
+									},
+									["type"] = "Static",
+									
+					},	
+					["btnWarning"] = {
+									["params"] = {
+										["bounds"] = {
+											["h"] = 30,
+											["w"] = 50,
+											["x"] = 500,
+											["y"] = 415,
+										},
+										["enabled"] = true,
+										["tabOrder"] = 0,
+										["text"] = "",
+										["visible"] = true,
+										["tooltip"] = "",
+									},
+									["skin"] = {
+										["params"] = {
+											["name"] = "staticSkin",
+										},
+										["states"] = {
+											["released"] = {
+												[1] = {
+													["picture"] = {
+														["color"] = "0xffffffff",
+														["file"] = "dxgui\\skins\\skinME\\images\\Icons\\32x32\\warning.ico",
+														["horzAlign"] = {
+															["type"] = "middle",
+														},
+														["userTexSampler"] = 1,
+														["vertAlign"] = {
+															["type"] = "middle",
+														},
+													},
+												},
+											},
+										},
+									},
+									["type"] = "Static",
+									
+					},
+					["ArrowRight"] = {
+									["params"] = {
+										["bounds"] = {
+											["h"] = 30,
+											["w"] = 50,
+											["x"] = 585,
+											["y"] = 415,
+										},
+										["enabled"] = true,
+										["tabOrder"] = 0,
+										["text"] = "",
+										["visible"] = true,
+										["tooltip"] = "",
+									},
+									["skin"] = {
+										["params"] = {
+											["name"] = "staticSkin",
+										},
+										["states"] = {
+											["released"] = {
+												[1] = {
+													["picture"] = {
+														["color"] = "0xffffffff",
+														["file"] = "dxgui\\skins\\skinME\\images\\Buttons\\arrows\\right.png",
+														["horzAlign"] = {
+															["type"] = "middle",
+														},
+														["userTexSampler"] = 1,
+														["vertAlign"] = {
+															["type"] = "middle",
+														},
+													},
+												},
+											},
+										},
+									},
+									["type"] = "Static",
+									
+					},]]	
 			},
 			["params"] = {
 				["bounds"] = {

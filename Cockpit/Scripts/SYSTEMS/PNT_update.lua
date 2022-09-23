@@ -30,6 +30,7 @@ local PNT_TRIM_U			= nil
 local PNT_TRIM_D			= nil
 local PNT_CTM_CHAFF			= nil			
 local PNT_CTM_FLARE			= nil
+local PNT_CTM_F15			= nil
 local PNT_FLAPS_MULTI_BIS	= nil
 local PNT_STICK_LOCK		= nil
 local PNT_STICK_UNLOCK		= nil
@@ -74,6 +75,7 @@ function post_initialize()
 	PNT_TRIM_D				= get_clickable_element_reference("PNT_TRIM_D")
 	PNT_CTM_CHAFF			= get_clickable_element_reference("PNT_CTM_CHAFF")
 	PNT_CTM_FLARE			= get_clickable_element_reference("PNT_CTM_FLARE")
+	PNT_CTM_F15				= get_clickable_element_reference("PNT_CTM_F15")
 	PNT_FLAPS_MULTI_BIS		= get_clickable_element_reference("PNT_FLAPS_MULTI_BIS")
 	PNT_STICK_LOCK			= get_clickable_element_reference("PNT_STICK_LOCK")
 	PNT_STICK_UNLOCK		= get_clickable_element_reference("PNT_STICK_UNLOCK")
@@ -173,6 +175,9 @@ function update()
 	end
 	if PNT_CTM_FLARE then
 		PNT_CTM_FLARE:update()
+	end
+	if PNT_CTM_F15 then
+		PNT_CTM_F15:update()
 	end
 	if PNT_FLAPS_MULTI_BIS then
 		PNT_FLAPS_MULTI_BIS:update()

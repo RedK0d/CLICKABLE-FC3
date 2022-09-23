@@ -1,16 +1,14 @@
-
 declare_plugin("RedK0d Clickable",
 {
-	installed 	  = true,
-	dirName		  = current_mod_path,
-	displayName   = "RedK0d Clickable",
-	shortName	  = "RedK0d Clickable",
-	fileMenuName  = "RedK0d Clickable",
-	version		 = "v1.0.2c-beta",			
-
-	state		  = "installed",
-	developerName = "RedK0d",
-	info		  = "RedK0d Clickable",
+	installed 	  	= 	true,
+	dirName		  	= 	current_mod_path,
+	displayName   	= 	"RedK0d Clickable",
+	shortName	  	= 	"RedK0d Clickable",
+	fileMenuName  	= 	"RedK0d Clickable",
+	version			=	"v1.1.1a-beta",
+	state		  	= 	"installed",
+	developerName 	= 	"RedK0d",
+	info		  	= 	"RedK0d Clickable",
 	
 	load_immediately = true,
 	binaries	 = {},
@@ -30,6 +28,7 @@ declare_plugin("RedK0d Clickable",
             CLSID		= "{FC3 CLICKABLE}"
 		},
 	},
+	
 })
 
 
@@ -54,6 +53,8 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["Su-25"] 					= {enable_options_key_for_unit = 'Su25_enabled'},
 	["A-10A"]					= {enable_options_key_for_unit = 'A10a_enabled'},
 	["F-15C"]					= {enable_options_key_for_unit = 'F15c_enabled'},
+	["TEST"]					= {enable_options_key_for_unit = 'Version'},
 	}
 )
+
 plugin_done()

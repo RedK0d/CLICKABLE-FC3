@@ -140,11 +140,12 @@ Keys =
     iCommandPlaneTrimOn	                        =   957;
     iCommandPlaneTrimOff	                    =   958;
     iCommandPlaneAntiCollisionLights	        =   518;
+    iCommandPlaneWingtipSmokeOnOff	            =   78;
 
 
 
 }   
-
+local LMFD_OSB_01                                        = 10000;
 
 count = 3500
 
@@ -182,13 +183,13 @@ device_commands =
     CLIC_CTM                    = counter(),
     CLIC_CTM_CHAFF              = counter(),
     CLIC_CTM_FLARE              = counter(),
+    CLIC_CTM_F15                = counter(),
     CLIC_JAM                    = counter(),
     CLIC_JAM_IR                 = counter(),
     CLIC_HUD_FILTER             = counter(),
     CLIC_GEAR                   = counter(),
     CLIC_CANOPY                 = counter(),
     CLIC_NAVLIGHTS              = counter(),
-    CLIC_COL_LIGHTS             = counter(),
     CLIC_COCKPITLIGHT           = counter(),
     CLIC_COCKPITLIGHT_F15       = counter(),
     CLIC_JETTINSON              = counter(),
@@ -220,8 +221,8 @@ device_commands =
     CLIC_MIRROR_UPDU            = counter(),
     CLIC_ENG_INLET              = counter(),
     CLIC_EMER_BRAKE             = counter(),
-    CLIC_EMERGENCY_BRAKES_ON  = counter(),
-    CLIC_EMERGENCY_BRAKES_OFF = counter(),
+    CLIC_EMERGENCY_BRAKES_ON    = counter(),
+    CLIC_EMERGENCY_BRAKES_OFF   = counter(),
     CLIC_NOSE_WHEEL             = counter(),
     CLIC_AUTOTHRUST             = counter(),
     CLIC_AUTOTHRUST_I           = counter(),
@@ -281,5 +282,6 @@ device_commands =
     CLIC_COM_R                  = counter(),
     CLIC_TAKEOFFTRIMF15         = counter(),
     CLIC_COL_LIGHTS             = counter(),
+    CLIC_TEST                   = counter(), 
 
 }

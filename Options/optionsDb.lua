@@ -1,6 +1,6 @@
-local DbOption  = require('Options.DbOption')
-local oms       = require('optionsModsScripts')
-
+local DbOption  		= 	require('Options.DbOption')
+local oms       		= 	require('optionsModsScripts')
+local optionsEditor 	= 	require('optionsEditor')
 
 
 function script_path() 
@@ -19,7 +19,6 @@ local tblCPLocalList = oms.getTblCPLocalList(modulelocation)
 
 
 
-
 return {
 		useit	 		= DbOption.new():setValue(true),
 		dontuseit 		= DbOption.new():setValue(false),
@@ -33,4 +32,9 @@ return {
 		Su33_enabled 	= DbOption.new():setValue(true):checkbox(),
 		A10a_enabled 	= DbOption.new():setValue(true):checkbox(),
 		F15c_enabled	= DbOption.new():setValue(true):checkbox(),
+		F15c_extended	= DbOption.new():setValue(0),
+		Version			= DbOption.new():setValue(0),
+		
+
 		}
+

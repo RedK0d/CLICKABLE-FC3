@@ -1,3 +1,37 @@
+# 29/09/2022 v1.1.1a-beta
+Su-25
+.Fixed Salvo Control 
+    Was not moving two notches at a time.
+Su-25T
+.Fixed misplacement of landing gear lever connector
+    Was not moving
+
+MiG-29S/A/G
+.Fixed misplacement of landing gear lever connector
+.Fixed bug about electro Electro-Optical System On/Off
+.Fixed bug about Radar On/Off
+
+F-15C
+.Fixed throttle connectors location
+
+Rework of the F-15C part.
+The mod uses the connectors already provided in the cockpit and can thus use the animations.
+
+Creation of a customized countermeasure system.
+    .Choose, Chaff, Flares, or both, by operating a switch.
+    .Two modes supported, Manual, or Semi Automatic.
+    .Important, see the INSTALL and follow the instructions to make it work.
+
+Creation of a lighting management system..
+    .The LDG/TAXI light lever is now functional.
+    .The navigation lights are adjustable in intensity, and can now flash.
+    .The anti-collision lights are managed independently and are activated with their own switch.
+    .The cockpit lighting can be activated by manipulating a switch, and is adjustable by manipulating a rotary.
+    .You can now turn off the formation lights by turning the relevant knob to OFF.
+
+Many other animations integrated. Most are cosmetic, but some others are usable.
+Work still in progress
+
 # 03/06/2022 v1.0.2c-beta
 
 Added Help Images produced by @denissoliveira#9693 thanks to him.

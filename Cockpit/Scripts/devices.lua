@@ -7,8 +7,7 @@ end
 devices = {}
 devices["CLICKABLE"]     			= counter()
 devices["PNT_UPD"]     				= counter()
-
-
+devices["UTILS"]     				= counter()
 
 
 
