@@ -23,6 +23,9 @@ Please report conflicts with others mods.
  # SUPPORT US
 You can support us via 
 
+Our Store
+https://redk0d.myshopify.com/
+
 Patreon 
 https://www.patreon.com/RedK0d
 
