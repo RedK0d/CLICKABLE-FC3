@@ -18,13 +18,13 @@ Then launch the game. You can manage the activation of the module in the options
 
 Concerning the F-15C it is a little more complex:  
 
-* _Step 1:_ Download and Install Open Mod Manager Available here: https://github.com/sedenion/OpenModMan/releases  
-* _Step 2:_ Open the Redk0d Clickable F-15C.omc file contained in CLICKABLE-FC3(version)\DATA\Open Mod Manager  
-* _Step 3:_ Click on "Edit"  
-* _Step 4:_ Click on "Target Destination Folder"   
-* _Step 5:_ Enter your DCS installation directory  
-* _Step 6:_ Click Apply  
-* _Step 7:_ Depending if you have Standalone F-15C or FC3 highlight "F-15C Standalone" or "F-15C With FC3" and click "Install" or "Unistall" if you want to install or uninstall.  
+* __Step 1:__ Download and Install Open Mod Manager Available here: https://github.com/sedenion/OpenModMan/releases  
+* __Step 2:__ Open the Redk0d Clickable F-15C.omc file contained in CLICKABLE-FC3(version)\DATA\Open Mod Manager  
+* __Step 3:__ Click on "Edit"  
+* __Step 4:__ Click on "Target Destination Folder"   
+* __Step 5:__ Enter your DCS installation directory  
+* __Step 6:__ Click Apply  
+* __Step 7:__ Depending if you have Standalone F-15C or FC3 highlight "F-15C Standalone" or "F-15C With FC3" and click "Install" or "Unistall" if you want to install or uninstall.  
 *Step 8: Fly  
  
  # SUPPORT US
@@ -41,13 +41,13 @@ Join us on Discord.
 https://discord.com/invite/CrExr87dP9
 
  # SPECIAL THANKS
- * Tobsen                               (Edm Exporter for Blender)  
- * Grim Reapers,MatAWG and Sklang       (YouTube content creators)  
- * Aether,ImAPanzer and Emerald 467     (For Discord Management)  
- * CrunchZ08                            (For his information on the F-15C systems)  
- * Emerald 467 deadlyfishes and snowman (For tests and feedback)  
- * Zeitgeist                            (LowFidelityAircraftManual)  
- * denissoliveira                       (Help Images)  
+ * __Tobsen__                               (Edm Exporter for Blender)  
+ * __Grim Reapers,MatAWG and Sklang__       (YouTube content creators)  
+ * __Aether,ImAPanzer and Emerald 467__     (For Discord Management)  
+ * __CrunchZ08__                            (For his information on the F-15C systems)  
+ * __Emerald 467 deadlyfishes and snowman__ (For tests and feedback)  
+ * __Zeitgeist__                            (LowFidelityAircraftManual)  
+ * __denissoliveira__                       (Help Images)  
  
  
  * And for you all                      (For your interest in this mod)  
