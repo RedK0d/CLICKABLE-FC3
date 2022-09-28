@@ -19,7 +19,9 @@
 '* You can manage the activation of the module in the options.' 
 '* Lalt+C to click.'
 '* Please report any issues in the dedicated section on Discord or Github.'  
+`* Une sous-puce`
 
+`* Une autre sous-puce`
 ## Concerning the F-15C it is a little more complex:  
 
 * __Step 1:__ Download and Install Open Mod Manager Available [here](https://github.com/sedenion/OpenModMan/releases)  
