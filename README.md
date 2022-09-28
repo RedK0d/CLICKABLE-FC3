@@ -30,14 +30,11 @@ Concerning the F-15C it is a little more complex:
  # SUPPORT US
 You can support us via 
 
-* Our Store
-https://redk0d.myshopify.com/
+* [Our Store](https://redk0d.myshopify.com) !  
 
-* Patreon 
-https://www.patreon.com/RedK0d
+* [Patreon](https://www.patreon.com/RedK0d) !  
 
-* Paypal
-[![Donate](https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)
+* [Paypal][![Donate](https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)
 
  # DISCORD
 Join us on Discord. 
