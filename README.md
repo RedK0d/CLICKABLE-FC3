@@ -28,13 +28,13 @@ Concerning the F-15C it is a little more complex:
 *Step 8: Fly  
  
  # SUPPORT US
-You can support us via 
+3 ways to support us 
 
-* [Our Store](https://redk0d.myshopify.com) !  
+* [Our Store](https://redk0d.myshopify.com)   
 
-* [Patreon](https://www.patreon.com/RedK0d) !  
+* [Patreon](https://www.patreon.com/RedK0d)   
 
-* [Paypal](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC) !  
+* [Paypal](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)   
 
  # DISCORD
 Join us on Discord. 
