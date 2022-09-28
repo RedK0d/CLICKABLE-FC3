@@ -34,7 +34,7 @@ You can support us via
 
 * [Patreon](https://www.patreon.com/RedK0d) !  
 
-* [Paypal]https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC) !  
+* [Paypal](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC) !  
 
  # DISCORD
 Join us on Discord. 
