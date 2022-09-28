@@ -16,7 +16,7 @@
 
 
 * __Step 2:__ Launch the game. 
-* Une sous-puce
+ * Une sous-puce
 `* You can manage the activation of the module in the options` 
 `* Lalt+C to click`
 `* Please report any issues in the dedicated section on Discord or Github`  
