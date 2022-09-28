@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Open_Mod_Manager_Location>
+  <uuid>f0dbfd72-8477-47c9-8edf-ff9963efbeec</uuid>
+  <title index="0">F-15C</title>
+  <install>C:\Program Files (x86)\Steam\steamapps\common\DCSWorld</install>
+  <backup_comp level="0" />
+  <library_devmode enable="1" />
+  <warn_options>
+    <warn_overlaps enable="1" />
+    <warn_extra_inst enable="1" />
+    <warn_miss_deps enable="1" />
+    <warn_extra_unin enable="1" />
+  </warn_options>
+  <network>
+    <warn_extra_dnld enable="1" />
+    <warn_miss_dnld enable="1" />
+    <warn_upgd_brk_deps enable="0" />
+  </network>
+</Open_Mod_Manager_Location>

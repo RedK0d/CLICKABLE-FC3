@@ -9,12 +9,6 @@
  Su-25
  A-10A
  F-15C 
- 
- # TROUBLESHOOTING WITH V1.1.1a-beta
- Some files need to be copied into the base directory of the game, this can only be done with write permissions.
-If the mod does not launch with the F-15C, simply start the game by right-clicking "run as administrator" to fix the problem.
-
-This method is temporary, we will update the mod very soon, with a version that will use OVGME and it will be easier.
 
  # INSTALLATION 
 

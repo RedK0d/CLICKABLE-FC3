@@ -37,19 +37,18 @@ check_entry_version()
 optionsEditor.setOption("plugins.RedK0d Clickable.Version",version)
 dev_install()
 function post_initialize()
-		TIMER = 5
+		TIMER = 20
 		print_message_to_user("[ RedK0d Clickable ] \n[ "..version.." ]\n[ " .. aircraft .." ]",10)
 end
 need_to_be_closed = false 
 
 function update()
-	
     if                  TIMER     >   0                                                               then
                         TIMER     =   TIMER - update_time_step
         if              TIMER     <=  0                                                               then
                         TIMER     =   0
 						dofile(LockOn_Options.script_path.."UTILS\\show_support_window.lua")
-					end
+		end
       
     end
 end

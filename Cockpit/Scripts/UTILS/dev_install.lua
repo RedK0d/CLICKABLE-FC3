@@ -235,7 +235,7 @@ end
 
 function  F15C_extended()
     --print_message_to_user("F15C_extended")
-    lfs.mkdir(rep_dest_F15C.."Cockpit\\KneeboardRight\\SYSTEMS")
+    --[[ lfs.mkdir(rep_dest_F15C.."Cockpit\\KneeboardRight\\SYSTEMS")
     lfs.mkdir(rep_dest_F15C.."Cockpit\\Textures\\F-15C-CPT-TEXTURES")
     lfs.mkdir(rep_dest_F15C.."Sounds")
     lfs.mkdir(rep_dest_F15C.."Sounds\\Effects")
@@ -282,15 +282,15 @@ function  F15C_extended()
     filemanip.copy(rep_source_ext.."Sounds\\sdef\\Aircrafts\\JFS_OPEN_START.sdef",rep_dest_F15C.."Sounds\\sdef\\Aircrafts\\JFS_OPEN_START.sdef")
     filemanip.copy(rep_source_ext.."Sounds\\sdef\\Aircrafts\\JFS_OPEN_STOP.sdef",rep_dest_F15C.."Sounds\\sdef\\Aircrafts\\JFS_OPEN_STOP.sdef")
     filemanip.copy(rep_input_F15C.."keyboard\\default.lua",rep_input_F15C.."keyboard\\default.lua.backup")
-    filemanip.copy(rep_input_F15C.."joystick\\default.lua",rep_input_F15C.."joystick\\default.lua.backup")
+    filemanip.copy(rep_input_F15C.."joystick\\default.lua",rep_input_F15C.."joystick\\default.lua.backup") ]]
     F15C_editinput_k()
     F15C_editinput_j() 
-    F15C_editentry()
-    F15C_editdevice_init()
+    --[[ F15C_editentry()
+    F15C_editdevice_init() ]]
 end
 function  F15C_not_extended()
     --print_message_to_user("F15C_not_extended")
-    lfs.mkdir(rep_dest_F15C.."Cockpit\\KneeboardRight\\SYSTEMS")
+    --[[ lfs.mkdir(rep_dest_F15C.."Cockpit\\KneeboardRight\\SYSTEMS")
     filemanip.copy(rep_source_not_ext.."Cockpit\\KneeboardRight\\clickable_defs.lua",rep_dest_F15C.."Cockpit\\KneeboardRight\\clickable_defs.lua")
     filemanip.copy(rep_source_not_ext.."Cockpit\\KneeboardRight\\clickabledata.lua",rep_dest_F15C.."Cockpit\\KneeboardRight\\clickabledata.lua")
     filemanip.copy(rep_source_not_ext.."Cockpit\\KneeboardRight\\command_defs.lua",rep_dest_F15C.."Cockpit\\KneeboardRight\\command_defs.lua")
@@ -311,15 +311,15 @@ function  F15C_not_extended()
     filemanip.copy(rep_source_not_ext.."Cockpit\\Shape\\cockpit_f-15c.edm.json",rep_dest_F15C.."Cockpit\\Shape\\cockpit_f-15c.edm.json")
     filemanip.copy(rep_source_not_ext.."Liveries\\Cockpit_F-15C\\default\\description.lua",rep_dest_F15C.."Liveries\\Cockpit_F-15C\\default\\description.lua")
     filemanip.copy(rep_input_F15C.."keyboard\\default.lua",rep_input_F15C.."keyboard\\default.lua.backup")
-    filemanip.copy(rep_input_F15C.."joystick\\default.lua",rep_input_F15C.."joystick\\default.lua.backup")
+    filemanip.copy(rep_input_F15C.."joystick\\default.lua",rep_input_F15C.."joystick\\default.lua.backup") ]]
     F15C_editinput_k()
     F15C_editinput_j() 
-    F15C_editentry()
-    F15C_editdevice_init()
+    --[[ F15C_editentry()
+    F15C_editdevice_init() ]]
 end
 
 function  FC3_extended()
-    lfs.mkdir(rep_dest_FC3.."Cockpit\\KneeboardRight\\SYSTEMS")
+    --[[ lfs.mkdir(rep_dest_FC3.."Cockpit\\KneeboardRight\\SYSTEMS")
     lfs.mkdir(rep_dest_FC3.."Cockpit\\Textures\\F-15C-CPT-TEXTURES")
     lfs.mkdir(rep_dest_FC3.."Sounds")
     lfs.mkdir(rep_dest_FC3.."Sounds\\Effects")
@@ -366,15 +366,15 @@ function  FC3_extended()
     filemanip.copy(rep_source_ext.."Sounds\\sdef\\Aircrafts\\JFS_OPEN_START.sdef",rep_dest_FC3.."Sounds\\sdef\\Aircrafts\\JFS_OPEN_START.sdef")
     filemanip.copy(rep_source_ext.."Sounds\\sdef\\Aircrafts\\JFS_OPEN_STOP.sdef",rep_dest_FC3.."Sounds\\sdef\\Aircrafts\\JFS_OPEN_STOP.sdef")
     filemanip.copy(rep_input_FC3.."keyboard\\default.lua",rep_input_FC3.."keyboard\\default.lua.backup")
-    filemanip.copy(rep_input_FC3.."joystick\\default.lua",rep_input_FC3.."joystick\\default.lua.backup")
+    filemanip.copy(rep_input_FC3.."joystick\\default.lua",rep_input_FC3.."joystick\\default.lua.backup") ]]
     FC3_editinput_k()
     FC3_editinput_j() 
-    FC3_editentry()
-    FC3_editdevice_init()
+    --[[ FC3_editentry()
+    FC3_editdevice_init() ]]
 end
 function  FC3_not_extended()
     --print_message_to_user("FC3_not_extended")
-    lfs.mkdir(rep_dest_FC3.."Cockpit\\KneeboardRight\\SYSTEMS")
+    --[[ lfs.mkdir(rep_dest_FC3.."Cockpit\\KneeboardRight\\SYSTEMS")
     filemanip.copy(rep_source_not_ext.."Cockpit\\KneeboardRight\\clickable_defs.lua",rep_dest_FC3.."Cockpit\\KneeboardRight\\clickable_defs.lua")
     filemanip.copy(rep_source_not_ext.."Cockpit\\KneeboardRight\\clickabledata.lua",rep_dest_FC3.."Cockpit\\KneeboardRight\\clickabledata.lua")
     filemanip.copy(rep_source_not_ext.."Cockpit\\KneeboardRight\\command_defs.lua",rep_dest_FC3.."Cockpit\\KneeboardRight\\command_defs.lua")
@@ -395,17 +395,20 @@ function  FC3_not_extended()
     filemanip.copy(rep_source_not_ext.."Cockpit\\Shape\\cockpit_f-15c.edm.json",rep_dest_FC3.."Cockpit\\Shape\\cockpit_f-15c.edm.json")
     filemanip.copy(rep_source_not_ext.."Liveries\\Cockpit_F-15C\\default\\description.lua",rep_dest_FC3.."Liveries\\Cockpit_F-15C\\default\\description.lua")
     filemanip.copy(rep_input_FC3.."keyboard\\default.lua",rep_input_FC3.."keyboard\\default.lua.backup")
-    filemanip.copy(rep_input_FC3.."joystick\\default.lua",rep_input_FC3.."joystick\\default.lua.backup")
+    filemanip.copy(rep_input_FC3.."joystick\\default.lua",rep_input_FC3.."joystick\\default.lua.backup") ]]
     FC3_editinput_k()
     FC3_editinput_j() 
-    FC3_editentry()
-    FC3_editdevice_init()
+    --[[ FC3_editentry()
+    FC3_editdevice_init() ]]
 end
 ---------------------------------------------------------------------------------------
 --Checks if installalation status
 function F15C_check()
+    F15C_editinput_k()
+    F15C_editinput_j() 
+
     --print_message_to_user("F15C_check")
-    local path = rep_dest_F15C.."Cockpit\\KneeboardRight\\device_init.lua"
+    --[[ local path = rep_dest_F15C.."Cockpit\\KneeboardRight\\device_init.lua"
     local file = io.open(path, 'r')
     local fileContent = {}
     for line in file:lines() do
@@ -416,11 +419,14 @@ function F15C_check()
     if              F15c_extended       ==  1                   and
                     fileContent[25]     ~=  device_init_ext     then
                     F15C_extended()                        
-    end      
+    end   ]]    
 end
 function FC3_check()
+    FC3_editinput_k()
+    FC3_editinput_j() 
+
     --print_message_to_user("FC3_check")
-    local path = rep_dest_FC3.."Cockpit\\KneeboardRight\\device_init.lua"
+    --[[ local path = rep_dest_FC3.."Cockpit\\KneeboardRight\\device_init.lua"
     local file = io.open(path, 'r')
     local fileContent = {}
     for line in file:lines() do
@@ -431,7 +437,7 @@ function FC3_check()
     if              F15c_extended       ==  1                   and
                     fileContent[25]     ~=  device_init_ext     then
                     FC3_extended()                        
-    end         
+    end ]]         
 end
 ---------------------------------------------------------------------------------------
 if      present_FC3                                     then

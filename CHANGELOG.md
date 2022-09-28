@@ -1,4 +1,11 @@
-# 29/09/2022 v1.1.1a-beta
+# 28/09/2022 v1.1.1b-beta
+
+Changed the installation method.
+    Look in the install file
+F-15C
+.Fixed Illumination Cocpit Issue
+.Fixed Bingo Fuel Issue    
+# 24/09/2022 v1.1.1a-beta
 Su-25
 .Fixed Salvo Control 
     Was not moving two notches at a time.
