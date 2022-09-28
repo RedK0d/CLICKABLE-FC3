@@ -12,11 +12,15 @@
 
  # INSTALLATION 
 
-1.Unzip the contents of the archive in your "Saved Games\DCS\Mods\tech" directory.  
+* __Step 1:__ Unzip the contents of the archive in your "Saved Games\DCS\Mods\tech" directory.  
 
-2.Launch the game. You can manage the activation of the module in the options. Lalt+C to click Please report any issues in the dedicated section on Discord or Github.  
 
-Concerning the F-15C it is a little more complex:  
+* __Step 2:__ Launch the game. 
+'* You can manage the activation of the module in the options.' 
+'* Lalt+C to click.'
+'* Please report any issues in the dedicated section on Discord or Github.'  
+
+## Concerning the F-15C it is a little more complex:  
 
 * __Step 1:__ Download and Install Open Mod Manager Available [here](https://github.com/sedenion/OpenModMan/releases)  
 * __Step 2:__ Open the Redk0d Clickable F-15C.omc file contained in CLICKABLE-FC3(version)\DATA\Open Mod Manager  
