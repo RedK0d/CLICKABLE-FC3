@@ -18,7 +18,7 @@ Then launch the game. You can manage the activation of the module in the options
 
 Concerning the F-15C it is a little more complex:  
 
-* __Step 1:__ Download and Install Open Mod Manager Available _[here]_ (https://github.com/sedenion/OpenModMan/releases)  
+* __Step 1:__ Download and Install Open Mod Manager Available _[here]_(https://github.com/sedenion/OpenModMan/releases)  
 * __Step 2:__ Open the Redk0d Clickable F-15C.omc file contained in CLICKABLE-FC3(version)\DATA\Open Mod Manager  
 * __Step 3:__ Click on "Edit"  
 * __Step 4:__ Click on "Target Destination Folder"   
