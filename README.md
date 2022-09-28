@@ -29,7 +29,7 @@
 * __Step 5:__ Enter your DCS installation directory  
 * __Step 6:__ Click Apply  
 * __Step 7:__ Depending if you have Standalone F-15C or FC3 highlight "F-15C Standalone" or "F-15C With FC3" and click "Install" or "Unistall" if you want to install or uninstall.  
-*Step 8: Fly  
+* __Step 8:__ Fly  
  
  # SUPPORT US
 3 ways to support us 
