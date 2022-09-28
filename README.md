@@ -50,6 +50,6 @@ https://discord.com/invite/CrExr87dP9
  * __denissoliveira__                       (Help Images)  
  
  
- * And for you all                      (For your interest in this mod)  
+ * __And for you all__                      (For your interest in this mod)  
 
 
