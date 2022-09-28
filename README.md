@@ -44,14 +44,14 @@ Join us on Discord.
 https://discord.com/invite/CrExr87dP9
 
  # SPECIAL THANKS
- Tobsen                               (Edm Exporter for Blender)
- Grim Reapers,MatAWG and Sklang       (YouTube content creators)
- Aether,ImAPanzer and Emerald 467     (For Discord Management)
- Emerald 467 deadlyfishes and snowman (For tests and feedback)
- Zeitgeist                            (LowFidelityAircraftManual)
- denissoliveira                       (Help Images)
+ * Tobsen                               (Edm Exporter for Blender)  
+ * Grim Reapers,MatAWG and Sklang       (YouTube content creators)  
+ * Aether,ImAPanzer and Emerald 467     (For Discord Management)  
+ * Emerald 467 deadlyfishes and snowman (For tests and feedback)  
+ * Zeitgeist                            (LowFidelityAircraftManual)  
+ * denissoliveira                       (Help Images)  
  
  
- And for you all                      (For your interest in this mod)
+ * And for you all                      (For your interest in this mod)  
 
 
