@@ -12,9 +12,9 @@
 
  # INSTALLATION 
 
-Unzip the contents of the archive in your "Saved Games\DCS\Mods\tech" directory.  
+1.Unzip the contents of the archive in your "Saved Games\DCS\Mods\tech" directory.  
 
-Then launch the game. You can manage the activation of the module in the options. Lalt+C to click Please report any issues in the dedicated section on Discord or Github.  
+2.Launch the game. You can manage the activation of the module in the options. Lalt+C to click Please report any issues in the dedicated section on Discord or Github.  
 
 Concerning the F-15C it is a little more complex:  
 
