@@ -44,6 +44,7 @@ https://discord.com/invite/CrExr87dP9
  * Tobsen                               (Edm Exporter for Blender)  
  * Grim Reapers,MatAWG and Sklang       (YouTube content creators)  
  * Aether,ImAPanzer and Emerald 467     (For Discord Management)  
+ * CrunchZ08                            (For his information on the F-15C systems)  
  * Emerald 467 deadlyfishes and snowman (For tests and feedback)  
  * Zeitgeist                            (LowFidelityAircraftManual)  
  * denissoliveira                       (Help Images)  
