@@ -37,8 +37,7 @@ Concerning the F-15C it is a little more complex:
 * [Paypal](https://www.paypal.com/donate/?hosted_button_id=8RA626VEJD2SC)   
 
  # DISCORD
-Join us on Discord. 
-https://discord.com/invite/CrExr87dP9
+Join us on [Discord](https://discord.com/invite/CrExr87dP9)
 
  # SPECIAL THANKS
  * __Tobsen__                               (Edm Exporter for Blender)  
