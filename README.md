@@ -34,7 +34,7 @@
  # SUPPORT US
 3 ways to support us 
 
-* [Our Store](https://redk0d.myshopify.com)   
+* [Our Store](https://redk0d.gumroad.com/l/fvkodo)   
 
 * [Patreon](https://www.patreon.com/RedK0d)   
 
