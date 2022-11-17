@@ -379,10 +379,10 @@ function SetCommand(command,value)
 
     end
     
-    if  aircraft~="MiG-29A"or aircraft~="MiG-29G"or aircraft~="MiG-29S" and command == device_commands.CLIC_RADAR_FREQ  and  value == 1 then
+    if  (aircraft ~= "MiG-29A" or aircraft ~="MiG-29G" or aircraft~="MiG-29S") and command == device_commands.CLIC_RADAR_FREQ  and  value == 1 then
         dispatch_action(nil,Keys.iCommandPlaneChangeRadarPRF)
     end
-    if  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" and command == device_commands.CLIC_RADAR_FREQ   then
+    if  (aircraft == "MiG-29A" or aircraft =="MiG-29G" or aircraft=="MiG-29S") and command == device_commands.CLIC_RADAR_FREQ   then
         dispatch_action(nil,Keys.iCommandPlaneChangeRadarPRF)
     end 
 
