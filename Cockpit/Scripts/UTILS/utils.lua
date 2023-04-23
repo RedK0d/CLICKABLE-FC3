@@ -47,7 +47,7 @@ function update()
                         TIMER     =   TIMER - update_time_step
         if              TIMER     <=  0                                                               then
                         TIMER     =   0
-						dofile(LockOn_Options.script_path.."UTILS\\show_support_window.lua")
+						--dofile(LockOn_Options.script_path.."UTILS\\show_support_window.lua")
 		end
       
     end
