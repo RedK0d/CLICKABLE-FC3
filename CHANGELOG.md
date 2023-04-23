@@ -1,3 +1,7 @@
+# 23/04/2023 v1.1.1e-beta
+
+Removed the popup
+
 # 28/09/2022 v1.1.1b-beta
 
 Changed the installation method.
