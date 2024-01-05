@@ -11,8 +11,8 @@ local   mod_version         =   get_plugin_option_value("RedK0d Clickable", "Ver
 local   F15c_extended       =   0--get_plugin_option_value("RedK0d Clickable", "F15c_extended", "local")
 local   present_FC3         =   options.plugins["FC3"]
 local   present_F15C        =   options.plugins["F-15C"]
-local   device_init_ext     =   "--[[CLICKABLE-FC3 ".. mod_version  .." F15c_extended]]"
-local   device_init         =   "--[[CLICKABLE-FC3 ".. mod_version  .."]]"
+--local   device_init_ext     =   "--[[CLICKABLE-FC3 ".. mod_version  .." F15c_extended]]"
+--local   device_init         =   "--[[CLICKABLE-FC3 ".. mod_version  .."]]"
 local   date                =   os.date()
 local   modified            =   "--[[Modified " .. date .. "]]"
 local   entry_ext_f15c      =   "MAC_flyable('F-15C', current_mod_path..'/Cockpit/KneeboardRight/',nil, current_mod_path..'/Comm/F-15C.lua')"
@@ -76,7 +76,7 @@ function F15C_editinput_k()
     io.close(file)
         if          fileContent[6]  ~=  '--[[Edited file by RedK0d]]'                                              then   
                     fileContent[4]  =  '})\n\n--[[Edited file by RedK0d]]\n\nlocal CMD_ONOFF    = 10000\n'
-                    fileContent[78]  =   '\n-- RedK0d Countermeasures Custom Program\n{down = CMD_ONOFF,name = _(\'Countermeasures Custom Program\'),category = _(\'Countermeasures\'),features = {"Countermeasures"}},\n})\n'
+                    fileContent[76]  =   '\n-- RedK0d Countermeasures Custom Program\n{down = CMD_ONOFF,name = _(\'Countermeasures Custom Program\'),category = _(\'Countermeasures\'),features = {"Countermeasures"}},\n'
         end
     file = io.open(path, 'w')
     for index, value in ipairs(fileContent) do
@@ -94,7 +94,7 @@ function F15C_editinput_j()
     io.close(file)
         if          fileContent[6]  ~=  '--[[Edited file by RedK0d]]'                                              then   
                     fileContent[4]  =  '})\n\n--[[Edited file by RedK0d]]\n\nlocal CMD_ONOFF    = 10000\n'
-                    fileContent[76]  =   '\n-- RedK0d Countermeasures Custom Program\n{down = CMD_ONOFF,name = _(\'Countermeasures Custom Program\'),category = _(\'Countermeasures\'),features = {"Countermeasures"}},\n})\n'
+                    fileContent[74]  =   '\n-- RedK0d Countermeasures Custom Program\n{down = CMD_ONOFF,name = _(\'Countermeasures Custom Program\'),category = _(\'Countermeasures\'),features = {"Countermeasures"}},\n'
         end
     file = io.open(path, 'w')
     for index, value in ipairs(fileContent) do
@@ -159,7 +159,7 @@ function FC3_editinput_k()
     io.close(file)
         if          fileContent[6]  ~=  '--[[Edited file by RedK0d]]'                                              then   
                     fileContent[4]  =  '})\n\n--[[Edited file by RedK0d]]\n\nlocal CMD_ONOFF    = 10000\n'
-                    fileContent[78]  =   '\n-- RedK0d Countermeasures Custom Program\n{down = CMD_ONOFF,name = _(\'Countermeasures Custom Program\'),category = _(\'Countermeasures\'),features = {"Countermeasures"}},\n})\n'
+                    fileContent[73]  =   '\n-- RedK0d Countermeasures Custom Program\n{down = CMD_ONOFF,name = _(\'Countermeasures Custom Program\'),category = _(\'Countermeasures\'),features = {"Countermeasures"}},\n'
         end
     file = io.open(path, 'w')
     for index, value in ipairs(fileContent) do
@@ -177,7 +177,7 @@ function FC3_editinput_j()
     io.close(file)
         if          fileContent[6]  ~=  '--[[Edited file by RedK0d]]'                                              then   
                     fileContent[4]  =  '})\n\n--[[Edited file by RedK0d]]\n\nlocal CMD_ONOFF    = 10000\n'
-                    fileContent[76]  =   '\n-- RedK0d Countermeasures Custom Program\n{down = CMD_ONOFF,name = _(\'Countermeasures Custom Program\'),category = _(\'Countermeasures\'),features = {"Countermeasures"}},\n})\n'
+                    fileContent[71]  =   '\n-- RedK0d Countermeasures Custom Program\n{down = CMD_ONOFF,name = _(\'Countermeasures Custom Program\'),category = _(\'Countermeasures\'),features = {"Countermeasures"}},\n'
         end
     file = io.open(path, 'w')
     for index, value in ipairs(fileContent) do
